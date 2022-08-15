@@ -1,16 +1,16 @@
 {
-  "name": "blk-design-system-react",
-  "version": "1.2.0",
-  "description": "React version of BLK Design System by Creative Tim",
+  "name": "cs-week",
+  "version": "0.0.1",
+  "description": "React website created for UTCS annual CS Week",
   "main": "index.js",
-  "author": "Creative Tim",
+  "author": "Sahil Jain",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/creativetimofficial/blk-design-system-react.git"
+    "url": "git+https://github.com/ECLAIR-Robotics/CS-Week"
   },
   "bugs": {
-    "url": "https://github.com/creativetimofficial/blk-design-system-react/issues"
+    "url": "https://github.com/ECLAIR-Robotics/CS-Week/issues"
   },
   "homepage": "https://demos.creative-tim.com/blk-design-system-react/#/",
   "keywords": [

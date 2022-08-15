@@ -1,0 +1,36 @@
+/*!
+
+=========================================================
+* BLK Design System React - v1.2.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/blk-design-system-react
+* Copyright 2020 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/blk-design-system-react/blob/main/LICENSE.md)
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+*/
+import React from "react";
+// reactstrap components
+import {
+  Button,
+} from "reactstrap";
+
+export default function SignUpModal() {
+
+  return (
+    <Button
+      className="nav-link d-none d-lg-block"
+      color="primary"
+      target="_blank"
+      href=""
+    >
+      <i className="tim-icons icon-triangle-right-17" /> Sign up!
+    </Button>
+  );
+}

@@ -171,10 +171,7 @@ export default function Bits() {
                   </h4>
                   <h4 className='text-white'>
                     CS Hosting Bits: SOME_AMOUNT<br />
-                    Extra Hosting Bits: SOME_AMOUNT
-                    <br />
-                    <br />
-
+                    Extra Hosting Bits: SOME_AMOUNT<br /><br />
                     <font className='text-success'>Where are the sign ups for
                     volunteering for helping host other events?</font><br />
                     Currently, we do not have any available hosting spots, but
@@ -183,24 +180,47 @@ export default function Bits() {
                   </h4>
                 </TabPane>
                 <TabPane tabId="link3">
-                  <p>
-                    Efficiently unleash cross-media information without
-                    cross-media value. Quickly maximize timely deliverables
-                    for real-time schemas. <br />
+                  <h4 className='text-primary'>Scavenger Hunts will be published
+                    at 9AM everyday on this website. These events will be designed
+                    in such a way that they will be <font className='text-warning'>
+                    very difficult to complete on your own,</font> so we highly
+                    encourage you to work with others!
                     <br />
-                    Dramatically maintain clicks-and-mortar solutions without
-                    functional solutions.
-                  </p>
+                  </h4>
+                  <h4 className='text-white'>
+                    1st: SOME_AMOUNT 2nd: SOME_AMOUNT<br />
+                    3rd: SOME_AMOUNT<br /> <br />
+                    <font className='text-success'>What challenges should I
+                    expect in the scavenger hunts?</font><br />
+                    We don't want to spoil any solutions, but there will both
+                    virtual and in person components. There will be multiple
+                    sections for each scavenger hunt, and you will be able to
+                    track your organization's progress here. Some challenges
+                    will be fairly intense while some may be tracking down
+                    the right information. The scavenger hunt may also differ
+                    day-to-day, so try not to panic too much. :)
+                    <br />
+                  </h4>
                 </TabPane>
                 <TabPane tabId="link4">
-                  <p>
-                    Efficiently unleash cross-media information without
-                    cross-media value. Quickly maximize timely deliverables
-                    for real-time schemas. <br />
+                  <h4 className='text-primary'>
+                    Extra Events are blah blah
                     <br />
-                    Dramatically maintain clicks-and-mortar solutions without
-                    functional solutions.
-                  </p>
+                  </h4>
+                  <h4 className='text-white'>
+                    Bits for this Extra Events vary on the event itself
+                    <br /> <br />
+                    <font className='text-success'>What challenges should I
+                    expect in the scavenger hunts?</font><br />
+                    We don't want to spoil any solutions, but there will both
+                    virtual and in person components. There will be multiple
+                    sections for each scavenger hunt, and you will be able to
+                    track your organization's progress here. Some challenges
+                    will be fairly intense while some may be tracking down
+                    the right information. The scavenger hunt may also differ
+                    day-to-day, so try not to panic too much. :)
+                    <br />
+                  </h4>
                 </TabPane>
               </TabContent>
             </CardBody>

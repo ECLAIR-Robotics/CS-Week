@@ -133,16 +133,66 @@ export default function Bits() {
                   <SignUpModal />
                 </TabPane>
                 <TabPane tabId="link1">
-                  <p>
-                    Completely synergize resource taxing relationships via
-                    premier niche markets. Professionally cultivate one-to-one
-                    customer service with robust ideas. <br />
+                  <h4 className='text-primary'>Event Bits are earned by attending
+                    and winning events held by other organizations.
+                    <font className='text-warning'> These events will be the best way
+                    to earn points for your organization.</font> Typically,
+                    you will be working alongside the members that are a part of
+                    your club in order to win as many Bits as you can. The Bit
+                    denominations are as follows:
                     <br />
-                    Dynamically innovate resource-leveling customer service
-                    for state of the art customer service.
-                  </p>
+                  </h4>
+                  <h4 className='text-white'>
+                    1st Place: SOME_AMOUNT 2nd Place: SOME_AMOUNT<br />
+                    3rd Place: SOME_AMOUNT 4th Place: SOME_AMOUNT
+                    <br />
+                    <br />
+
+                    <font className='text-success'>What are some example events?</font><br />
+                    Events can be both CS related and Non-CS related. Rest assured,
+                    there won't be any interviews or Leet Code questions. Some
+                    examples of events are listed below:
+                    - Most high scores in arcade games developed by UTCS students<br />
+                    - Dodgeball<br />
+                    - Playing table tennis against a robotic arm<br />
+                    - Jeopardy night or CS Trivia night<br />
+                    <br />
+                    Please note that these events are subject to likely to change
+                    and may not appear in the event this year.
+                  </h4>
                 </TabPane>
                 <TabPane tabId="link2">
+                  <h4 className='text-primary'>Hosting Bits are earned by helping your
+                    organization host their event. <font className='text-warning'> At a
+                    minimum, each organization must host at least 1 event. </font>
+                    Additionally, extra Hosting Bits may be earned by assisting labs
+                    and other organizations during their events.
+                    <br />
+                  </h4>
+                  <h4 className='text-white'>
+                    CS Hosting Bits: SOME_AMOUNT<br />
+                    Extra Hosting Bits: SOME_AMOUNT
+                    <br />
+                    <br />
+
+                    <font className='text-success'>Where are the sign ups for
+                    volunteering for helping host other events?</font><br />
+                    Currently, we do not have any available hosting spots, but
+                    please check this location again later for any updates/links!
+                    <br />
+                  </h4>
+                </TabPane>
+                <TabPane tabId="link3">
+                  <p>
+                    Efficiently unleash cross-media information without
+                    cross-media value. Quickly maximize timely deliverables
+                    for real-time schemas. <br />
+                    <br />
+                    Dramatically maintain clicks-and-mortar solutions without
+                    functional solutions.
+                  </p>
+                </TabPane>
+                <TabPane tabId="link4">
                   <p>
                     Efficiently unleash cross-media information without
                     cross-media value. Quickly maximize timely deliverables

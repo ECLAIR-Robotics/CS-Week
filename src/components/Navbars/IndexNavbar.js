@@ -36,29 +36,35 @@ import {
 } from "reactstrap";
 import SignUpModal from "views/components/SignUpModal";
 
-export default function IndexNavbar() {
+export default function IndexNavbar({
+  navColor='info'
+}) {
   const [collapseOpen, setCollapseOpen] = React.useState(false);
   const [collapseOut, setCollapseOut] = React.useState("");
   const [color, setColor] = React.useState("navbar-transparent");
+
   React.useEffect(() => {
+
+    const changeColor = () => {
+      if (
+        document.documentElement.scrollTop > 99 ||
+        document.body.scrollTop > 99
+      ) {
+        setColor(`bg-${navColor}`);
+      } else if (
+        document.documentElement.scrollTop < 100 ||
+        document.body.scrollTop < 100
+      ) {
+        setColor("navbar-transparent");
+      }
+    };
+
     window.addEventListener("scroll", changeColor);
     return function cleanup() {
       window.removeEventListener("scroll", changeColor);
     };
-  },[]);
-  const changeColor = () => {
-    if (
-      document.documentElement.scrollTop > 99 ||
-      document.body.scrollTop > 99
-    ) {
-      setColor("bg-info");
-    } else if (
-      document.documentElement.scrollTop < 100 ||
-      document.body.scrollTop < 100
-    ) {
-      setColor("navbar-transparent");
-    }
-  };
+  },[navColor]);
+
   const toggleCollapse = () => {
     document.documentElement.classList.toggle("nav-open");
     setCollapseOpen(!collapseOpen);
@@ -79,7 +85,7 @@ export default function IndexNavbar() {
             <span> ECLAIR</span>
           </NavbarBrand>
           <UncontrolledTooltip placement="bottom" target="navbar-brand">
-            Designed and Coded by Creative Tim and Sahil Jain
+            Coded by Sahil Jain
           </UncontrolledTooltip>
           <button
             aria-expanded={collapseOpen}

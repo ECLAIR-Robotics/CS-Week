@@ -16,8 +16,6 @@
 
 */
 import React from "react";
-// react plugin used to create charts
-import { Line } from "react-chartjs-2";
 // reactstrap components
 import {
   Button,
@@ -34,10 +32,11 @@ import {
 } from "reactstrap";
 
 // core components
-import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import Footer from "components/Footer/Footer.js";
+import IndexNavbar from "components/Navbars/IndexNavbar.js";
 
-import bigChartData from "variables/charts.js";
+//import bigChartData from "variables/charts.js";
+import Bits from "views/components/Bits.js"
 
 export default function AboutPage() {
 
@@ -50,7 +49,7 @@ export default function AboutPage() {
   },[]);
   return (
     <>
-      <ExamplesNavbar />
+      <IndexNavbar navColor='warning'/>
       <div className="wrapper">
         <div className="page-header">
           <img
@@ -87,8 +86,7 @@ export default function AboutPage() {
             <Row className="row-grid justify-content-between align-items-center text-left">
               <Col lg="6" md="6">
                 <h1 className="text-white">
-                  We keep your coin <br />
-                  <span className="text-white">secured</span>
+                  About Us
                 </h1>
                 <p className="text-white mb-3">
                   A wonderful serenity has taken possession of my entire soul,
@@ -290,33 +288,51 @@ export default function AboutPage() {
           <Container>
             <Row className="justify-content-center">
               <Col lg="12">
-                <h1 className="text-center">Your best benefit</h1>
+                <h1 className="text-center">Motivations</h1>
                 <Row className="row-grid justify-content-center">
                   <Col lg="3">
                     <div className="info">
-                      <div className="icon icon-primary">
-                        <i className="tim-icons icon-money-coins" />
+                      <div className="icon icon-info">
+                        <i className="tim-icons icon-molecule-40" />
                       </div>
-                      <h4 className="info-title">Low Commission</h4>
-                      <hr className="line-primary" />
+                      <h4 className="info-title">Covid-19</h4>
+                      <hr className="line-info" />
                       <p>
-                        Divide details about your work into parts. Write a few
-                        lines about each one. A paragraph describing a feature
-                        will.
+                        Computer science, as a field, can feel very independent
+                        and isolating at times. We hope students can take a break
+                        and look forward to something fun and exciting while being
+                        a part of a new college tradition
                       </p>
                     </div>
                   </Col>
                   <Col lg="3">
                     <div className="info">
-                      <div className="icon icon-warning">
+                      <div className="icon icon-danger">
+                        <i className="tim-icons icon-time-alarm" />
+                      </div>
+                      <h4 className="info-title">Burnout is Real</h4>
+                      <hr className="line-danger" />
+                      <p>
+                        Computer science, as a field, can feel very independent
+                        and isolating at times. We hope students can take a break
+                        and look forward to something fun and exciting while being
+                        a part of a new college tradition
+                      </p>
+                    </div>
+                  </Col>
+                  <Col lg="3">
+                    <div className="info">
+                      <div className="icon icon-primary">
                         <i className="tim-icons icon-chart-pie-36" />
                       </div>
-                      <h4 className="info-title">High Incomes</h4>
-                      <hr className="line-warning" />
+                      <h4 className="info-title">Community Building</h4>
+                      <hr className="line-primary" />
                       <p>
-                        Divide details about your product or agency work into
-                        parts. Write a few lines about each one. A paragraph
-                        describing feature will be a feature.
+                        UTCS feels relatively isolated as people work independently
+                        through the year. However, many like-minded individuals
+                        roam the halls of GDC daily. We hope that undergraduate CS
+                        and UTCS orgs can come together and create something that
+                        makes the whole community stronger!
                       </p>
                     </div>
                   </Col>
@@ -325,12 +341,13 @@ export default function AboutPage() {
                       <div className="icon icon-success">
                         <i className="tim-icons icon-single-02" />
                       </div>
-                      <h4 className="info-title">Verified People</h4>
+                      <h4 className="info-title">Diversity, Equity, and Inclusion</h4>
                       <hr className="line-success" />
                       <p>
-                        Divide details about your product or agency work into
-                        parts. Write a few lines about each one. A paragraph
-                        describing be enough.
+                        We strongly believe that the most vocal initiative should not
+                        be the only important initiative. CS Week hopes to allow all
+                        initiatves, big or small, to have a microphone and create a
+                        space for all UTCS members
                       </p>
                     </div>
                   </Col>
@@ -432,39 +449,6 @@ export default function AboutPage() {
             </Row>
           </Container>
         </section>
-        <section className="section section-lg">
-          <img
-            alt="..."
-            className="path"
-            src={require("assets/img/path4.png").default}
-          />
-          <img
-            alt="..."
-            className="path2"
-            src={require("assets/img/path2.png").default}
-          />
-          <Col md="12">
-            <Card className="card-chart card-plain">
-              <CardHeader>
-                <Row>
-                  <Col className="text-left" sm="6">
-                    <hr className="line-info" />
-                    <h5 className="card-category">Total Investments</h5>
-                    <CardTitle tag="h2">Performance</CardTitle>
-                  </Col>
-                </Row>
-              </CardHeader>
-              <CardBody>
-                <div className="chart-area">
-                  <Line
-                    data={bigChartData.data}
-                    options={bigChartData.options}
-                  />
-                </div>
-              </CardBody>
-            </Card>
-          </Col>
-        </section>
         <section className="section section-lg section-coins">
           <img
             alt="..."
@@ -474,10 +458,9 @@ export default function AboutPage() {
           <Container>
             <Row>
               <Col md="4">
-                <hr className="line-info" />
                 <h1>
-                  Choose the coin{" "}
-                  <span className="text-info">that fits your needs</span>
+                  Bit{" "} <span className="text-info">System</span>
+                  <hr className="line-info" />
                 </h1>
               </Col>
             </Row>
@@ -494,16 +477,29 @@ export default function AboutPage() {
                   <CardBody>
                     <Row>
                       <Col className="text-center" md="12">
-                        <h4 className="text-uppercase">Light Coin</h4>
-                        <span>Plan</span>
+                        <h4 className="text-uppercase">Participation Bits</h4>
                         <hr className="line-primary" />
                       </Col>
                     </Row>
                     <Row>
                       <ListGroup>
-                        <ListGroupItem>50 messages</ListGroupItem>
-                        <ListGroupItem>100 emails</ListGroupItem>
-                        <ListGroupItem>24/7 Support</ListGroupItem>
+                        <ListGroupItem>
+                          <h5 className='text-white'>Earned by
+                            <font className='text-warning'> CS students </font>
+                            signing up
+                          </h5>
+                        </ListGroupItem>
+                          <h5 className='text-white'>
+                            You are only allowed to sign up <br />
+                            for <font className='text-danger'>1 organization to represent
+                            </font>
+                          </h5>
+                        <ListGroupItem>
+                          <h5 className='text-white'>
+                            <font className='text-info'>1 Participation Bit </font> is awarded
+                            <br />per CS student
+                          </h5>
+                        </ListGroupItem>
                       </ListGroup>
                     </Row>
                   </CardBody>
@@ -526,8 +522,7 @@ export default function AboutPage() {
                   <CardBody>
                     <Row>
                       <Col className="text-center" md="12">
-                        <h4 className="text-uppercase">Dark Coin</h4>
-                        <span>Plan</span>
+                        <h4 className="text-uppercase">Event Bits</h4>
                         <hr className="line-success" />
                       </Col>
                     </Row>
@@ -558,8 +553,7 @@ export default function AboutPage() {
                   <CardBody>
                     <Row>
                       <Col className="text-center" md="12">
-                        <h4 className="text-uppercase">Bright Coin</h4>
-                        <span>Plan</span>
+                        <h4 className="text-uppercase">Hosting Bits</h4>
                         <hr className="line-info" />
                       </Col>
                     </Row>
@@ -580,6 +574,9 @@ export default function AboutPage() {
               </Col>
             </Row>
           </Container>
+        </section>
+        <section className="section section-lg">
+          <Bits />
         </section>
         <Footer />
       </div>

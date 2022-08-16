@@ -117,7 +117,6 @@ export default function Bits() {
                     1 Participation Bit is awarded to each UTCS student that
                     chooses to represent a particular org <br />
                     <br />
-
                     <font className='text-success'>I'm not a UTCS student, but I
                     still want to participate! Is there a way for me to still be
                     a part of CS Week?</font><br />

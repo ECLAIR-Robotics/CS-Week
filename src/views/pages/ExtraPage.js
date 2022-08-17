@@ -22,9 +22,7 @@ import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import PageHeader from "components/PageHeader/PageHeader.js";
 import Footer from "components/Footer/Footer.js";
 
-import Introduction from "views/components/Introduction.js"
-
-export default function HomePage() {
+export default function ExtraPage() {
   React.useEffect(() => {
     document.body.classList.toggle("index-page");
     // Specify how to clean up after this effect:
@@ -39,7 +37,6 @@ export default function HomePage() {
       <div className="wrapper">
         <PageHeader />
         <div className="main">
-          <Introduction />
         </div>
        <Footer />
       </div>

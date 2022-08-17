@@ -298,10 +298,10 @@ export default function AboutPage() {
                       <h4 className="info-title">Covid-19</h4>
                       <hr className="line-info" />
                       <p>
-                        Computer science, as a field, can feel very independent
-                        and isolating at times. We hope students can take a break
-                        and look forward to something fun and exciting while being
-                        a part of a new college tradition
+                        The pandemic had a massive impact on in-person events
+                        especially in CS department. CS Week aims to provide fun
+                        team building activities to help transition away from
+                        virtual events
                       </p>
                     </div>
                   </Col>

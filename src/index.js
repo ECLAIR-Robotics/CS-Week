@@ -24,16 +24,19 @@ import "assets/scss/blk-design-system-react.scss?v=1.2.0";
 import "assets/demo/demo.css";
 
 import HomePage from "views/pages/HomePage.js";
-// import LandingPage from "views/examples/LandingPage.js";
-// import RegisterPage from "views/examples/RegisterPage.js";
-// import ProfilePage from "views/examples/ProfilePage.js";
 import AboutPage from "views/pages/AboutPage.js";
+import CorporatePage from "views/pages/CorporatePage.js";
+import ExtraPage from "views/pages/ExtraPage.js";
+import ScavengerPage from "views/pages/ScavengerPage";
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Route exact path="/" render={(props) => <HomePage {...props} />} />
       <Route path="/about" render={(props) => <AboutPage {...props} />} />
+      <Route path="/sponsor" render={(props) => <CorporatePage {...props} />} />
+      <Route path="/extra" render={(props) => <ExtraPage {...props} />} />
+      <Route path="/scavenger" render={(props) => <ScavengerPage {...props} />} />
       <Redirect to="/" />
     </Switch>
   </BrowserRouter>,

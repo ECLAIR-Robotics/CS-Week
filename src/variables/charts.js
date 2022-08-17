@@ -21,29 +21,25 @@ const bigChart = {
     let ctx = canvas.getContext("2d");
 
     let gradientFill = ctx.createLinearGradient(0, 230, 0, 50);
-
-    gradientFill.addColorStop(1, "rgba(29,140,248,0.2)");
-    gradientFill.addColorStop(0.4, "rgba(29,140,248,0.0)");
+    gradientFill.addColorStop(1, "rgba(29,140,248,0.4)");
     gradientFill.addColorStop(0, "rgba(29,140,248,0)"); //blue colors
+
+    let gradientFill2 = ctx.createLinearGradient(0, 230, 0, 50);
+    gradientFill2.addColorStop(1, "rgba(255,78,202,0.4)");
+    gradientFill2.addColorStop(0, "rgba(255,78,202,0)"); //pink colors
 
     return {
       labels: [
-        "JUN",
-        "FEB",
-        "MAR",
-        "APR",
-        "MAY",
-        "JUN",
-        "JUL",
-        "AUG",
-        "SEP",
-        "OCT",
-        "NOV",
-        "DEC",
+        "MON",
+        "TUE",
+        "WED",
+        "THUR",
+        "FRI",
+        "SAT"
       ],
       datasets: [
         {
-          label: "Data",
+          label: "ECLAIR",
           fill: true,
           backgroundColor: gradientFill,
           borderColor: "#1d8cf8",
@@ -57,8 +53,26 @@ const bigChart = {
           pointBorderWidth: 20,
           pointHoverRadius: 4,
           pointHoverBorderWidth: 15,
-          pointRadius: 4,
-          data: [80, 160, 200, 160, 250, 280, 220, 190, 200, 250, 290, 320],
+          pointRadius: 6,
+          data: [10, 20, 40, 80, 160, 320],
+        },
+        {
+          label: "Freetail Hackers",
+          fill: true,
+          backgroundColor: gradientFill2,
+          borderColor: "#ff4eca",
+          borderWidth: 2,
+          borderDash: [],
+          borderDashOffset: 0.0,
+          pointBackgroundColor: "#ff4eca",
+          pointBorderColor: "rgba(255,255,255,0)",
+          pointHoverBackgroundColor: "#5464ed",
+          //pointHoverBorderColor:'rgba(35,46,55,1)',
+          pointBorderWidth: 20,
+          pointHoverRadius: 4,
+          pointHoverBorderWidth: 15,
+          pointRadius: 6,
+          data: [10, 22, 38, 90, 140, 300],
         },
       ],
     };
@@ -66,7 +80,7 @@ const bigChart = {
   options: {
     maintainAspectRatio: false,
     legend: {
-      display: false,
+      display: true,
     },
 
     tooltips: {
@@ -92,7 +106,7 @@ const bigChart = {
           ticks: {
             display: false,
             suggestedMin: 0,
-            suggestedMax: 350,
+            suggestedMax: 100,
             padding: 20,
             fontColor: "#9a9a9a",
           },

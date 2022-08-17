@@ -178,15 +178,23 @@ export default function IndexNavbar({
                 </DropdownItem>
                 <DropdownItem tag={Link} to="/about">
                   <i className="tim-icons icon-bullet-list-67" />
-                  About
+                  About Us
                 </DropdownItem>
                 <DropdownItem tag={Link} to="/schedule">
                   <i className="tim-icons icon-calendar-60" />
                   Schedule
                 </DropdownItem>
-                <DropdownItem tag={Link} to="/scavenger-hunt">
+                <DropdownItem tag={Link} to="/scavenger">
                   <i className="tim-icons icon-puzzle-10" />
                   Scavenger Hunt
+                </DropdownItem>
+                <DropdownItem tag={Link} to="/sponsors">
+                  <i className="tim-icons icon-headphones" />
+                  Sponsors
+                </DropdownItem>
+                <DropdownItem tag={Link} to="/extra">
+                  <i className="tim-icons icon-trophy" />
+                  Extra Events
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>

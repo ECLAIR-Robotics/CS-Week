@@ -16,10 +16,17 @@
 
 */
 import React from "react";
+import { Line } from "react-chartjs-2";
+import bigChartData from "variables/charts.js";
+
+import {
+  Card,
+  CardHeader,
+} from "reactstrap";
 
 // core components
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
-import PageHeader from "components/PageHeader/PageHeader.js";
+import { ScavengerHeader } from "components/PageHeader/PageHeader.js";
 import Footer from "components/Footer/Footer.js";
 
 export default function ScavengerPage() {
@@ -35,9 +42,18 @@ export default function ScavengerPage() {
     <>
       <IndexNavbar />
       <div className="wrapper">
-        <PageHeader />
-        <div className="main">
-        </div>
+        <ScavengerHeader />
+          <Card className="card-chart card-plain">
+            <CardHeader>
+              <div className="chart-area"
+                  style={{'width' : '80%', 'margin-left' : 'auto', 'margin-right' : 'auto'}}>
+                <Line
+                  data={bigChartData.data}
+                  options={bigChartData.options}
+                />
+              </div>
+            </CardHeader>
+          </Card>
        <Footer />
       </div>
     </>

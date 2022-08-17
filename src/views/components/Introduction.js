@@ -33,25 +33,28 @@ export default function Introduction() {
         <Container>
           <Row className="justify-content-between align-items-center">
             <Col className="mb-5 mb-lg-0" lg="5">
-              <h1 className="text-success font-weight-light">
+              <h2 className="text-primary font-weight-light">
                 What is CS Week?
-              </h1>
-              <h4 className='text-white'>
+              </h2>
+              <p className="text-white mb-3">
                 CS Week is a week-long competition social between UTCS orgs. UTCS organizations
                 will be competing against each other in a series of challenges, activities, and
-                scavenger hunts to accumulate the most amount of Bits. 
-              </h4>
-              <Button
-                style={{
-                  paddingTop: '10px',
-                  boxSizing: 'content-box',
-                }}
-                className="btn-round"
-                color="warning"
-                href="/about"
-              >
-                Learn more about CS Week
-              </Button>
+                scavenger hunts to accumulate the most amount of Bits
+              </p>
+              <div className="btn-wrapper mb-3">
+                <h5 className="text-success d-inline">
+                  Learn more about CS Week
+                </h5>
+                <Button
+                  className="btn-link"
+                  color="success"
+                  href="/about"
+                  onClick={(e) => e.preventDefault()}
+                  size="sm"
+                >
+                  <i className="tim-icons icon-minimal-right" />
+                </Button>
+              </div>
             </Col>
             <Col lg="6">
               <UncontrolledCarousel

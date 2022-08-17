@@ -27,7 +27,7 @@ import HomePage from "views/pages/HomePage.js";
 import AboutPage from "views/pages/AboutPage.js";
 import CorporatePage from "views/pages/CorporatePage.js";
 import ExtraPage from "views/pages/ExtraPage.js";
-import ScavengerPage from "views/pages/ScavengerPage";
+import ScavengerPage from "views/pages/ScavengerPage.js";
 
 ReactDOM.render(
   <BrowserRouter>

@@ -39,6 +39,11 @@ export default function Bits() {
 
   return (
     <Container>
+      <img
+        alt="..."
+        className="path"
+        src={require("assets/img/path5.png").default}
+      />
       <h1 className={`text-primary font-weight-light`}>
         Bit System
       </h1>

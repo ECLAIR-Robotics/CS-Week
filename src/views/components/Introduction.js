@@ -42,18 +42,14 @@ export default function Introduction() {
                 scavenger hunts to accumulate the most amount of Bits
               </p>
               <div className="btn-wrapper mb-3">
-                <h5 className="text-success d-inline">
-                  Learn more about CS Week
-                </h5>
-                <Button
-                  className="btn-link"
-                  color="success"
+                <a
+                  className="font-weight text-success mt-5"
                   href="/about"
-                  onClick={(e) => e.preventDefault()}
-                  size="sm"
+                  onClick={() => {}}
                 >
-                  <i className="tim-icons icon-minimal-right" />
-                </Button>
+                  Learn more about CS Week{" "}
+                  <i className="tim-icons icon-minimal-right text-success" />
+                </a>
               </div>
             </Col>
             <Col lg="6">
@@ -62,6 +58,32 @@ export default function Introduction() {
                 indicators={false}
                 autoPlay={false}
               />
+            </Col>
+          </Row>
+        </Container>
+        <Container>
+          <Row className="justify-content-md-center">
+            <Col className="text-center" lg="8" md="12">
+              <h2 className="title">
+                Participating Organizations
+              </h2>
+              <h4 className="description">
+                Cause if you do, it can be yours for FREE. Hit the button below to
+                navigate to Creative Tim where you can find the design system in
+                React format. Start a new project or give an old Bootstrap project
+                a new look!
+              </h4>
+            </Col>
+            <Col className="text-center" lg="8" md="12">
+              <Button
+                className="btn-round"
+                color="info"
+                href="https://www.creative-tim.com/product/blk-design-system-react?ref=blkdsr-index-page-download-section"
+                role="button"
+                size="lg"
+              >
+                Download React
+              </Button>
             </Col>
           </Row>
         </Container>

@@ -35,6 +35,8 @@ import {
   UncontrolledTooltip,
 } from "reactstrap";
 import SignUpModal from "views/components/SignUpModal";
+import jwt_decode from "jwt-decode";
+import axios from "axios";
 
 export default function IndexNavbar({
   navColor='info'
@@ -43,8 +45,72 @@ export default function IndexNavbar({
   const [collapseOut, setCollapseOut] = React.useState("");
   const [color, setColor] = React.useState("navbar-transparent");
 
-  React.useEffect(() => {
+  const [googleToken, setGoogleToken] = React.useState('');
+  const [googleUser, setGoogleUser] = React.useState({});
 
+  // Google stuff
+  const [formModal, setFormModal] = React.useState(false);
+
+  React.useEffect(() => {
+    if (googleToken === '') {
+
+      const googleCallback = (res) => {
+        var userObject = jwt_decode(res.credential);
+        console.log('in google callback')
+        console.log(userObject);
+
+        if (userObject.hd === 'utexas.edu') {
+          console.log('utexas')
+
+          // Do API call to see if user exists
+          //axios.post('https://cs-week-api.herokuapp.com/auth/signin', {
+          axios.post('http://localhost:5000/auth/signin', {
+            google_id: res.credential,
+            email: userObject.email,
+          }).then((response) => {
+            // Check response status
+            if (response.status === 200){
+              var resJson = response.json();
+
+              if (resJson["create_user"]) {
+                // Redirect to a create user page
+                console.log('create user')
+              }
+              else {
+                console.log('do not create user')
+                // User exists. Sign them in
+                setGoogleUser(userObject);
+                setGoogleToken(res.credential);
+                document.getElementById('google_signup').hidden = true
+              }
+            }
+          }, (error) => {
+            // else: have the user sign in again
+          })
+        }
+        //else {
+        //  // Sign Out
+        //  setGoogleToken('');
+        //  setGoogleUser({});
+        //  document.getElementById('google_signup').hidden = false
+        //}
+      }
+
+      /* global google */
+      google.accounts.id.initialize({
+        client_id: "66587737847-galid6ft98binr278396v6lqm88b5ub2.apps.googleusercontent.com",
+        callback: googleCallback
+      })
+
+      google.accounts.id.renderButton(
+        document.getElementById("google_signup"),
+        { theme : "outline", size: "large" }
+      )
+    }
+  }, [googleToken])
+
+  // useEffect for changing the navcolor on each page
+  React.useEffect(() => {
     const changeColor = () => {
       if (
         document.documentElement.scrollTop > 99 ||
@@ -199,7 +265,10 @@ export default function IndexNavbar({
               </DropdownMenu>
             </UncontrolledDropdown>
             <NavItem>
-              <SignUpModal />
+              <SignUpModal
+                formModal={formModal}
+                setFormModal={setFormModal}
+                googleUser={googleUser}/>
             </NavItem>
           </Nav>
         </Collapse>

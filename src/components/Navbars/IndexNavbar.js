@@ -51,6 +51,8 @@ export default function IndexNavbar({
   // Google stuff
   const [formModal, setFormModal] = React.useState(false);
 
+  const [modalError, setErrorModal] = React.useState('');
+
   React.useEffect(() => {
     if (googleToken === '') {
 
@@ -64,17 +66,23 @@ export default function IndexNavbar({
 
           // Do API call to see if user exists
           //axios.post('https://cs-week-api.herokuapp.com/auth/signin', {
-          axios.post('http://localhost:5000/auth/signin', {
+          axios.post('https://cs-week-api.herokuapp.com/auth/signin', {
             google_id: res.credential,
             email: userObject.email,
           }).then((response) => {
             // Check response status
             if (response.status === 200){
-              var resJson = response.json();
+              var resJson = response.data;
+              console.log(resJson)
 
-              if (resJson["create_user"]) {
+              if (resJson.create_user) {
                 // Redirect to a create user page
                 console.log('create user')
+
+                // TEMP REMOVE LATER TODO (SAHIL)
+                setGoogleUser(userObject);
+                setGoogleToken(res.credential);
+                document.getElementById('google_signup').hidden = true
               }
               else {
                 console.log('do not create user')
@@ -86,14 +94,15 @@ export default function IndexNavbar({
             }
           }, (error) => {
             // else: have the user sign in again
+            setErrorModal(error);
           })
         }
-        //else {
-        //  // Sign Out
-        //  setGoogleToken('');
-        //  setGoogleUser({});
-        //  document.getElementById('google_signup').hidden = false
-        //}
+        else {
+          setErrorModal('Please select a utexas gmail account');
+          setGoogleToken('');
+          setGoogleUser({});
+          document.getElementById('google_signup').hidden = false
+        }
       }
 
       /* global google */
@@ -268,7 +277,9 @@ export default function IndexNavbar({
               <SignUpModal
                 formModal={formModal}
                 setFormModal={setFormModal}
-                googleUser={googleUser}/>
+                googleUser={googleUser}
+                modalError={modalError}
+                setErrorModal={setErrorModal}/>
             </NavItem>
           </Nav>
         </Collapse>

@@ -19,9 +19,6 @@ import React from "react";
 // reactstrap components
 import {
   Button,
-  DropdownItem,
-  DropdownMenu,
-  DropdownToggle,
   Form,
   FormGroup,
   Input,
@@ -29,7 +26,6 @@ import {
   InputGroupAddon,
   InputGroupText,
   Modal,
-  UncontrolledDropdown,
 } from "reactstrap";
 import classnames from "classnames";
 
@@ -37,37 +33,20 @@ export default function SignUpModal({
   formModal,
   setFormModal,
   googleUser,
+  modalError,
+  setErrorModal,
 }) {
 
   const [uteidFocus, setuteidFocus] = React.useState(false);
   const [emailFocus, setEmailFocus] = React.useState(false);
   const [majorFocus, setMajorFocus] = React.useState(false);
-  const [orgFocus, setOrgFocus] = React.useState(false);
-      //{googleUser && 
-      //  <UncontrolledDropdown nav>
-      //    <DropdownToggle
-      //      caret
-      //      color="default"
-      //      data-toggle="dropdown"
-      //      href="#pablo"
-      //      nav
-      //      onClick={(e) => e.preventDefault()}
-      //    >
-      //      <i className="fa fa-cogs d-lg-none d-xl-none" />
-      //      John Doe 
-      //    </DropdownToggle>
-      //    <DropdownMenu className="dropdown-with-icons">
-      //      <DropdownItem>
-      //        <i className="tim-icons icon-paper" />
-      //        Profile
-      //      </DropdownItem>
-      //      <DropdownItem>
-      //        <i className="tim-icons icon-paper" />
-      //        Logout
-      //      </DropdownItem>
-      //    </DropdownMenu>
-      //  </UncontrolledDropdown>
-      //}
+  const [orgFocus, setOrgFocus]     = React.useState(false);
+
+  function isEmpty(obj) {
+    return Object.keys(obj).length === 0;
+  }
+
+  const demoModal = (modalError !== '');
 
   return (
     <div>
@@ -79,6 +58,40 @@ export default function SignUpModal({
       >
         <i className="tim-icons icon-triangle-right-17" />
       </button>
+      {!isEmpty(googleUser) &&
+        <Button
+          className="nav-link d-none d-lg-block"
+          color="primary"
+          href="/profile"
+        >
+          {`${googleUser.name}  `}
+          <i className="tim-icons icon-minimal-right" />
+        </Button>
+      }
+      {modalError !== '' && 
+        <Modal isOpen={demoModal} toggle={() => setErrorModal('')}>
+          <div className="modal-header justify-content-center">
+            <button 
+              className="close"
+              onClick={() => setErrorModal('')}>
+              <i className="tim-icons icon-simple-remove" />
+            </button>
+            <h4 className="title title-up">Oh no! An error occurred</h4>
+          </div>
+          <div className="modal-body">
+            <p>{modalError}</p>
+          </div>
+          <div className="modal-footer ml-auto mr-auto">
+            <Button
+              color="danger"
+              type="button"
+              onClick={() => setErrorModal('')}
+            >
+              Close
+            </Button>
+          </div>
+        </Modal>
+      }
       {/* Start Form Modal */}
       <Modal
         modalClassName="modal-black"

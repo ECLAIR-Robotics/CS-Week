@@ -68,30 +68,28 @@ export default function SignUpModal({
           <i className="tim-icons icon-minimal-right" />
         </Button>
       }
-      {modalError !== '' && 
-        <Modal isOpen={demoModal} toggle={() => setErrorModal('')}>
-          <div className="modal-header justify-content-center">
-            <button 
-              className="close"
-              onClick={() => setErrorModal('')}>
-              <i className="tim-icons icon-simple-remove" />
-            </button>
-            <h4 className="title title-up">Oh no! An error occurred</h4>
-          </div>
-          <div className="modal-body">
-            <p>{modalError}</p>
-          </div>
-          <div className="modal-footer ml-auto mr-auto">
-            <Button
-              color="danger"
-              type="button"
-              onClick={() => setErrorModal('')}
-            >
-              Close
-            </Button>
-          </div>
-        </Modal>
-      }
+      <Modal isOpen={demoModal} toggle={() => setErrorModal('')}>
+        <div className="modal-header justify-content-center">
+          <button 
+            className="close"
+            onClick={() => setErrorModal('')}>
+            <i className="tim-icons icon-simple-remove" />
+          </button>
+          <h4 className="title title-up">Oh no! An error occurred</h4>
+        </div>
+        <div className="modal-body">
+          <p>{modalError}</p>
+        </div>
+        <div className="modal-footer ml-auto mr-auto">
+          <Button
+            color="danger"
+            type="button"
+            onClick={() => setErrorModal('')}
+          >
+            Close
+          </Button>
+        </div>
+      </Modal>
       {/* Start Form Modal */}
       <Modal
         modalClassName="modal-black"

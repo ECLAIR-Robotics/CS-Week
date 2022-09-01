@@ -58,11 +58,8 @@ export default function IndexNavbar({
 
       const googleCallback = (res) => {
         var userObject = jwt_decode(res.credential);
-        console.log('in google callback')
-        console.log(userObject);
 
         if (userObject.hd === 'utexas.edu') {
-          console.log('utexas')
 
           // Do API call to see if user exists
           //axios.post('https://cs-week-api.herokuapp.com/auth/signin', {
@@ -71,26 +68,24 @@ export default function IndexNavbar({
             email: userObject.email,
           }).then((response) => {
             // Check response status
-            if (response.status === 200){
+            if (response.status === 200) {
               var resJson = response.data;
-              console.log(resJson)
 
               if (resJson.create_user) {
-                // Redirect to a create user page
-                console.log('create user')
-
                 // TEMP REMOVE LATER TODO (SAHIL)
                 setGoogleUser(userObject);
                 setGoogleToken(res.credential);
-                document.getElementById('google_signup').hidden = true
+                document.getElementById('google_signup').hidden = true;
               }
               else {
-                console.log('do not create user')
                 // User exists. Sign them in
                 setGoogleUser(userObject);
                 setGoogleToken(res.credential);
-                document.getElementById('google_signup').hidden = true
+                document.getElementById('google_signup').hidden = true;
               }
+            }
+            else {
+              setErrorModal('An error occurred when signing in. Please try again.')
             }
           }, (error) => {
             // else: have the user sign in again
@@ -98,7 +93,9 @@ export default function IndexNavbar({
           })
         }
         else {
-          setErrorModal('Please select a utexas gmail account');
+          var temp = 'Only UT students are allowed to participate in CS Week. ';
+          temp += 'Please sign in using a gmail account authorized by the University of Texas at Austin.';
+          setErrorModal(temp);
           setGoogleToken('');
           setGoogleUser({});
           document.getElementById('google_signup').hidden = false

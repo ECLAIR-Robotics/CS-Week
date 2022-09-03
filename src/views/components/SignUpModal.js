@@ -58,7 +58,7 @@ export default function SignUpModal({
       >
         <i className="tim-icons icon-triangle-right-17" />
       </button>
-      {!isEmpty(googleUser) &&
+      {!isEmpty(googleUser) && googleUser.loading === undefined &&
         <Button
           className="nav-link d-none d-lg-block"
           color="primary"
@@ -66,6 +66,15 @@ export default function SignUpModal({
         >
           {`${googleUser.name}  `}
           <i className="tim-icons icon-minimal-right" />
+        </Button>
+      }
+      {!isEmpty(googleUser) && googleUser.loading !== undefined &&
+        <Button
+          className="nav-link d-none d-lg-block"
+          color="info"
+          href="/profile"
+        >
+          Loading...
         </Button>
       }
       <Modal isOpen={demoModal} toggle={() => setErrorModal('')}>

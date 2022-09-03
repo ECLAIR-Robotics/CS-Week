@@ -35,8 +35,14 @@ import {
   UncontrolledTooltip,
 } from "reactstrap";
 import SignUpModal from "views/components/SignUpModal";
-import jwt_decode from "jwt-decode";
 import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  clear,
+  setGoogleToken,
+  setGoogleUser
+} from "views/reduxFiles/reduxGoogle.js"
+import jwt_decode from 'jwt-decode';
 
 export default function IndexNavbar({
   navColor='info'
@@ -45,8 +51,11 @@ export default function IndexNavbar({
   const [collapseOut, setCollapseOut] = React.useState("");
   const [color, setColor] = React.useState("navbar-transparent");
 
-  const [googleToken, setGoogleToken] = React.useState('');
-  const [googleUser, setGoogleUser] = React.useState({});
+  const googleToken = useSelector((state) => state.reducer.jwt_key);
+  const googleUser = useSelector((state) => state.reducer.user);
+  console.log(googleToken)
+  console.log(googleUser)
+  const dispatch = useDispatch();
 
   // Google stuff
   const [formModal, setFormModal] = React.useState(false);
@@ -61,6 +70,9 @@ export default function IndexNavbar({
 
         if (userObject.hd === 'utexas.edu') {
 
+          document.getElementById('google_signup').hidden = true;
+          dispatch(setGoogleUser({'loading' : 'loading'}));
+
           // Do API call to see if user exists
           //axios.post('https://cs-week-api.herokuapp.com/auth/signin', {
           axios.post('https://cs-week-api.herokuapp.com/auth/signin', {
@@ -73,15 +85,13 @@ export default function IndexNavbar({
 
               if (resJson.create_user) {
                 // TEMP REMOVE LATER TODO (SAHIL)
-                setGoogleUser(userObject);
-                setGoogleToken(res.credential);
-                document.getElementById('google_signup').hidden = true;
+                dispatch(setGoogleUser(userObject));
+                dispatch(setGoogleToken(res.credential));
               }
               else {
                 // User exists. Sign them in
-                setGoogleUser(userObject);
-                setGoogleToken(res.credential);
-                document.getElementById('google_signup').hidden = true;
+                dispatch(setGoogleUser(userObject));
+                dispatch(setGoogleToken(res.credential));
               }
             }
             else {
@@ -89,15 +99,14 @@ export default function IndexNavbar({
             }
           }, (error) => {
             // else: have the user sign in again
-            setErrorModal(error);
+            setErrorModal(`${error}. If the error persists, please reach out to eclairrobotics@gmail.com for support.`);
           })
         }
         else {
           var temp = 'Only UT students are allowed to participate in CS Week. ';
           temp += 'Please sign in using a gmail account authorized by the University of Texas at Austin.';
           setErrorModal(temp);
-          setGoogleToken('');
-          setGoogleUser({});
+          dispatch(clear());
           document.getElementById('google_signup').hidden = false
         }
       }
@@ -113,7 +122,7 @@ export default function IndexNavbar({
         { theme : "outline", size: "large" }
       )
     }
-  }, [googleToken])
+  }, [googleToken, dispatch])
 
   // useEffect for changing the navcolor on each page
   React.useEffect(() => {

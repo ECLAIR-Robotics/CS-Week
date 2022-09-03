@@ -30,7 +30,6 @@ import {
   TabContent
 } from "reactstrap";
 import classnames from "classnames";
-import SignUpModal from "./SignUpModal";
 
 export default function Bits() {
   const [iconTabs, setIconsTabs] = React.useState(0);
@@ -132,9 +131,8 @@ export default function Bits() {
                     great opportunity to find people with similar interests!
                     <br />
                     <br />
-                    In order to sign up, please refer to the following link:
+                    In order to sign up, please login with your UT email.
                   </h4>
-                  <SignUpModal />
                 </TabPane>
                 <TabPane tabId="link1">
                   <h4 className='text-primary'>Event Bits are earned by attending

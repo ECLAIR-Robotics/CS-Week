@@ -29,16 +29,21 @@ import CorporatePage from "views/pages/CorporatePage.js";
 import ExtraPage from "views/pages/ExtraPage.js";
 import ScavengerPage from "views/pages/ScavengerPage.js";
 
+import { Provider } from 'react-redux'
+import store from "views/reduxFiles/store.js"
+
 ReactDOM.render(
-  <BrowserRouter>
-    <Switch>
-      <Route exact path="/" render={(props) => <HomePage {...props} />} />
-      <Route path="/about" render={(props) => <AboutPage {...props} />} />
-      <Route path="/sponsor" render={(props) => <CorporatePage {...props} />} />
-      <Route path="/extra" render={(props) => <ExtraPage {...props} />} />
-      <Route path="/scavenger" render={(props) => <ScavengerPage {...props} />} />
-      <Redirect to="/" />
-    </Switch>
-  </BrowserRouter>,
+  <Provider store={store}>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" render={(props) => <HomePage {...props} />} />
+        <Route path="/about" render={(props) => <AboutPage {...props} />} />
+        <Route path="/sponsor" render={(props) => <CorporatePage {...props} />} />
+        <Route path="/extra" render={(props) => <ExtraPage {...props} />} />
+        <Route path="/scavenger" render={(props) => <ScavengerPage {...props} />} />
+        <Redirect to="/" />
+      </Switch>
+    </BrowserRouter>,
+  </Provider>,
   document.getElementById("root")
 );

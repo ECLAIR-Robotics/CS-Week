@@ -16,7 +16,7 @@
 
 */
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 // reactstrap components
 import {
   Collapse,
@@ -53,9 +53,8 @@ export default function IndexNavbar({
 
   const googleToken = useSelector((state) => state.reducer.jwt_key);
   const googleUser = useSelector((state) => state.reducer.user);
-  console.log(googleToken)
-  console.log(googleUser)
   const dispatch = useDispatch();
+  const history = useHistory();
 
   // Google stuff
   const [formModal, setFormModal] = React.useState(false);
@@ -70,7 +69,7 @@ export default function IndexNavbar({
 
         if (userObject.hd === 'utexas.edu') {
 
-          document.getElementById('google_signup').hidden = true;
+          //document.getElementById('google_signup').hidden = true;
           dispatch(setGoogleUser({'loading' : 'loading'}));
 
           // Do API call to see if user exists
@@ -83,16 +82,14 @@ export default function IndexNavbar({
             if (response.status === 200) {
               var resJson = response.data;
 
+              dispatch(setGoogleUser(userObject));
+              dispatch(setGoogleToken(res.credential));
+
               if (resJson.create_user) {
-                // TEMP REMOVE LATER TODO (SAHIL)
-                dispatch(setGoogleUser(userObject));
-                dispatch(setGoogleToken(res.credential));
+                // If user doesn't have an account, create one
+                history.push('/register');
               }
-              else {
-                // User exists. Sign them in
-                dispatch(setGoogleUser(userObject));
-                dispatch(setGoogleToken(res.credential));
-              }
+
             }
             else {
               setErrorModal('An error occurred when signing in. Please try again.')
@@ -107,7 +104,7 @@ export default function IndexNavbar({
           temp += 'Please sign in using a gmail account authorized by the University of Texas at Austin.';
           setErrorModal(temp);
           dispatch(clear());
-          document.getElementById('google_signup').hidden = false
+          //document.getElementById('google_signup').hidden = false
         }
       }
 
@@ -122,7 +119,7 @@ export default function IndexNavbar({
         { theme : "outline", size: "large" }
       )
     }
-  }, [googleToken, dispatch])
+  }, [googleToken, dispatch, history])
 
   // useEffect for changing the navcolor on each page
   React.useEffect(() => {

@@ -16,6 +16,7 @@
 
 */
 import React from "react";
+import { useHistory } from "react-router-dom";
 // reactstrap components
 import {
   Button,
@@ -41,6 +42,7 @@ export default function SignUpModal({
   const [emailFocus, setEmailFocus] = React.useState(false);
   const [majorFocus, setMajorFocus] = React.useState(false);
   const [orgFocus, setOrgFocus]     = React.useState(false);
+  const history = useHistory();
 
   function isEmpty(obj) {
     return Object.keys(obj).length === 0;
@@ -55,14 +57,14 @@ export default function SignUpModal({
         href=""
         onClick={() => {setFormModal(true)}}
         style={{ background: "none", border: "none", padding: 0 }}
+        hidden={!isEmpty(googleUser)}
       >
-        <i className="tim-icons icon-triangle-right-17" />
       </button>
       {!isEmpty(googleUser) && googleUser.loading === undefined &&
         <Button
           className="nav-link d-none d-lg-block"
           color="primary"
-          href="/profile"
+          onClick={() => {history.push('/profile')}}
         >
           {`${googleUser.name}  `}
           <i className="tim-icons icon-minimal-right" />
@@ -72,7 +74,6 @@ export default function SignUpModal({
         <Button
           className="nav-link d-none d-lg-block"
           color="info"
-          href="/profile"
         >
           Loading...
         </Button>

@@ -31,6 +31,7 @@ import ScavengerPage from "views/pages/ScavengerPage.js";
 
 import { Provider } from 'react-redux'
 import store from "views/reduxFiles/store.js"
+import RegisterPage from "views/pages/RegisterPage.js";
 
 ReactDOM.render(
   <Provider store={store}>
@@ -41,6 +42,7 @@ ReactDOM.render(
         <Route path="/sponsor" render={(props) => <CorporatePage {...props} />} />
         <Route path="/extra" render={(props) => <ExtraPage {...props} />} />
         <Route path="/scavenger" render={(props) => <ScavengerPage {...props} />} />
+        <Route path="/register" render={(props) => <RegisterPage {...props} />} />
         <Redirect to="/" />
       </Switch>
     </BrowserRouter>,

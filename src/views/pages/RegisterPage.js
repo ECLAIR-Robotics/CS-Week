@@ -18,6 +18,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import classnames from "classnames";
+import axios from "axios";
+
 // reactstrap components
 import {
   Button,
@@ -35,6 +37,7 @@ import {
   Container,
   Row,
   Col,
+  Label,
 } from "reactstrap";
 
 // core components
@@ -52,6 +55,30 @@ export default function RegisterPage() {
 
   const googleToken = useSelector((state) => state.reducer.jwt_key);
   const googleUser = useSelector((state) => state.reducer.user);
+
+  // Form Values
+  const [eidValue, setEidValue] = React.useState('');
+  const [majorValue, setMajorValue] = React.useState('');
+  const [orgValue, setOrgValue] = React.useState('');
+
+
+  const createAccount = () => {
+    axios.put('https://cs-week-api.herokuapp.com/auth/create', {
+      google_id: googleToken,
+      uteid: eidValue,
+      major: majorValue,
+      org: orgValue,
+    }).then((response) => {
+      // Check response status
+      if (response.status === 200) {
+        // Redirect
+      }
+      else {
+      }
+    }, (error) => {
+      // else: have the user sign in again
+    })
+  }
 
   React.useEffect(() => {
     document.body.classList.toggle("register-page");
@@ -107,7 +134,7 @@ export default function RegisterPage() {
                         alt="..."
                         src={require("assets/img/square-purple-1.png").default}
                       />
-                      <CardTitle tag="h4">Register</CardTitle>
+                      <CardTitle tag="h4"> Register</CardTitle>
                     </CardHeader>
                     <CardBody>
                       <Form className="form">
@@ -124,7 +151,11 @@ export default function RegisterPage() {
                           <Input
                             placeholder={
                               googleUser.name === undefined ?
-                              "Full Name" : googleUser.name
+                              "Full Name" : ''
+                            }
+                            value={
+                              googleUser.name === undefined ?
+                              "" : googleUser.name
                             }
                             type="text"
                             onFocus={(e) => setFullNameFocus(true)}
@@ -144,7 +175,11 @@ export default function RegisterPage() {
                           <Input
                             placeholder={
                               googleUser.email === undefined ?
-                              "Email" : googleUser.email
+                              "Email" : ''
+                            }
+                            value={
+                              googleUser.email === undefined ?
+                              "" : googleUser.email
                             }
                             type="text"
                             onFocus={(e) => setEmailFocus(true)}
@@ -166,6 +201,7 @@ export default function RegisterPage() {
                             type="text"
                             onFocus={(e) => setEidFocus(true)}
                             onBlur={(e) => setEidFocus(false)}
+                            onChange={(e) => {setEidValue(e.target.value)}}
                           />
                         </InputGroup>
                         <InputGroup
@@ -175,14 +211,16 @@ export default function RegisterPage() {
                         >
                           <InputGroupAddon addonType="prepend">
                             <InputGroupText>
-                              <i className="tim-icons icon-key-25" />
+                              <i className="tim-icons icon-bulb-63" />
                             </InputGroupText>
                           </InputGroupAddon>
                           <Input
-                            placeholder="Major"
                             type="text"
+                            placeholder="Computer Science"
                             onFocus={(e) => setMajorFocus(true)}
                             onBlur={(e) => setMajorFocus(false)}
+                            onChange={(e) => {setMajorValue(e.target.value)}}
+                            id="selectMajor"
                           />
                         </InputGroup>
                         <InputGroup
@@ -196,17 +234,43 @@ export default function RegisterPage() {
                             </InputGroupText>
                           </InputGroupAddon>
                           <Input
-                            placeholder="Organization"
-                            type="text"
+                            type="select"
+                            name="select"
                             onFocus={(e) => setOrgFocus(true)}
                             onBlur={(e) => setOrgFocus(false)}
-                          />
+                            onChange={(e) => {setOrgValue(e.target.value)}}
+                          >
+                          <option>ABCS</option>
+                          <option>ACM/A4C</option>
+                          <option>Convergent</option>
+                          <option>CS Roadshow</option>
+                          <option>CS Transfer Society</option>
+                          <option>ECLAIR</option>
+                          <option>EGaDS</option>
+                          <option>Freetail Hackers</option>
+                          <option>UTPC</option>
+                          </Input>
                         </InputGroup>
                       </Form>
+                      <Label>
+                        Please note that you can select one organization to
+                        represent. You cannot change this later.
+                      </Label>
                     </CardBody>
                     <CardFooter>
-                      <Button className="btn-round" color="primary" size="lg">
-                        Get Started
+                      <Button
+                        className="btn-round"
+                        color="primary"
+                        size="lg"
+                        onClick={createAccount}
+                        disabled={
+                          googleUser.name === undefined ||
+                          googleUser.email === undefined ||
+                          eidValue === '' ||
+                          majorValue === ''
+                        }
+                        >
+                        Create account!
                       </Button>
                     </CardFooter>
                   </Card>

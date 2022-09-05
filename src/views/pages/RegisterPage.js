@@ -26,7 +26,6 @@ import {
   Card,
   CardHeader,
   CardBody,
-  CardFooter,
   CardImg,
   CardTitle,
   Form,
@@ -37,7 +36,6 @@ import {
   Container,
   Row,
   Col,
-  Label,
 } from "reactstrap";
 
 // core components
@@ -252,27 +250,26 @@ export default function RegisterPage() {
                           </Input>
                         </InputGroup>
                       </Form>
-                      <Label>
-                        Please note that you can select one organization to
-                        represent. You cannot change this later.
-                      </Label>
                     </CardBody>
-                    <CardFooter>
-                      <Button
-                        className="btn-round"
-                        color="primary"
-                        size="lg"
-                        onClick={createAccount}
-                        disabled={
-                          googleUser.name === undefined ||
-                          googleUser.email === undefined ||
-                          eidValue === '' ||
-                          majorValue === ''
-                        }
-                        >
-                        Create account!
-                      </Button>
-                    </CardFooter>
+                    <p className="text-white ml-4 mr-3">
+                      Please note that you can select <font className='text-success'> one </font>
+                      organization to represent.{" "}
+                    <font className='text-danger'>You cannot change this later.</font>
+                    </p>
+                    <Button
+                      className="btn-round ml-3 mr-3 mb-3 mt-2"
+                      color="primary"
+                      size="lg"
+                      onClick={createAccount}
+                      disabled={
+                        googleUser.name === undefined ||
+                        googleUser.email === undefined ||
+                        eidValue === '' ||
+                        majorValue === ''
+                      }
+                      >
+                      Create account!
+                    </Button>
                   </Card>
                 </Col>
               </Row>

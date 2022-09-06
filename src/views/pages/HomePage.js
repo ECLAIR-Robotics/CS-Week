@@ -20,9 +20,8 @@ import React from "react";
 // core components
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import { PageHeader } from "components/PageHeader/PageHeader.js";
-import Footer from "components/Footer/Footer.js";
 
-import Introduction from "views/components/Introduction.js"
+import OrgDisplay from "views/components/OrgDisplay.js"
 
 export default function HomePage() {
   React.useEffect(() => {
@@ -35,11 +34,11 @@ export default function HomePage() {
 
   return (
     <>
-      <IndexNavbar />
+      <IndexNavbar navColor='primary'/>
       <div className="wrapper">
         <PageHeader />
         <div className="main">
-          <Introduction />
+          <OrgDisplay />
         </div>
       </div>
     </>

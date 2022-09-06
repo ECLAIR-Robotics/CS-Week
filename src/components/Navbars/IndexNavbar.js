@@ -163,7 +163,13 @@ export default function IndexNavbar({
             <span> ECLAIR</span>
           </NavbarBrand>
           <UncontrolledTooltip placement="bottom" target="navbar-brand">
-            Coded by Sahil Jain
+            Coded by<br />
+            Sahil Jain<br /><br />
+            Designed by<br />
+            Irene Chamorro-Beckenhauer<br />
+            Taylor Mason<br />
+            Sujeong Oh<br />
+            Sai Veda Rallabandi<br />
           </UncontrolledTooltip>
           <button
             aria-expanded={collapseOpen}

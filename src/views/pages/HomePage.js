@@ -41,7 +41,6 @@ export default function HomePage() {
         <div className="main">
           <Introduction />
         </div>
-       <Footer />
       </div>
     </>
   )

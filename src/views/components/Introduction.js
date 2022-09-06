@@ -17,47 +17,77 @@
 */
 import React from "react";
 // reactstrap components
-import { Container, Row, Col, UncontrolledCarousel } from "reactstrap";
-
-const carouselItems = [
-  {
-    src: require("assets/img/denys.jpg").default,
-    altText: "",
-    caption: "",
-  },
-];
+import {
+Button,
+Col,
+Container,
+Row,
+} from "reactstrap";
 
 export default function Introduction() {
   return (
-      <div className="section">
+      <div className="section mb-5 mt-5">
         <Container>
-          <Row className="justify-content-between align-items-center">
-            <Col className="mb-5 mb-lg-0" lg="5">
-              <h2 className="text-primary font-weight-light">
-                What is CS Week?
-              </h2>
-              <p className="text-white mb-3">
-                CS Week is a week-long competition social between UTCS orgs. UTCS organizations
-                will be competing against each other in a series of challenges, activities, and
-                scavenger hunts to accumulate the most amount of Bits
-              </p>
-              <div className="btn-wrapper mb-3">
-                <a
-                  className="font-weight text-success mt-5"
-                  href="/about"
-                  onClick={() => {}}
-                >
-                  Learn more about CS Week{" "}
-                  <i className="tim-icons icon-minimal-right text-success" />
-                </a>
-              </div>
+          <Row className="row-grid justify-content-between">
+            <Col className="mt-lg-5" md="5">
+              <h1 className="text-white font-weight-light">
+                Level up your UTCS experience with one of our participating
+                student organizations
+              </h1>
             </Col>
-            <Col lg="6">
-              <UncontrolledCarousel
-                items={carouselItems}
-                indicators={false}
-                autoPlay={false}
-              />
+          </Row>
+          <Row className='row-grid justify-content-md-center'>
+            {/* Grid starts here */}
+            <Col lg="auto mr-2 ml-2">
+              <Row>
+                <Button color="primary" size="lg" className='mr-auto ml-auto'>
+                  ABCS
+                </Button>
+              </Row>
+              <Row>
+                <Button color="primary" size="lg" className='mr-auto ml-auto'>
+                  ACM/A4C
+                </Button>
+              </Row>
+              <Row>
+                <Button color="primary" size="lg" className='mr-auto ml-auto'>
+                  Convergent
+                </Button>
+              </Row>
+            </Col>
+            <Col lg="auto mr-2 ml-2">
+              <Row>
+                <Button color="primary" size="lg" className='mr-auto ml-auto'>
+                  CS Roadshow
+                </Button>
+              </Row>
+              <Row>
+                <Button color="primary" size="lg" className='mr-auto ml-auto'>
+                  CS Transfer Society
+                </Button>
+              </Row>
+              <Row>
+                <Button color="primary" size="lg" className='mr-auto ml-auto'>
+                  ECLAIR
+                </Button>
+              </Row>
+            </Col>
+            <Col lg="auto mr-2 ml-2">
+              <Row>
+                <Button color="primary" size="lg" className='mr-auto ml-auto'>
+                  EGaDS
+                </Button>
+              </Row>
+              <Row>
+                <Button color="primary" size="lg" className='mr-auto ml-auto'>
+                  Freetail Hackers
+                </Button>
+              </Row>
+              <Row>
+                <Button color="primary" size="lg" className='mr-auto ml-auto'>
+                  UTPC
+                </Button>
+              </Row>
             </Col>
           </Row>
         </Container>

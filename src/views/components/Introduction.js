@@ -36,58 +36,42 @@ export default function Introduction() {
               </h1>
             </Col>
           </Row>
-          <Row className='row-grid justify-content-md-center'>
+          <Row className='justify-content-md-center'>
             {/* Grid starts here */}
-            <Col lg="auto mr-2 ml-2">
-              <Row>
-                <Button color="primary" size="lg" className='mr-auto ml-auto'>
-                  ABCS
-                </Button>
-              </Row>
-              <Row>
-                <Button color="primary" size="lg" className='mr-auto ml-auto'>
-                  ACM/A4C
-                </Button>
-              </Row>
-              <Row>
-                <Button color="primary" size="lg" className='mr-auto ml-auto'>
-                  Convergent
-                </Button>
-              </Row>
+            <Col>
+              <Button color="primary" style={{width: "125px", height: "125px"}}>
+                ABCS
+              </Button>
+              <Button color="primary" style={{width: "125px", height: "125px"}}>
+                ACM/A4C
+              </Button>
+              <Button color="primary" style={{width: "125px", height: "125px"}}>
+                Convergent
+              </Button>
             </Col>
-            <Col lg="auto mr-2 ml-2">
-              <Row>
-                <Button color="primary" size="lg" className='mr-auto ml-auto'>
-                  CS Roadshow
-                </Button>
-              </Row>
-              <Row>
-                <Button color="primary" size="lg" className='mr-auto ml-auto'>
-                  CS Transfer Society
-                </Button>
-              </Row>
-              <Row>
-                <Button color="primary" size="lg" className='mr-auto ml-auto'>
-                  ECLAIR
-                </Button>
-              </Row>
+            <div className="w-100" />
+            <Col>
+              <Button color="primary" style={{width: "125px", height: "125px"}}>
+                CS Roadshow
+              </Button>
+              <Button color="primary" style={{width: "125px", height: "125px"}}>
+                CS Transfer Society
+              </Button>
+              <Button color="primary" style={{width: "125px", height: "125px"}}>
+                ECLAIR
+              </Button>
             </Col>
-            <Col lg="auto mr-2 ml-2">
-              <Row>
-                <Button color="primary" size="lg" className='mr-auto ml-auto'>
-                  EGaDS
-                </Button>
-              </Row>
-              <Row>
-                <Button color="primary" size="lg" className='mr-auto ml-auto'>
-                  Freetail Hackers
-                </Button>
-              </Row>
-              <Row>
-                <Button color="primary" size="lg" className='mr-auto ml-auto'>
-                  UTPC
-                </Button>
-              </Row>
+            <div className="w-100" />
+            <Col>
+              <Button color="primary" style={{width: "125px", height: "125px"}}>
+                EGaDS
+              </Button>
+              <Button color="primary" style={{width: "125px", height: "125px"}}>
+                Freetail Hackers
+              </Button>
+              <Button color="primary" style={{width: "125px", height: "125px"}}>
+                UTPC
+              </Button>
             </Col>
           </Row>
         </Container>

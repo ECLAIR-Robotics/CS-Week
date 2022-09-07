@@ -26,11 +26,12 @@ export default function GridButton({
   click=false,
   gridIndex=-1,
   setClick,
+  width='160px',
+  height='150px',
+  color='info',
 }) {
 
   const[isHover, setIsHover] = React.useState(false);
-
-  var color = 'info';
 
   if (click) {
     color = 'success';
@@ -52,7 +53,8 @@ export default function GridButton({
 
   return (
       <Button
-        style={{width: "160px", height: "160px"}}
+        className='mr-2 ml-2 mt-2 mb-2 btn-round'
+        style={{width: width, height: height}}
         color={color}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseExit}

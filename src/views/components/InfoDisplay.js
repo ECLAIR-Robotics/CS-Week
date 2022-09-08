@@ -23,6 +23,7 @@ Container,
 Row,
 } from "reactstrap";
 import GridButton from "./GridButton";
+import PaginatedImpact from "./PaginatedImpact";
 
 export default function InfoDisplay() {
 
@@ -63,10 +64,20 @@ export default function InfoDisplay() {
                 </div>}
               {clickGrid === 1 &&
                 <div>
-                  <h4 className="text-white font-weight-light">
-                    Students can only sign up for one organization.
-                  </h4>
+                  <blockquote>
+                    <p className="blockquote blockquote-danger justify-content-center">
+                      Students can only sign up for one organization
+                    </p>
+                    <p className="blockquote blockquote-info justify-content-center">
+                      Organizations compete by obtaining bits in events, scavenger hunts, and other activities
+                    </p>
+                    <p className="blockquote blockquote-primary justify-content-center">
+                      May the best organization win
+                    </p>
+                  </blockquote>
                 </div>}
+              {clickGrid === 2}
+              {clickGrid === 3 && <PaginatedImpact />}
             </Col>
             <Col className='ml-3'>
               {/* Grid starts here */}

@@ -23,6 +23,7 @@ Container,
 Row,
 } from "reactstrap";
 import GridButton from "./GridButton";
+import BitNavs from "./BitNavs";
 import PaginatedImpact from "./PaginatedImpact";
 
 export default function InfoDisplay() {
@@ -76,7 +77,7 @@ export default function InfoDisplay() {
                     </p>
                   </blockquote>
                 </div>}
-              {clickGrid === 2}
+              {clickGrid === 2 && <BitNavs />}
               {clickGrid === 3 && <PaginatedImpact />}
             </Col>
             <Col className='ml-3'>

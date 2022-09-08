@@ -212,16 +212,6 @@ export default function Bits() {
                   <h4 className='text-white'>
                     Bits for this Extra Events vary on the event itself
                     <br /> <br />
-                    <font className='text-success'>What challenges should I
-                    expect in the scavenger hunts?</font><br />
-                    We don't want to spoil any solutions, but there will both
-                    virtual and in person components. There will be multiple
-                    sections for each scavenger hunt, and you will be able to
-                    track your organization's progress here. Some challenges
-                    will be fairly intense while some may be tracking down
-                    the right information. The scavenger hunt may also differ
-                    day-to-day, so try not to panic too much. :)
-                    <br />
                   </h4>
                 </TabPane>
               </TabContent>

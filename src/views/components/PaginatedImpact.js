@@ -58,7 +58,7 @@ export default function PaginatedImpact() {
       {pageNum === 1 &&
         <div className="mt-4">
           <h3 className="text-white">
-            <i className="icon icon-info tim-icons icon-molecule-40 mr-3"
+            <i className="icon icon-info tim-icons icon-sound-wave mr-3"
               style={{'font-size': '1.8em'}}/>
             Covid-19
           </h3>

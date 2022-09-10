@@ -46,12 +46,12 @@ export default function OrgDisplay() {
     },
     {
       'name' : 'CS Roadshow',
-      'desc' : 'CS Roadshow visits local schools to share information about computing and computing careers.',
+      'desc' : 'We visit local K-12 schools to introduce students to the world of computer science, and teach them about how they can get involved.',
       'link' : 'https://www.cs.utexas.edu/roadshow/',
     },
     {
       'name' : 'CS Transfer Society',
-      'desc' : "We're a student org created by transfer students, for transfer students. We know firsthand how tough it can be to find your way and your people after transferring into the CS major or into UT more generally. If you're an internal transfer, external transfer, or ATP student we hope to see you there!",
+      'desc' : "We're a student org created by transfer students, for transfer students. We know firsthand how tough it can be to find your way and your people after transferring into the CS major or into UT more generally. If you're an internal transfer, external transfer, or ATP student we hope to see you!",
       'link' : 'https://www.cs.utexas.edu/undergraduate-program/student-organizations',
     },
     {
@@ -68,6 +68,11 @@ export default function OrgDisplay() {
       'name' : 'Freetail Hackers',
       'desc' : 'Freetail Hackers is an organization focused on bringing students who are passionate about technology together to build cool tech, learn new skills, and become involved in the hackathon and tech communities. We put on HackTX, an annual hackathon that brings students from all over the country to build new technology.',
       'link' : 'https://freetailhackers.com/',
+    },
+    {
+      'name' : 'Quantum Collective',
+      'desc' : 'The Quantum  Collective at UT Austin aims to provide a community where undergraduate students can engage with each other to learn, teach, and research topics within the field of Quantum Computing.',
+      'link' : 'https://quantum-collective.webflow.io/',
     },
     {
       'name' : 'UTPC',

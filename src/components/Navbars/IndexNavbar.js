@@ -207,48 +207,11 @@ export default function IndexNavbar({
             </Row>
           </div>
           <Nav navbar>
-            <NavItem className="p-0">
-              <NavLink
-                data-placement="bottom"
-                href="https://twitter.com/CreativeTim"
-                rel="noopener noreferrer"
-                target="_blank"
-                title="Follow us on Twitter"
-              >
-                <i className="fab fa-twitter" />
-                <p className="d-lg-none d-xl-none">Twitter</p>
-              </NavLink>
-            </NavItem>
-            <NavItem className="p-0">
-              <NavLink
-                data-placement="bottom"
-                href="https://www.facebook.com/CreativeTim"
-                rel="noopener noreferrer"
-                target="_blank"
-                title="Like us on Facebook"
-              >
-                <i className="fab fa-facebook-square" />
-                <p className="d-lg-none d-xl-none">Facebook</p>
-              </NavLink>
-            </NavItem>
-            <NavItem className="p-0">
-              <NavLink
-                data-placement="bottom"
-                href="https://www.instagram.com/CreativeTimOfficial"
-                rel="noopener noreferrer"
-                target="_blank"
-                title="Follow us on Instagram"
-              >
-                <i className="fab fa-instagram" />
-                <p className="d-lg-none d-xl-none">Instagram</p>
-              </NavLink>
-            </NavItem>
             <UncontrolledDropdown nav>
               <DropdownToggle
                 caret
                 color="default"
                 data-toggle="dropdown"
-                href="#pablo"
                 nav
                 onClick={(e) => e.preventDefault()}
               >
@@ -260,23 +223,15 @@ export default function IndexNavbar({
                   <i className="tim-icons icon-paper" />
                   Home
                 </DropdownItem>
-                <DropdownItem tag={Link} to="/about">
-                  <i className="tim-icons icon-bullet-list-67" />
-                  About Us
-                </DropdownItem>
                 <DropdownItem tag={Link} to="/schedule">
                   <i className="tim-icons icon-calendar-60" />
                   Schedule
                 </DropdownItem>
-                <DropdownItem tag={Link} to="/scavenger">
+                <DropdownItem tag={Link} to="/schedule">
                   <i className="tim-icons icon-puzzle-10" />
                   Scavenger Hunt
                 </DropdownItem>
-                <DropdownItem tag={Link} to="/sponsors">
-                  <i className="tim-icons icon-headphones" />
-                  Sponsors
-                </DropdownItem>
-                <DropdownItem tag={Link} to="/extra">
+                <DropdownItem tag={Link} to="/schedule">
                   <i className="tim-icons icon-trophy" />
                   Extra Events
                 </DropdownItem>

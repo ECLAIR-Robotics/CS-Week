@@ -71,8 +71,8 @@ export default function OrgDisplay() {
     },
     {
       'name' : 'Quantum Collective',
-      'desc' : 'The Quantum  Collective at UT Austin aims to provide a community where undergraduate students can engage with each other to learn, teach, and research topics within the field of Quantum Computing.',
-      'link' : 'https://quantum-collective.webflow.io/',
+      'desc' : 'The Quantum Collective at UT Austin aims to provide a community where undergraduate students can engage with each other to learn, teach, and research topics within the field of Quantum Computing.',
+      'link' : 'https://linktr.ee/qcut',
     },
     {
       'name' : 'UTPC',

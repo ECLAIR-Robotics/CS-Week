@@ -1,27 +1,56 @@
 import * as React from 'react';
-import Accordion from '@mui/material/Accordion';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import AccordionSummary from '@mui/material/AccordionSummary';
+import { styled } from '@mui/material/styles';
+import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
+import MuiAccordion from '@mui/material/Accordion';
+import MuiAccordionSummary from '@mui/material/AccordionSummary';
+import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import {
   Row,
   Col,
 } from "reactstrap";
 
+const Accordion = styled((props) => (
+  <MuiAccordion disableGutters elevation={0} square {...props} />
+))(({ theme }) => ({
+  border: `1px solid ${theme.palette.divider}`,
+  '&:not(:last-child)': {
+    borderBottom: 0,
+  },
+  '&:before': {
+    display: 'none',
+  },
+}));
+
+const AccordionSummary = styled((props) => (
+  <MuiAccordionSummary
+    {...props}
+  />
+))(({ theme }) => ({
+  backgroundColor:
+    theme.palette.mode === 'dark'
+      ? 'rgba(255, 255, 255, .05)'
+      : 'rgba(0, 0, 0, .03)',
+  flexDirection: 'row-reverse',
+  '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
+    transform: 'rotate(90deg)',
+  },
+  '& .MuiAccordionSummary-content': {
+    marginLeft: theme.spacing(1),
+  },
+}));
+
+const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+  padding: theme.spacing(2),
+  borderTop: '1px solid rgba(0, 0, 0, .125)',
+}));
+
 export default function ControlledAccordions({
   eventDay
 }) {
-  const [expanded, setExpanded] = React.useState(false);
 
-  // State variables for extra events
-  // false - unpersonalized, true - personalized
-  const [extraType, setExtraType] = React.useState(false);
-
-  React.useEffect(() => {
-    setExpanded('panel1');
-  },[]);
+  const [expanded, setExpanded] = React.useState('panel1');
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
@@ -180,67 +209,73 @@ export default function ControlledAccordions({
 
   return (
     <div>
-      <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+      <Accordion
+        expanded={expanded === 'panel1'}
+        onChange={handleChange('panel1')}
+        sx={{backgroundColor : "#1C248B"}}
+      >
         <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1bh-content"
-          id="panel1bh-header"
-          sx={{backgroundColor: "#1C248B"}}
+          aria-controls="panel1d-content"
+          id="panel1d-header"
+          sx={{backgroundColor : "#1C248B"}}
         >
-          <Typography sx={{ width: '33%', flexShrink: 0 }}>
-            Events
-          </Typography>
+          <Typography style={{'font-size' : '24px'}}>Events</Typography>
         </AccordionSummary>
-        <AccordionDetails sx={{backgroundColor: "#1C248B"}}>
-            <Col>
-          <Row>
-                {Object.keys(events[eventDay]).map((k, i) => {
-                  return <blockquote>
-                    <p className="blockquote blockquote-white justify-content-center">
-                      {events[eventDay][i]['name']} <br />
-                      {events[eventDay][i]['time']} <br />
-                      {events[eventDay][i]['loc']} <br />
-                    </p>
-                  </blockquote>
-                })}
-          </Row>
-            </Col>
+        <AccordionDetails>
+          <Col>
+            <Row>
+              {Object.keys(events[eventDay]).map((k, i) => {
+                return <blockquote>
+                  <p className="blockquote blockquote-white justify-content-center">
+                    {events[eventDay][i]['name']} <br />
+                    {events[eventDay][i]['time']} <br />
+                    {events[eventDay][i]['loc']} <br />
+                  </p>
+                </blockquote>
+              })}
+            </Row>
+          </Col>
         </AccordionDetails>
       </Accordion>
-      <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+      <Accordion
+        expanded={expanded === 'panel2'}
+        onChange={handleChange('panel2')}
+        sx={{backgroundColor : '#151D6E'}}
+      >
         <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2bh-content"
-          id="panel2bh-header"
-          sx={{backgroundColor: "#151D6E"}}
+          aria-controls="panel2d-content"
+          id="panel2d-header"
+          sx={{backgroundColor : '#151D6E'}}
         >
-          <Typography sx={{ width: '33%', flexShrink: 0}}>
-            Scavenger Hunt
-          </Typography>
+          <Typography style={{'font-size' : '24px'}}>Scavenger Hunts</Typography>
         </AccordionSummary>
-        <AccordionDetails sx={{backgroundColor: "#151D6E"}}>
+        <AccordionDetails>
           <Typography>
-            Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus,
-            varius pulvinar diam eros in elit. Pellentesque convallis laoreet
-            laoreet.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
+            sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+            sit amet blandit leo lobortis eget.
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+      <Accordion
+        expanded={expanded === 'panel3'}
+        onChange={handleChange('panel3')}
+        sx={{backgroundColor : '#0E153E'}}
+      >
         <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel3bh-content"
-          id="panel3bh-header"
-          sx={{backgroundColor: "#0E153E"}}
+          aria-controls="panel3d-content"
+          id="panel3d-header"
+          sx={{backgroundColor : '#0E153E'}}
         >
-          <Typography sx={{ width: '33%', flexShrink: 0}}>
-            Extra Events
-          </Typography>
+          <Typography style={{'font-size' : '24px'}}>Extra Events</Typography>
         </AccordionSummary>
-        <AccordionDetails sx={{backgroundColor: "#0E153E"}}>
+        <AccordionDetails>
           <Typography>
-            Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit
-            amet egestas eros, vitae egestas augue. Duis vel est augue.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
+            sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+            sit amet blandit leo lobortis eget.
           </Typography>
         </AccordionDetails>
       </Accordion>

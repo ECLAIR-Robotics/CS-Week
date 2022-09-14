@@ -34,6 +34,10 @@ export default function SchedulePage() {
   // State variables for main events & scavenger hunt
   const [eventDay, setEventDay] = React.useState(0);
 
+  // State variables for extra events
+  // false - unpersonalized, true - personalized
+  const [extraType, setExtraType] = React.useState(false);
+
   // UseEffect
   React.useEffect(() => {
     document.body.classList.toggle("landing-page");

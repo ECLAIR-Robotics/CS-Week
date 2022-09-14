@@ -17,11 +17,7 @@
 */
 import React from "react";
 // reactstrap components
-import {
-  Button,
-  Row,
-  Col,
-} from "reactstrap";
+import { View } from "react-native";
 
 // core components
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
@@ -56,12 +52,12 @@ export default function SchedulePage() {
       return <button
               style={{
                 'backgroundColor' : '#ff9343',
-                'font-size' : '20px',
+                'font-size' : '40px',
                 'color' : 'black',
                 'border' : '4px solid #000000',
                 'text-align' : 'center',
-                'width' : '50px',
-                'height' : '50px',
+                'width' : '100px',
+                'height' : '100px',
               }}    
              >
             {content}
@@ -71,12 +67,12 @@ export default function SchedulePage() {
     return <button
             style={{
               'backgroundColor' : '#ffffff',
-              'font-size' : '20px',
+              'font-size' : '40px',
               'color' : 'black',
               'border' : '2px solid #000000',
               'text-align' : 'center',
-              'width' : '50px',
-              'height' : '50px',
+              'width' : '100px',
+              'height' : '100px',
             }}    
             onClick={() => {setEventDay(id)}}
            >
@@ -86,28 +82,27 @@ export default function SchedulePage() {
 
   return (
     <>
-      <IndexNavbar navColor='warning'/>
-        <div className="wrapper">
-          <div className="page-header">
-            <div className="content-center">
-              <Row className="row-grid justify-content-between align-items-center text-left">
-                <Col lg="1">
-                  <Col>
-                    <DaysButton id={0} content='M'/>
-                    <DaysButton id={1} content='T'/>
-                    <DaysButton id={2} content='W'/>
-                    <DaysButton id={3} content='Th'/>
-                    <DaysButton id={4} content='F'/>
-                    <DaysButton id={5} content='S'/>
-                  </Col>
-                </Col>
-                <Col lg="10">
-                  <EventList eventDay={eventDay}/>
-                </Col>
-              </Row>
-            </div>
-          </div>
-      </div>
+        <IndexNavbar navColor='warning'/>
+      <View style={{
+          'display' : 'flex',
+          'flexDirection' : 'row',
+          'top' : '10%',
+          'left' : '10%',
+          'margin-top' : '100px',
+        }}
+      >
+        <View style={{'flex' : 1}}>
+          <DaysButton id={0} content='M'/>
+          <DaysButton id={1} content='T'/>
+          <DaysButton id={2} content='W'/>
+          <DaysButton id={3} content='Th'/>
+          <DaysButton id={4} content='F'/>
+          <DaysButton id={5} content='S'/>
+        </View>
+        <View style={{'flex' : 10}}>
+          <EventList eventDay={eventDay}/>
+        </View>
+      </View>
     </>
   );
 }

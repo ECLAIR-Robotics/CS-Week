@@ -210,7 +210,7 @@ export default function ControlledAccordions({
       },
       {
         'name' : 'N/A',
-        'time' : '4:00PM-:00PM',
+        'time' : '4:00PM-5:00PM',
         'loc'  : 'N/A',
       },
     ],
@@ -246,7 +246,7 @@ export default function ControlledAccordions({
           style={eventProps}
         >
           <Typography
-            style={{'font-size' : '24px', 'margin-left' : '10px',}}
+            style={{'font-size' : '40px', 'margin-left' : '10px',}}
           >
             Events
           </Typography>
@@ -256,7 +256,12 @@ export default function ControlledAccordions({
             <Row>
               {Object.keys(events[eventDay]).map((k, i) => {
                 return <blockquote>
-                  <p className="blockquote blockquote-white justify-content-center">
+                  <p className="blockquote blockquote-white justify-content-center"
+                    style={{
+                      'font-size' : '18px',
+                      'margin-left' : '30px'
+                    }}
+                  >
                     {events[eventDay][i]['name']} <br />
                     {events[eventDay][i]['time']} <br />
                     {events[eventDay][i]['loc']} <br />
@@ -279,7 +284,7 @@ export default function ControlledAccordions({
           sx={scavengerProps}
         >
           <Typography
-            style={{'font-size' : '24px', 'margin-left' : '10px',}}
+            style={{'font-size' : '40px', 'margin-left' : '10px',}}
           >
             Scavenger Hunts
           </Typography>
@@ -305,7 +310,7 @@ export default function ControlledAccordions({
           sx={extraProps}
         >
           <Typography
-            style={{'font-size' : '24px', 'margin-left' : '10px',}}
+            style={{'font-size' : '40px', 'margin-left' : '10px',}}
           >
             Extra Events
           </Typography>

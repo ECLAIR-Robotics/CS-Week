@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
-import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
@@ -43,8 +42,18 @@ const AccordionSummary = styled((props) => (
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(2),
-  borderTop: '1px solid rgba(0, 0, 0, .125)',
 }));
+
+function Rectangle ({
+  color
+}) {
+  return <div style={{
+    'display' : 'inline-block',
+    'background' : color,
+    'width' : '100%',
+    'height' : '60px',
+  }}></div>
+}
 
 export default function ControlledAccordions({
   eventDay
@@ -53,7 +62,7 @@ export default function ControlledAccordions({
   const [expanded, setExpanded] = React.useState('panel1');
 
   const handleChange = (panel) => (event, isExpanded) => {
-    setExpanded(isExpanded ? panel : false);
+    setExpanded(panel);
   };
 
   const events = [
@@ -207,19 +216,40 @@ export default function ControlledAccordions({
     ],
   ]
 
+  const eventProps = {
+    'backgroundColor' : "#1C248B",
+    'border-radius' : '40px 0px 0px 0px',
+  }
+
+  const scavengerProps = {
+    'backgroundColor' : '#151D6E',
+    'border-radius' : '40px 0px 0px 0px',
+    'margin-top' : '-30px'
+  }
+
+  const extraProps = {
+    'backgroundColor' : '#0E153E',
+    'border-radius' : '40px 0px 0px 0px',
+    'margin-top' : '-30px'
+  }
+
   return (
     <div>
       <Accordion
         expanded={expanded === 'panel1'}
         onChange={handleChange('panel1')}
-        sx={{backgroundColor : "#1C248B"}}
+        style={eventProps}
       >
         <AccordionSummary
           aria-controls="panel1d-content"
           id="panel1d-header"
-          sx={{backgroundColor : "#1C248B"}}
+          style={eventProps}
         >
-          <Typography style={{'font-size' : '24px'}}>Events</Typography>
+          <Typography
+            style={{'font-size' : '24px', 'margin-left' : '10px',}}
+          >
+            Events
+          </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Col>
@@ -237,17 +267,22 @@ export default function ControlledAccordions({
           </Col>
         </AccordionDetails>
       </Accordion>
+      <Rectangle color='#1C248B'/>
       <Accordion
         expanded={expanded === 'panel2'}
         onChange={handleChange('panel2')}
-        sx={{backgroundColor : '#151D6E'}}
+        sx={scavengerProps}
       >
         <AccordionSummary
           aria-controls="panel2d-content"
           id="panel2d-header"
-          sx={{backgroundColor : '#151D6E'}}
+          sx={scavengerProps}
         >
-          <Typography style={{'font-size' : '24px'}}>Scavenger Hunts</Typography>
+          <Typography
+            style={{'font-size' : '24px', 'margin-left' : '10px',}}
+          >
+            Scavenger Hunts
+          </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -258,17 +293,22 @@ export default function ControlledAccordions({
           </Typography>
         </AccordionDetails>
       </Accordion>
+      <Rectangle color='#151D6E'/>
       <Accordion
         expanded={expanded === 'panel3'}
         onChange={handleChange('panel3')}
-        sx={{backgroundColor : '#0E153E'}}
+        sx={extraProps}
       >
         <AccordionSummary
           aria-controls="panel3d-content"
           id="panel3d-header"
-          sx={{backgroundColor : '#0E153E'}}
+          sx={extraProps}
         >
-          <Typography style={{'font-size' : '24px'}}>Extra Events</Typography>
+          <Typography
+            style={{'font-size' : '24px', 'margin-left' : '10px',}}
+          >
+            Extra Events
+          </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>

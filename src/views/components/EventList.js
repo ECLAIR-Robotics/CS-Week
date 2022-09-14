@@ -5,15 +5,23 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-export default function ControlledAccordions() {
-  const [expanded, setExpanded] = React.useState(false);
+import {
+  Row,
+  Col,
+} from "reactstrap";
 
-  // State variables for main events & scavenger hunt
-  const [eventDay, setEventDay] = React.useState(0);
+export default function ControlledAccordions({
+  eventDay
+}) {
+  const [expanded, setExpanded] = React.useState(false);
 
   // State variables for extra events
   // false - unpersonalized, true - personalized
   const [extraType, setExtraType] = React.useState(false);
+
+  React.useEffect(() => {
+    setExpanded('panel1');
+  },[]);
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
@@ -177,21 +185,26 @@ export default function ControlledAccordions() {
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1bh-content"
           id="panel1bh-header"
+          sx={{backgroundColor: "#1C248B"}}
         >
           <Typography sx={{ width: '33%', flexShrink: 0 }}>
             Events
           </Typography>
         </AccordionSummary>
-        <AccordionDetails>
-          <blockquote>
-            {Object.keys(events[eventDay]).map((k, i) => {
-              return <p className="blockquote blockquote-info justify-content-center">
-                {events[eventDay][i]['name']} <br />
-                {events[eventDay][i]['time']} <br />
-                {events[eventDay][i]['loc']} <br />
-              </p>
-            })}
-          </blockquote>
+        <AccordionDetails sx={{backgroundColor: "#1C248B"}}>
+            <Col>
+          <Row>
+                {Object.keys(events[eventDay]).map((k, i) => {
+                  return <blockquote>
+                    <p className="blockquote blockquote-white justify-content-center">
+                      {events[eventDay][i]['name']} <br />
+                      {events[eventDay][i]['time']} <br />
+                      {events[eventDay][i]['loc']} <br />
+                    </p>
+                  </blockquote>
+                })}
+          </Row>
+            </Col>
         </AccordionDetails>
       </Accordion>
       <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
@@ -199,12 +212,13 @@ export default function ControlledAccordions() {
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2bh-content"
           id="panel2bh-header"
+          sx={{backgroundColor: "#151D6E"}}
         >
-          <Typography sx={{ width: '33%', flexShrink: 0 }}>
+          <Typography sx={{ width: '33%', flexShrink: 0}}>
             Scavenger Hunt
           </Typography>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails sx={{backgroundColor: "#151D6E"}}>
           <Typography>
             Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus,
             varius pulvinar diam eros in elit. Pellentesque convallis laoreet
@@ -217,27 +231,13 @@ export default function ControlledAccordions() {
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel3bh-content"
           id="panel3bh-header"
+          sx={{backgroundColor: "#0E153E"}}
         >
-          <Typography sx={{ width: '33%', flexShrink: 0 }}>
+          <Typography sx={{ width: '33%', flexShrink: 0}}>
             Extra Events
           </Typography>
         </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit
-            amet egestas eros, vitae egestas augue. Duis vel est augue.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel4bh-content"
-          id="panel4bh-header"
-        >
-          <Typography sx={{ width: '33%', flexShrink: 0 }}>Personal data</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails sx={{backgroundColor: "#0E153E"}}>
           <Typography>
             Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit
             amet egestas eros, vitae egestas augue. Duis vel est augue.

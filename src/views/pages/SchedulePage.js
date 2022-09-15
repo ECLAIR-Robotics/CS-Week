@@ -58,6 +58,9 @@ export default function SchedulePage() {
                 'text-align' : 'center',
                 'width' : '75px',
                 'height' : '75',
+                'font-family' : 'bdr-mono, sans-serif',
+                'font-style' : 'bold',
+                'font-weight' : 300,
               }}    
              >
             {content}
@@ -73,6 +76,9 @@ export default function SchedulePage() {
               'text-align' : 'center',
               'width' : '75px',
               'height' : '75px',
+              'font-family' : 'bdr-mono, sans-serif',
+              'font-style' : 'bold',
+              'font-weight' : 300,
             }}    
             onClick={() => {setEventDay(id)}}
            >

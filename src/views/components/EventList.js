@@ -233,6 +233,14 @@ export default function ControlledAccordions({
     'margin-top' : '-30px'
   }
 
+  const titleProps = {
+    'font-size' : '30px',
+    'margin-left' : '10px',
+    //'font-family' : 'bdr-mono, sans-serif',
+    //'font-style' : 'normal',
+    //'font-weight' : 300,
+  }
+
   return (
     <div>
       <Accordion
@@ -245,9 +253,7 @@ export default function ControlledAccordions({
           id="panel1d-header"
           style={eventProps}
         >
-          <Typography
-            style={{'font-size' : '30px', 'margin-left' : '10px',}}
-          >
+          <Typography style={titleProps}>
             Events
           </Typography>
         </AccordionSummary>
@@ -285,9 +291,7 @@ export default function ControlledAccordions({
           id="panel2d-header"
           sx={scavengerProps}
         >
-          <Typography
-            style={{'font-size' : '30px', 'margin-left' : '10px',}}
-          >
+          <Typography style={titleProps}>
             Scavenger Hunts
           </Typography>
         </AccordionSummary>
@@ -313,9 +317,7 @@ export default function ControlledAccordions({
           id="panel3d-header"
           sx={extraProps}
         >
-          <Typography
-            style={{'font-size' : '30px', 'margin-left' : '10px',}}
-          >
+          <Typography style={titleProps}>
             Extra Events
           </Typography>
         </AccordionSummary>

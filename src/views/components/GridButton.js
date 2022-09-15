@@ -54,7 +54,13 @@ export default function GridButton({
   return (
       <Button
         className='mr-2 ml-2 mt-2 mb-2 btn-round'
-        style={{width: width, height: height}}
+        style={{
+          'width'  : width,
+          'height' : height,
+          'font-family' : 'soleil, sans-serif',
+          'font-style' : 'bold',
+          'font-weight' : 300,
+        }}
         color={color}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseExit}

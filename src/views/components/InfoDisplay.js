@@ -91,8 +91,7 @@ export default function InfoDisplay() {
                       click={clickGrid === idx}
                       content={content.name}
                       setClick={setClickGrid}
-                      gridIndex={idx}
-                      color={'warning'}/>
+                      gridIndex={idx}/>
                   }
                   return <></>
                 })}
@@ -107,8 +106,7 @@ export default function InfoDisplay() {
                       click={clickGrid === idx}
                       content={content.name}
                       setClick={setClickGrid}
-                      gridIndex={idx}
-                      color={'warning'}/>
+                      gridIndex={idx}/>
                   }
                   return <></>
                 })}

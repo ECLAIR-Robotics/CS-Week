@@ -17,9 +17,6 @@
 */
 import React from "react";
 // reactstrap components
-import {
-Button,
-} from "reactstrap";
 
 export default function GridButton({
   content='',
@@ -28,16 +25,16 @@ export default function GridButton({
   setClick,
   width='160px',
   height='150px',
-  color='info',
+  color='#0E154E',
 }) {
 
   const[isHover, setIsHover] = React.useState(false);
 
   if (click) {
-    color = 'success';
+    color = '#42A560';
   }
   else if (isHover) {
-    color = '';
+    color = '#1C248B';
   }
 
   const handleMouseEnter = () => {
@@ -52,20 +49,28 @@ export default function GridButton({
 
 
   return (
-      <Button
-        className='mr-2 ml-2 mt-2 mb-2 btn-round'
+      <button
         style={{
           'width'  : width,
           'height' : height,
           'font-family' : 'soleil, sans-serif',
           'font-style' : 'bold',
           'font-weight' : 300,
+          'margin-top'    : '5px',
+          'margin-left'   : '5px',
+          'margin-right'  : '5px',
+          'margin-bottom' : '5px',
+          'backgroundColor' : color,
+          'border-color' : color,
+          'color' : '#ffffff',
+          'border-radius' : '34px',
+          'border' : 'none',
+          'outline' : 'none',
         }}
-        color={color}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseExit}
         onClick={() => setClick(gridIndex)}>
         {content}
-      </Button>
+      </button>
   );
 }

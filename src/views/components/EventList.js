@@ -224,7 +224,7 @@ export default function ControlledAccordions({
   const scavengerProps = {
     'backgroundColor' : '#151D6E',
     'border-radius' : '40px 0px 0px 0px',
-    'margin-top' : '-30px'
+    'margin-top' : '-30px',
   }
 
   const extraProps = {
@@ -246,12 +246,14 @@ export default function ControlledAccordions({
           style={eventProps}
         >
           <Typography
-            style={{'font-size' : '40px', 'margin-left' : '10px',}}
+            style={{'font-size' : '30px', 'margin-left' : '10px',}}
           >
             Events
           </Typography>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails
+          style={{height : `${window.innerHeight - 350}px`}}
+        >
           <Col>
             <Row>
               {Object.keys(events[eventDay]).map((k, i) => {
@@ -284,12 +286,14 @@ export default function ControlledAccordions({
           sx={scavengerProps}
         >
           <Typography
-            style={{'font-size' : '40px', 'margin-left' : '10px',}}
+            style={{'font-size' : '30px', 'margin-left' : '10px',}}
           >
             Scavenger Hunts
           </Typography>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails
+          style={{height : `${window.innerHeight - 350}px`}}
+        >
           <Typography>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
@@ -310,12 +314,14 @@ export default function ControlledAccordions({
           sx={extraProps}
         >
           <Typography
-            style={{'font-size' : '40px', 'margin-left' : '10px',}}
+            style={{'font-size' : '30px', 'margin-left' : '10px',}}
           >
             Extra Events
           </Typography>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails
+          style={{height : `${window.innerHeight - 350}px`}}
+        >
           <Typography>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor

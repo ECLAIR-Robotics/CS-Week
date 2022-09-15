@@ -32,7 +32,7 @@ export default function SchedulePage() {
 
   // State variables for extra events
   // false - unpersonalized, true - personalized
-  const [extraType, setExtraType] = React.useState(false);
+  // const [extraType, setExtraType] = React.useState(false);
 
   // UseEffect
   React.useEffect(() => {
@@ -56,8 +56,8 @@ export default function SchedulePage() {
                 'color' : 'black',
                 'border' : '4px solid #000000',
                 'text-align' : 'center',
-                'width' : '100px',
-                'height' : '100px',
+                'width' : '75px',
+                'height' : '75',
               }}    
              >
             {content}
@@ -71,8 +71,8 @@ export default function SchedulePage() {
               'color' : 'black',
               'border' : '2px solid #000000',
               'text-align' : 'center',
-              'width' : '100px',
-              'height' : '100px',
+              'width' : '75px',
+              'height' : '75px',
             }}    
             onClick={() => {setEventDay(id)}}
            >
@@ -82,11 +82,10 @@ export default function SchedulePage() {
 
   return (
     <>
-        <IndexNavbar navColor='warning'/>
+      <IndexNavbar navColor='warning'/>
       <View style={{
           'display' : 'flex',
           'flexDirection' : 'row',
-          'top' : '10%',
           'left' : '10%',
           'margin-top' : '100px',
         }}

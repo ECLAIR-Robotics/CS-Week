@@ -19,20 +19,10 @@
   "keywords": [
     "react",
     "reactjs",
-    "blk",
-    "blk-react",
     "design",
     "design-react",
     "system",
-    "system-react",
-    "design-system",
-    "design-system-react",
-    "blk-design",
-    "blk-design-react",
-    "blk-system",
-    "blk-system-react",
-    "blk-design-system",
-    "blk-design-system-react"
+    "system-react"
   ],
   "dependencies": {
     "@emotion/react": "^11.10.4",
@@ -51,7 +41,7 @@
     "gulp": "4.0.2",
     "gulp-append-prepend": "1.0.8",
     "jwt-decode": "^3.1.2",
-    "moment": "2.29.1",
+    "moment": "^2.29.4",
     "node-sass": "4.14.1",
     "node-sass-package-importer": "5.3.2",
     "nouislider": "14.6.3",

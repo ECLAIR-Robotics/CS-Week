@@ -96,7 +96,7 @@ export default function SchedulePage() {
           'margin-top' : '100px',
         }}
       >
-        <View style={{'flex' : 1}}>
+        <View style={{'flex' : 1, 'margin-top' : '2%'}}>
           <DaysButton id={0} content='M'/>
           <DaysButton id={1} content='T'/>
           <DaysButton id={2} content='W'/>

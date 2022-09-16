@@ -24,10 +24,7 @@ import axios from "axios";
 import {
   Button,
   Card,
-  CardHeader,
   CardBody,
-  CardImg,
-  CardTitle,
   Form,
   Input,
   InputGroupAddon,
@@ -74,6 +71,37 @@ export default function RegisterPage() {
     })
   }
 
+  if (googleUser.name === undefined) {
+    return (<div>
+      <IndexNavbar />
+      <Container>
+        <Col style={{
+            'width' : '500px',
+            'margin-left': 'auto',
+            'margin-right': 'auto',
+            'margin-top': '10%',
+          }}
+        >
+          <Card className="card-register">
+            <h4 style={{
+              'margin-right' : 'auto',
+              'margin-left' : 'auto',
+              'margin-top' : '20px',
+              'color' : '#e36ef4',
+              'font-size' : '40px',
+              'font-family': 'bdr-mono, sans-serif',
+              'font-style': 'normal',
+              'font-weight': 300,
+            }}>REGISTER</h4>
+            <h2 className="text-white ml-4 mr-3">
+              Please sign in using your utexas gmail account! ^_^
+            </h2>
+          </Card>
+        </Col>
+      </Container>
+    </div>)
+  }
+
   return (<div>
       <IndexNavbar />
       <Container>
@@ -85,13 +113,15 @@ export default function RegisterPage() {
           }}
         >
           <Card className="card-register">
-            <CardHeader>
-              <CardImg
-                alt="..."
-                src={require("assets/img/square-purple-1.png").default}
-              />
-              <CardTitle tag="h4">Register</CardTitle>
-            </CardHeader>
+            <h4 style={{
+              'margin-right' : 'auto',
+              'margin-left' : 'auto',
+              'color' : '#e36ef4',
+              'font-size' : '40px',
+              'font-family': 'bdr-mono, sans-serif',
+              'font-style': 'normal',
+              'font-weight': 300
+            }}>REGISTER</h4>
             <CardBody>
               <Form className="form">
                 <InputGroup
@@ -204,6 +234,7 @@ export default function RegisterPage() {
                   <option>ECLAIR</option>
                   <option>EGaDS</option>
                   <option>Freetail Hackers</option>
+                  <option>Quantum Collective</option>
                   <option>UTPC</option>
                   </Input>
                 </InputGroup>

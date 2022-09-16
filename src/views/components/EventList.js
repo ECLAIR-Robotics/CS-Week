@@ -299,13 +299,17 @@ export default function ControlledAccordions({
         <AccordionDetails
           style={{height : `${window.innerHeight - 350}px`}}
         >
-          <h4 className='text-primary' style={{
+          <h4 className='text-white' style={{
             'width' : '70%',
             'margin-left' : '17px',
           }}>Scavenger Hunts will be published at 9AM everyday on this website.
             These events will be designed in such a way that they will be
             <font className='text-warning'> very difficult to complete on your own, </font>
-            so we highly encourage you to work with others!
+            so we highly encourage you to work with others! You are allowed to use
+            ANY resource you wish to solve these puzzles.
+            <font className='text-danger'> Please DO NOT copy answers
+            from another organization!</font>
+            <br />
             <br />
           </h4>
           <Button color='danger' style={{'margin-left' : '17px'}}>
@@ -331,12 +335,22 @@ export default function ControlledAccordions({
         <AccordionDetails
           style={{height : `${window.innerHeight - 350}px`}}
         >
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-            sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
-          </Typography>
+          <h4 className='text-white'
+            style={{
+              'width' : '70%',
+              'margin-left' : '17px',
+            }}
+          >
+            <font className='text-warning'>Extra Events </font>are random,
+            miscellaneous ways to get extra points for your organization.
+            These typically consist of fun, unique activities to get you
+            out of your comfort zone
+            <br />
+            <br />
+          </h4>
+          <Button color='info' style={{'margin-left' : '17px'}}>
+            Extra events will be released on Sept. 26th!
+          </Button>
         </AccordionDetails>
       </Accordion>
     </div>

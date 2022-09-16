@@ -97,7 +97,12 @@ export default function OrgDisplay() {
           <Row className="row-grid justify-content-between">
             <Col className="mt-lg-5 mr-5" md="5" mt='3'>
               {clickGrid === -1 &&
-                <h1 className="text-white font-weight-light">
+                <h1 className="text-white font-weight-light"
+                  style={{
+                    'margin-top'    : 'auto',
+                    'margin-bottom' : 'auto',
+                  }}
+                >
                   Level up your UTCS experience with one of our participating
                   student organizations!
                 </h1>

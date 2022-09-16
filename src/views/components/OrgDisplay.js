@@ -33,51 +33,61 @@ export default function OrgDisplay() {
       'name' : 'ABCS',
       'desc' : 'The organization works to build and empower members of Texas Computer Science and the broader Black community to pursue technology related education and careers. We hope to inspire and equip the next diverse generation of thoughtful technologists!',
       'link' : 'https://www.cs.utexas.edu/~abcs/',
+      'picture' : 'assets/avatar/question.png',
     },
     {
       'name' : 'ACM/A4C',
       'desc' : 'The Association for Computing Machinery is a UT chapter of the national ACM, and exists to create a community among Computer Science students and anyone interested in technology. ACM holds events that serve its members and the community, and is focused on the advancement of computer science studies and research, furthering computing as a profession and a science.',
       'link' : 'http://texasacm.org/',
+      'picture' : 'assets/avatar/question.png',
     },
     {
       'name' : 'Convergent',
       'desc' : 'TX Convergent fosters collaboration within a multidisciplinary student body through hands-on projects, comprehensive education, and open-source philanthropic endeavors.',
       'link' : 'https://www.txconvergent.org/',
+      'picture' : 'assets/avatar/question.png',
     },
     {
       'name' : 'CS Roadshow',
       'desc' : 'We visit local K-12 schools to introduce students to the world of computer science, and teach them about how they can get involved.',
       'link' : 'https://www.cs.utexas.edu/roadshow/',
+      'picture' : 'assets/avatar/question.png',
     },
     {
       'name' : 'CS Transfer Society',
       'desc' : "We're a student org created by transfer students, for transfer students. We know firsthand how tough it can be to find your way and your people after transferring into the CS major or into UT more generally. If you're an internal transfer, external transfer, or ATP student we hope to see you!",
       'link' : 'https://www.cs.utexas.edu/undergraduate-program/student-organizations',
+      'picture' : 'assets/avatar/question.png',
     },
     {
       'name' : 'ECLAIR',
       'desc' : 'The Engineering and Computational Learning of Artificial Intelligence in Robotics (ECLAIR) is a club at UT Austin dedicated to helping all robot-loving students to transform their passionate robotics ideas into reality.',
       'link' : 'https://eclair-robotics.github.io/',
+      'picture' : 'assets/avatar/question.png',
     },
     {
       'name' : 'EGaDS',
       'desc' : 'The Electronic Game Developers Society, also known as EGaDS, is a student organization of the University of Texas at Austin, TX, completely dedicated to computer and video game development. We are currently one of the world’s largest nonprofit membership organizations serving all individuals who are aspirants to become game developers. We are totally committed to advancing their careers and enhancing the lives of game developers.',
       'link' : 'http://egads-austin.org/',
+      'picture' : 'assets/avatar/question.png',
     },
     {
       'name' : 'Freetail Hackers',
       'desc' : 'Freetail Hackers is an organization focused on bringing students who are passionate about technology together to build cool tech, learn new skills, and become involved in the hackathon and tech communities. We put on HackTX, an annual hackathon that brings students from all over the country to build new technology.',
       'link' : 'https://freetailhackers.com/',
+      'picture' : 'assets/avatar/question.png',
     },
     {
       'name' : 'Quantum Collective',
       'desc' : 'The Quantum Collective at UT Austin aims to provide a community where undergraduate students can engage with each other to learn, teach, and research topics within the field of Quantum Computing.',
       'link' : 'https://linktr.ee/qcut',
+      'picture' : 'assets/avatar/question.png',
     },
     {
       'name' : 'UTPC',
       'desc' : 'The International Collegiate Programming Contest is an algorithmic programming contest for college students. Teams of three, representing their university, work to solve the most real-world problems, fostering collaboration, creativity, innovation, and the ability to perform under pressure.',
       'link' : 'https://www.cs.utexas.edu/users/utpc/',
+      'picture' : 'assets/avatar/question.png',
     },
   ]
 
@@ -123,7 +133,8 @@ export default function OrgDisplay() {
                       click={clickGrid === idx}
                       content={content.name}
                       setClick={setClickGrid}
-                      gridIndex={idx}/>
+                      gridIndex={idx}
+                      picture={gridContent[idx].picture}/>
                   }
                   return <></>
                 })}
@@ -136,7 +147,8 @@ export default function OrgDisplay() {
                       click={clickGrid === idx}
                       content={content.name}
                       setClick={setClickGrid}
-                      gridIndex={idx}/>
+                      gridIndex={idx}
+                      picture={gridContent[idx].picture}/>
                   }
                   return <></>
                 })}
@@ -149,7 +161,8 @@ export default function OrgDisplay() {
                       click={clickGrid === idx}
                       content={content.name}
                       setClick={setClickGrid}
-                      gridIndex={idx}/>
+                      gridIndex={idx}
+                      picture={gridContent[idx].picture}/>
                   }
                   return <></>
                 })}

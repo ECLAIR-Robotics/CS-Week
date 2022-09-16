@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import {
   Row,
   Col,
+  Button
 } from "reactstrap";
 
 const Accordion = styled((props) => (
@@ -298,12 +299,18 @@ export default function ControlledAccordions({
         <AccordionDetails
           style={{height : `${window.innerHeight - 350}px`}}
         >
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
-            sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
-          </Typography>
+          <h4 className='text-primary' style={{
+            'width' : '70%',
+            'margin-left' : '17px',
+          }}>Scavenger Hunts will be published at 9AM everyday on this website.
+            These events will be designed in such a way that they will be
+            <font className='text-warning'> very difficult to complete on your own, </font>
+            so we highly encourage you to work with others!
+            <br />
+          </h4>
+          <Button color='danger' style={{'margin-left' : '17px'}}>
+            First scavenger hunt will be released on Sept. 26th!
+          </Button>
         </AccordionDetails>
       </Accordion>
       <Rectangle color='#151D6E'/>

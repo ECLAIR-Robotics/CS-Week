@@ -26,6 +26,7 @@ export default function GridButton({
   width='160px',
   height='150px',
   color='#0E154E',
+  picture='',
 }) {
 
   const[isHover, setIsHover] = React.useState(false);
@@ -48,7 +49,7 @@ export default function GridButton({
   }
 
 
-  return (
+  return (<>
       <button
         style={{
           'width'  : width,
@@ -72,5 +73,16 @@ export default function GridButton({
         onClick={() => setClick(gridIndex)}>
         {content}
       </button>
+      {picture !== '' && <img
+        alt=' '
+        className='path'
+        src={picture}
+        style={{
+          'width'  : 60,
+          'height' : 60,
+        }}
+      />
+    }
+    </>
   );
 }

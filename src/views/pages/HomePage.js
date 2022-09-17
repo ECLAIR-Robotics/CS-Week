@@ -22,7 +22,7 @@ import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import { PageHeader } from "components/PageHeader/PageHeader.js";
 
 import OrgDisplay from "views/components/OrgDisplay.js"
-import InfoDisplay from "views/components/InfoDisplay"
+import InfoDisplay from "views/components/InfoDisplay.js"
 
 export default function HomePage() {
   React.useEffect(() => {
@@ -33,8 +33,7 @@ export default function HomePage() {
     };
   },[]);
 
-  return (
-    <>
+  return (<>
       <IndexNavbar navColor='primary'/>
       <div className="wrapper">
         <PageHeader />

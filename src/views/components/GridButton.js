@@ -25,7 +25,7 @@ export default function GridButton({
   setClick,
   width='160px',
   height='150px',
-  color='#0E154E',
+  color='#070D30',
   picture='',
 }) {
 
@@ -35,7 +35,7 @@ export default function GridButton({
     color = '#42A560';
   }
   else if (isHover) {
-    color = '#1C248B';
+    color = '#2935CC';
   }
 
   const handleMouseEnter = () => {

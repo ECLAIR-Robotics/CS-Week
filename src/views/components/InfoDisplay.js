@@ -50,7 +50,7 @@ export default function InfoDisplay() {
   ]
 
   return (
-      <div className="section mb-5 mt-5 ml-5">
+      <div className="section" style={{backgroundColor: '#1C248B'}}>
         <Container>
           <Row className="row-grid justify-content-between">
             <Col className="mt-lg-5 mr-5" md="5" mt='3'>

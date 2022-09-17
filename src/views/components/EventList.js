@@ -255,6 +255,7 @@ export default function ControlledAccordions({
           style={eventProps}
         >
           <Typography style={titleProps}>
+            <i className="tim-icons icon-calendar-60 mr-3 mb-1"/>
             Events
           </Typography>
         </AccordionSummary>
@@ -293,6 +294,7 @@ export default function ControlledAccordions({
           sx={scavengerProps}
         >
           <Typography style={titleProps}>
+            <i className="tim-icons icon-puzzle-10 mr-3 mb-1" />
             Scavenger Hunts
           </Typography>
         </AccordionSummary>
@@ -329,6 +331,7 @@ export default function ControlledAccordions({
           sx={extraProps}
         >
           <Typography style={titleProps}>
+            <i className="tim-icons icon-trophy mr-3 mb-1"/>
             Extra Events
           </Typography>
         </AccordionSummary>

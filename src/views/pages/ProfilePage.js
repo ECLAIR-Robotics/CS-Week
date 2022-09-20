@@ -94,35 +94,45 @@ export default function ProfilePage() {
             'width' : '800px',
             'margin-left': 'auto',
             'margin-right': 'auto',
-            'margin-top': '15%',
+            'margin-top': '12%',
           }}
         >
-          <Card className="card-register" style={{height: '400px'}}>
-            <h4 className="mt-3" style={{
-              'margin-right' : 'auto',
-              'margin-left' : 'auto',
-              'color' : '#e36ef4',
-              'font-size' : '40px',
-              'font-family': 'bdr-mono, sans-serif',
-              'font-style': 'normal',
-              'font-weight': 300
-            }}>{googleUser.name}</h4>
+          <Card className="card-register" style={{height: '450px'}}>
+            <Row>
+              <Col>
+                <div>
+                  <h4 className="mt-3" style={{
+                    color : '#e36ef4',
+                    fontSize : '44px',
+                    fontFamily : 'bdr-mono, sans-serif',
+                    fontStyle : 'normal',
+                    fontWeight : 300,
+                    textAlign : 'center',
+                  }}>{googleUser.name}</h4>
+                </div>
+                <FormGroup className='ml-4 mr-5'>
+                  <label>UTEID</label>
+                  <Input defaultValue={userInfo.uteid} type="text" />
+                </FormGroup>
+                <FormGroup className='ml-4 mr-5'>
+                  <label>Email address</label>
+                  <Input defaultValue={userInfo.email} type="email" />
+                </FormGroup>
+              </Col>
+              <img
+                alt="..."
+                className="img-fluid rounded-circle shadow-lg"
+                src={require("assets/avatar/question.png").default}
+                style={{
+                  width: "180px",
+                  height: "180px",
+                  marginTop: "30px",
+                  marginRight: "120px",
+                }}
+              />
+            </Row>
             <CardBody>
-              <Form className='ml-3 mr-3'>
-                <Row>
-                  <Col md="6">
-                    <FormGroup>
-                      <label>Email address</label>
-                      <Input defaultValue={userInfo.email} type="email" />
-                    </FormGroup>
-                  </Col>
-                  <Col md="6">
-                    <FormGroup>
-                      <label>UTEID</label>
-                      <Input defaultValue={userInfo.uteid} type="text" />
-                    </FormGroup>
-                  </Col>
-                </Row>
+              <Form className='ml-2 mr-2'>
                 <Row>
                   <Col md="6">
                     <FormGroup>
@@ -130,9 +140,7 @@ export default function ProfilePage() {
                       <Input defaultValue={userInfo.major} type="text" />
                     </FormGroup>
                   </Col>
-                </Row>
-                <Row>
-                  <Col md="12">
+                  <Col md="6">
                     <FormGroup>
                       <label>Google Drive Extra Event Link</label>
                       <Input placeholder={userInfo.drive_link} type="text" />

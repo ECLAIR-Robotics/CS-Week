@@ -221,15 +221,15 @@ export default function ControlledAccordions({
   const extraProps = {
     'backgroundColor' : '#0E153E',
     'border-radius' : '40px 0px 0px 0px',
-    'margin-top' : '-30px'
+    'margin-top' : '-30px',
   }
 
   const titleProps = {
     'font-size' : '30px',
     'margin-left' : '10px',
-    //'font-family' : 'bdr-mono, sans-serif',
-    //'font-style' : 'normal',
-    //'font-weight' : 300,
+    'font-family' : 'bdr-mono, sans-serif',
+    'font-style' : 'normal',
+    'font-weight' : 300,
   }
 
   return (

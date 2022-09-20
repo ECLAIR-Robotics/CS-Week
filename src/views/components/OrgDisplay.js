@@ -164,7 +164,7 @@ export default function OrgDisplay() {
               <Col className='ml-5'>
                 <Row>
                   {gridContent.map((content, idx) => {
-                    if (idx === 6 || idx === 7 || idx === 8) {
+                    if (idx === 6 || idx === 7 || idx === 8 || idx === 9) {
                       return <GridButton
                         click={clickGrid === idx}
                         content={content.name}

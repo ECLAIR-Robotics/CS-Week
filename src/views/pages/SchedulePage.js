@@ -51,16 +51,16 @@ export default function SchedulePage() {
     if (eventDay === id) {
       return <button
               style={{
-                'backgroundColor' : '#ff9343',
-                'font-size' : '40px',
-                'color' : 'black',
-                'border' : '4px solid #000000',
-                'text-align' : 'center',
-                'width' : '75px',
-                'height' : '75',
-                'font-family' : 'bdr-mono, sans-serif',
-                'font-style' : 'bold',
-                'font-weight' : 300,
+                backgroundColor : '#ff9343',
+                fontSize : '40px',
+                color : 'black',
+                border : '4px solid #000000',
+                textAlign : 'center',
+                width : '75px',
+                height : '75',
+                fontFamily : 'bdr-mono, sans-serif',
+                fontStyle : 'bold',
+                fontWeight : 300,
               }}    
              >
             {content}
@@ -96,13 +96,16 @@ export default function SchedulePage() {
           'margin-top' : '100px',
         }}
       >
-        <View style={{'flex' : 1, 'margin-top' : '2%'}}>
-          <DaysButton id={0} content='M'/>
-          <DaysButton id={1} content='T'/>
-          <DaysButton id={2} content='W'/>
-          <DaysButton id={3} content='Th'/>
-          <DaysButton id={4} content='F'/>
-          <DaysButton id={5} content='S'/>
+        <View style={{
+          flex : 1,
+          marginTop : '2%',
+        }}>
+          <DaysButton id={0} content={'M'}/>
+          <DaysButton id={1} content={'T'}/>
+          <DaysButton id={2} content={'W'}/>
+          <DaysButton id={3} content={'Th'}/>
+          <DaysButton id={4} content={'F'}/>
+          <DaysButton id={5} content={'S'}/>
         </View>
         <View style={{'flex' : 10}}>
           <EventList eventDay={eventDay}/>

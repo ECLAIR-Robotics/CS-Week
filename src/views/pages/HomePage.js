@@ -37,10 +37,8 @@ export default function HomePage() {
       <IndexNavbar navColor='primary'/>
       <div className="wrapper">
         <PageHeader />
-        <div className="main">
-          <InfoDisplay />
-          <OrgDisplay />
-        </div>
+        <InfoDisplay />
+        <OrgDisplay />
       </div>
     </>
   )

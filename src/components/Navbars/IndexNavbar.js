@@ -88,7 +88,6 @@ export default function IndexNavbar({
                 // If user doesn't have an account, create one
                 history.push('/register');
               }
-
             }
             else {
               setErrorModal('An error occurred when signing in. Please try again.')

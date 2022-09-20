@@ -24,13 +24,12 @@ import "assets/scss/blk-design-system-react.scss?v=1.2.0";
 import "assets/demo/demo.css";
 
 import HomePage from "views/pages/HomePage.js";
-// import AboutPage from "views/pages/AboutPage.js";
-// import ScavengerPage from "views/pages/ScavengerPage.js";
 import SchedulePage from "views/pages/SchedulePage.js";
+import ProfilePage from "views/pages/ProfilePage.js";
+import RegisterPage from "views/pages/RegisterPage.js";
 
 import { Provider } from 'react-redux'
 import store from "views/reduxFiles/store.js"
-import RegisterPage from "views/pages/RegisterPage.js";
 
 ReactDOM.render(
   <Provider store={store}>
@@ -39,6 +38,7 @@ ReactDOM.render(
         <Route exact path="/" render={(props) => <HomePage {...props} />} />
         <Route path="/schedule" render={(props) => <SchedulePage {...props} />} />
         <Route path="/register" render={(props) => <RegisterPage {...props} />} />
+        <Route path="/profile" render={(props) => <ProfilePage {...props} />} />
         <Redirect to="/" />
       </Switch>
     </BrowserRouter>,

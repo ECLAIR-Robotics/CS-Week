@@ -23,27 +23,29 @@ import { Container } from "reactstrap";
 
 export function PageHeader() {
   return (
-    <div className="page-header header-filter" style={{
+    <div style={{
       backgroundImage : `url(${landingpage})`,
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
     }}>
-      <Container style={{
-        'top' : '60%',
-      }}>
-        <h3 style={{
-          'color' : '#E36EF4',
-        }}>UT AUSTIN</h3>
-        <h1
-          style={{
-            'font-size': '80px',
-            'font-family' : 'soleil, sans-serif',
-            'font-style' : 'bold',
-            'font-weight' : 300,
-          }} 
-        >CS Week</h1>
-        <h3>September 26th - October 1st</h3>
-      </Container>
+      <div className="page-header header-filter">
+        <Container style={{
+          'top' : '60%',
+        }}>
+          <h3 style={{
+            'color' : '#E36EF4',
+          }}>UT AUSTIN</h3>
+          <h1
+            style={{
+              'font-size': '80px',
+              'font-family' : 'soleil, sans-serif',
+              'font-style' : 'bold',
+              'font-weight' : 300,
+            }} 
+          >CS Week</h1>
+          <h3>September 26th - October 1st</h3>
+        </Container>
+      </div>
     </div>
   );
 }

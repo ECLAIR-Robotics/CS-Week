@@ -80,12 +80,12 @@ export default function ControlledAccordions({
         'loc'  : 'N/A',
       },
       {
-        'name' : 'N/A',
+        'name' : 'CS Transfer Society',
         'time' : '7:00PM-8:00PM',
         'loc'  : 'N/A',
       },
       {
-        'name' : 'N/A',
+        'name' : 'Quantum Collective',
         'time' : '8:00PM-9:00PM',
         'loc'  : 'N/A',
       },
@@ -98,17 +98,17 @@ export default function ControlledAccordions({
     // Tuesday Events
     [
       {
-        'name' : 'N/A',
+        'name' : 'Convergent',
         'time' : '5:00PM-6:00PM',
         'loc'  : 'N/A',
       },
       {
-        'name' : 'N/A',
+        'name' : 'EGaDS',
         'time' : '6:00PM-8:00PM',
         'loc'  : 'N/A',
       },
       {
-        'name' : 'N/A',
+        'name' : 'ECLAIR',
         'time' : '8:00PM-9:00PM',
         'loc'  : 'N/A',
       },
@@ -121,7 +121,7 @@ export default function ControlledAccordions({
     // Wednesday Events
     [
       {
-        'name' : 'N/A',
+        'name' : 'Freetail Hackers',
         'time' : '5:00PM-6:00PM',
         'loc'  : 'N/A',
       },
@@ -146,16 +146,6 @@ export default function ControlledAccordions({
       {
         'name' : 'ACM',
         'time' : '6:00PM-7:00PM',
-        'loc'  : 'N/A',
-      },
-      {
-        'name' : 'ECLAIR',
-        'time' : '7:00PM-8:00PM',
-        'loc'  : 'N/A',
-      },
-      {
-        'name' : 'Convergent',
-        'time' : '8:00PM-9:00PM',
         'loc'  : 'N/A',
       },
       {

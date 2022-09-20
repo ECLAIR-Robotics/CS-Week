@@ -17,6 +17,7 @@
 */
 import React from "react";
 import { useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
 import classnames from "classnames";
 import axios from "axios";
 
@@ -46,6 +47,7 @@ export default function RegisterPage() {
 
   const googleToken = useSelector((state) => state.reducer.jwt_key);
   const googleUser = useSelector((state) => state.reducer.user);
+  const history = useHistory();
 
   // Form Values
   const [eidValue, setEidValue] = React.useState('');
@@ -63,6 +65,7 @@ export default function RegisterPage() {
       // Check response status
       if (response.status === 200) {
         // Redirect
+        history.push('/profile');
       }
       else {
       }
@@ -83,7 +86,7 @@ export default function RegisterPage() {
           }}
         >
           <Card className="card-register">
-            <h4 style={{
+            <h4 className="mt-3" style={{
               'margin-right' : 'auto',
               'margin-left' : 'auto',
               'margin-top' : '20px',
@@ -93,7 +96,7 @@ export default function RegisterPage() {
               'font-style': 'normal',
               'font-weight': 300,
             }}>REGISTER</h4>
-            <h2 className="text-white ml-4 mr-3">
+            <h2 className="text-white ml-4 mr-3 mt-3">
               Please sign in using your utexas gmail account! ^_^
             </h2>
           </Card>

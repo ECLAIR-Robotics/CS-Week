@@ -52,21 +52,22 @@ export default function GridButton({
   return (<>
       <button
         style={{
-          'width'  : width,
-          'height' : height,
-          'font-family' : 'soleil, sans-serif',
-          'font-style' : 'bold',
-          'font-weight' : 300,
-          'margin-top'    : '5px',
-          'margin-left'   : '5px',
-          'margin-right'  : '5px',
-          'margin-bottom' : '5px',
-          'backgroundColor' : color,
-          'border-color' : color,
-          'color' : '#ffffff',
-          'border-radius' : '34px',
-          'border' : 'none',
-          'outline' : 'none',
+          width  : width,
+          height : height,
+          fontFamily: 'bdr-mono, sans-serif',
+          fontStyle: 'normal',
+          fontWeight: '300',
+          fontSize: '20px',
+          marginTop    : '5px',
+          marginLeft   : '5px',
+          marginRight  : '5px',
+          marginBottom : '5px',
+          backgroundColor : color,
+          borderColor : color,
+          color : '#ffffff',
+          borderRadius : '34px',
+          border : 'none',
+          outline : 'none',
         }}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseExit}

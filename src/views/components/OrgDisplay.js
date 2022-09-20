@@ -99,8 +99,8 @@ export default function OrgDisplay() {
               {clickGrid === -1 &&
                 <h1 className="text-white font-weight-light"
                   style={{
-                    'margin-top'    : 'auto',
-                    'margin-bottom' : 'auto',
+                    marginTop    : 'auto',
+                    marginBottom : 'auto',
                   }}
                 >
                   Level up your UTCS experience with one of our participating
@@ -132,45 +132,49 @@ export default function OrgDisplay() {
             <Col className='ml-3'>
               {/* Grid starts here */}
               <Col className='ml-5'>
-                {gridContent.map((content, idx) => {
-                  if (idx === 0 || idx === 1 || idx === 2) {
-                    return <GridButton
-                      click={clickGrid === idx}
-                      content={content.name}
-                      setClick={setClickGrid}
-                      gridIndex={idx}
-                      picture={gridContent[idx].picture}/>
-                  }
-                  return <></>
-                })}
+                <Row>
+                  {gridContent.map((content, idx) => {
+                    if (idx === 0 || idx === 1 || idx === 2) {
+                      return <GridButton
+                        click={clickGrid === idx}
+                        content={content.name}
+                        setClick={setClickGrid}
+                        gridIndex={idx}
+                        picture={gridContent[idx].picture}/>
+                    }
+                    return <></>
+                  })}
+                </Row>
               </Col>
-              <div className="w-100" />
               <Col className='ml-5'>
-                {gridContent.map((content, idx) => {
-                  if (idx === 3 || idx === 4 || idx === 5) {
-                    return <GridButton
-                      click={clickGrid === idx}
-                      content={content.name}
-                      setClick={setClickGrid}
-                      gridIndex={idx}
-                      picture={gridContent[idx].picture}/>
-                  }
-                  return <></>
-                })}
+                <Row>
+                  {gridContent.map((content, idx) => {
+                    if (idx === 3 || idx === 4 || idx === 5) {
+                      return <GridButton
+                        click={clickGrid === idx}
+                        content={content.name}
+                        setClick={setClickGrid}
+                        gridIndex={idx}
+                        picture={gridContent[idx].picture}/>
+                    }
+                    return <></>
+                  })}
+                </Row>
               </Col>
-              <div className="w-100" />
               <Col className='ml-5'>
-                {gridContent.map((content, idx) => {
-                  if (idx === 6 || idx === 7 || idx === 8) {
-                    return <GridButton
-                      click={clickGrid === idx}
-                      content={content.name}
-                      setClick={setClickGrid}
-                      gridIndex={idx}
-                      picture={gridContent[idx].picture}/>
-                  }
-                  return <></>
-                })}
+                <Row>
+                  {gridContent.map((content, idx) => {
+                    if (idx === 6 || idx === 7 || idx === 8) {
+                      return <GridButton
+                        click={clickGrid === idx}
+                        content={content.name}
+                        setClick={setClickGrid}
+                        gridIndex={idx}
+                        picture={gridContent[idx].picture}/>
+                    }
+                    return <></>
+                  })}
+                </Row>
               </Col>
             </Col>
           </Row>

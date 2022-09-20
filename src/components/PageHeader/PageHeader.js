@@ -30,17 +30,21 @@ export function PageHeader() {
     }}>
       <div className="page-header header-filter">
         <Container style={{
-          'top' : '60%',
+          top : '64%',
+          fontFamily: 'bdr-mono, sans-serif',
+          fontStyle: 'normal',
+          fontWeight: '300',
         }}>
           <h3 style={{
-            'color' : '#E36EF4',
+            color : '#E36EF4',
           }}>UT AUSTIN</h3>
           <h1
             style={{
-              'font-size': '80px',
-              'font-family' : 'soleil, sans-serif',
-              'font-style' : 'bold',
-              'font-weight' : 300,
+              fontSize: '80px',
+              fontFamily : 'soleil, sans-serif',
+              fontStyle : 'bold',
+              fontWeight : 300,
+              marginTop: '-15px',
             }} 
           >CS Week</h1>
           <h3>September 26th - October 1st</h3>

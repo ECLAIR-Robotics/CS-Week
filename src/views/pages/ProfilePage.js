@@ -87,6 +87,27 @@ export default function ProfilePage() {
     </div>)
   }
 
+  if (isEmpty(userInfo)) {
+    return (<div>
+      <IndexNavbar />
+      <Container>
+        <Col style={{
+            'width' : '500px',
+            'margin-left': 'auto',
+            'margin-right': 'auto',
+            'margin-top': '10%',
+          }}
+        >
+          <Card className="card-register">
+            <h2 className="text-white ml-4 mr-3 mt-3">
+              Loading...
+            </h2>
+          </Card>
+        </Col>
+      </Container>
+    </div>)
+  }
+
   return (<div>
       <IndexNavbar />
       <Container>
@@ -144,6 +165,68 @@ export default function ProfilePage() {
                     <FormGroup>
                       <label>Google Drive Extra Event Link</label>
                       <Input placeholder={userInfo.drive_link} type="text" />
+                    </FormGroup>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col md="6">
+                    <FormGroup>
+                    <label>Attendance</label>
+                    <Row className='ml-1'>
+                      {userInfo.attendance.map((bool, idx) => {
+                        const color = bool ? '#00f2c3' : '#1d8cf8';
+
+                        return <blockquote>
+                          <p style={{
+                              marginLeft : '5px',
+                              width : '45px',
+                              height : '45px',
+                              textAlign : 'center',
+                              color: color,
+                              borderColor: color,
+                              borderStyle: 'solid',
+                              borderWidth: '1px',
+                            }}
+                          >
+                          {bool}
+                          </p>
+                        </blockquote>
+                      })}
+                    </Row>
+                    </FormGroup>
+                  </Col>
+                  <Col md='6'>
+                    <FormGroup>
+                    <label>Extra Events</label>
+                    <Row className='ml-1'>
+                      {userInfo.extra.map((num, idx) => {
+                        var color = 'white';
+
+                        if (num === 1) {
+                          color = '#00f2c3';
+                        }
+                        else if (num === -1) {
+                          color = '#ff8d72';
+                        }
+
+                        return <p className=""
+                            style={{
+                              marginLeft : '5px',
+                              width : '45px',
+                              height : '45px',
+                              textAlign : 'center',
+                              color: color,
+                              borderColor: color,
+                              borderStyle: 'solid',
+                              borderWidth: '1px',
+                              verticalAlign: 'auto',
+                              top: '50%',
+                            }}
+                          >
+                          {idx}
+                          </p>
+                      })}
+                    </Row>
                     </FormGroup>
                   </Col>
                 </Row>

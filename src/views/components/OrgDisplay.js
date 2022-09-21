@@ -92,7 +92,7 @@ export default function OrgDisplay() {
   ]
 
   return (
-      <div className="section" style={{backgroundColor: '#0e154e'}}>
+      <div className="section" style={{backgroundColor: '#232B95'}}>
         <Container>
           <Row className="row-grid justify-content-between">
             <Col className="mt-lg-5 mr-5" md="5" mt='3'>

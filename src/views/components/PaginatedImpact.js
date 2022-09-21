@@ -109,7 +109,7 @@ export default function PaginatedImpact() {
           <h3 className="text-white">
             <i className="icon icon-success tim-icons icon-single-02 mr-3"
               style={{'font-size': '1.8em'}}/>
-            Community Building
+            Diversity, Equity, and Inclusion
           </h3>
           <h4>
             We strongly believe that the most vocal initiative should not

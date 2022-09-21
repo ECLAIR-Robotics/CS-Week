@@ -45,33 +45,12 @@ export function PageHeader() {
               fontStyle : 'bold',
               fontWeight : 300,
               marginTop: '-15px',
+              marginLeft: '-8px',
             }} 
           >CS Week</h1>
           <h3>September 26th - October 1st</h3>
         </Container>
       </div>
-    </div>
-  );
-}
-
-
-
-// No longer using this since scavenger is part of the schedule
-export function ScavengerHeader() {
-  return (
-    <div className="page-header header-filter">
-      <div className="squares square1" />
-      <div className="squares square2" />
-      <div className="squares square3" />
-      <div className="squares square4" />
-      <div className="squares square5" />
-      <div className="squares square6" />
-      <div className="squares square7" />
-      <Container>
-        <div className="content-center brand">
-          <h1 className="h1-seo text-primary">Scavenger Hunt</h1>
-        </div>
-      </Container>
     </div>
   );
 }

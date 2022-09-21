@@ -71,7 +71,7 @@ class BitNavs extends React.Component {
                     onClick={e => this.toggleTabs(e, "plainTabs", 2)}
                   >
                     <i className={`icon tim-icons icon-trophy ${
-                      this.state.plainTabs === 2 && 'icon-info'
+                      this.state.plainTabs === 2 && 'icon-danger'
                     }`} />
                   </NavLink>
                 </NavItem>
@@ -120,13 +120,13 @@ class BitNavs extends React.Component {
             <TabPane tabId="plainTabs1">
               <h4 className='text-white'>
               <font className='text-success'>Participation Bits </font>are earned by
-                students signing up for CS Week. 1 Participation Bit is
+                students signing up for CS Week. 1 Bit is
                 awarded to each student that chooses to represent a particular org
               </h4>
             </TabPane>
             <TabPane tabId="plainTabs2">
               <h4 className='text-white'>
-              <font className='text-info'>Event Bits </font>are earned by attending
+              <font className='text-danger'>Event Bits </font>are earned by attending
                 and winning events held by other organizations.
                 <font className='text-warning'> These events will be the best way
                 to earn points for your organization.</font> Typically,

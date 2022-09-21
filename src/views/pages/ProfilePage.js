@@ -47,6 +47,11 @@ export default function ProfilePage() {
   const [eventIndex, setEventIndex] = React.useState(0);
   const history = useHistory();
 
+  const eventDescription = [
+    'TBD', 'TBD', 'CTS', 'QC', 'TBD', 'C', 'EG', 'EC', 'TBD', 'FH',
+    'A4C', 'TBD', 'TBD', 'ACM', 'R', 'TBD', 'UTPC',
+  ]
+
   function isEmpty(obj) {
     return Object.keys(obj).length === 0;
   }
@@ -218,7 +223,7 @@ export default function ProfilePage() {
                                 backgroundColor: 'transparent',
                               }}
                             >
-                            {bool}
+                            {eventDescription[idx]}
                             </button>
                         })}
                         <i className="tim-icons icon-minimal-right text-info ml-3 mt-3"

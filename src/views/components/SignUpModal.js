@@ -39,6 +39,25 @@ export default function SignUpModal({
 
   const demoModal = (modalError !== '');
 
+  const navStyleProps = {
+    fontFamily: 'bdr-mono, sans-serif',
+    fontStyle: 'normal',
+    fontWeight: '300',
+    fontSize: '16px',
+    //backgroundColor: '#e14eca',
+    backgroundColor: '#16206A',
+    color : '#ffffff',
+    border : 'none',
+    outline : 'none',
+    marginTop : '7px',
+    marginRight : '50px',
+    paddingLeft : '1px',
+    paddingRight : '40px',
+    paddingTop : '5px',
+    paddingBottom : '5px',
+    borderRadius : '8px',
+  };
+
   return (
     <div>
       <button
@@ -50,22 +69,22 @@ export default function SignUpModal({
       >
       </button>
       {!isEmpty(googleUser) && googleUser.loading === undefined &&
-        <Button
-          className="nav-link d-none d-lg-block"
-          color="primary"
-          onClick={() => {history.push('/profile')}}
+        <button
+          style={navStyleProps}
+          onClick={() => { history.push('/profile') }}
         >
-          {`${googleUser.name}  `}
           <i className="tim-icons icon-minimal-right" />
-        </Button>
+          {`${googleUser.name}  `}
+        </button>
       }
       {!isEmpty(googleUser) && googleUser.loading !== undefined &&
-        <Button
-          className="nav-link d-none d-lg-block"
-          color="info"
+        <button
+          style={navStyleProps}
+          onClick={() => { history.push('/profile') }}
         >
-          Loading...
-        </Button>
+          <i className="tim-icons icon-minimal-right" />
+            Loading...
+        </button>
       }
       <Modal isOpen={demoModal} toggle={() => setErrorModal('')}>
         <div className="modal-header justify-content-center">

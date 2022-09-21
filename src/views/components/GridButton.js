@@ -32,7 +32,7 @@ export default function GridButton({
   const[isHover, setIsHover] = React.useState(false);
 
   if (click) {
-    color = '#42A560';
+    color = '#1764FF';
   }
   else if (isHover) {
     color = '#2935CC';

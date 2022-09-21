@@ -229,7 +229,6 @@ export default function RegisterPage() {
                     onBlur={(e) => setOrgFocus(false)}
                     onChange={(e) => {setOrgValue(e.target.value)}}
                   >
-                  <option>ABCS</option>
                   <option>ACM/A4C</option>
                   <option>Convergent</option>
                   <option>CS Roadshow</option>

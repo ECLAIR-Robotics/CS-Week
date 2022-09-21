@@ -49,18 +49,18 @@ function Rectangle ({
   color
 }) {
   return <div style={{
-    'display' : 'inline-block',
-    'background' : color,
-    'width' : '100%',
-    'height' : '60px',
+    display : 'inline-block',
+    background : color,
+    width : '100%',
+    height : '60px',
   }}></div>
 }
 
 export default function ControlledAccordions({
-  eventDay
+  eventDay,
+  expanded,
+  setExpanded,
 }) {
-
-  const [expanded, setExpanded] = React.useState('panel1');
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(panel);
@@ -253,7 +253,7 @@ export default function ControlledAccordions({
           style={{height : `${window.innerHeight - 350}px`}}
         >
           <Col>
-            <Row>
+            <Row style={{width: '80%'}}>
               {Object.keys(events[eventDay]).map((k, i) => {
                 return <blockquote>
                   <p className="blockquote blockquote-white justify-content-center"
@@ -304,7 +304,7 @@ export default function ControlledAccordions({
             <br />
             <br />
           </h4>
-          <Button color='danger' style={{'margin-left' : '17px'}}>
+          <Button color='danger' style={{marginLeft : '17px'}}>
             First scavenger hunt will be released on Sept. 26th!
           </Button>
         </AccordionDetails>

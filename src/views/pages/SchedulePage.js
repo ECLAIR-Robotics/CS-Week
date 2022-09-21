@@ -29,6 +29,7 @@ export default function SchedulePage() {
 
   // State variables for main events & scavenger hunt
   const [eventDay, setEventDay] = React.useState(0);
+  const [expanded, setExpanded] = React.useState('panel1');
 
   // State variables for extra events
   // false - unpersonalized, true - personalized
@@ -51,16 +52,18 @@ export default function SchedulePage() {
     if (eventDay === id) {
       return <button
               style={{
-                backgroundColor : '#ff9343',
+                backgroundColor : '#E14ECA',
                 fontSize : '40px',
                 color : 'black',
-                border : '4px solid #000000',
+                border : '2px solid #E14ECA',
                 textAlign : 'center',
                 width : '75px',
-                height : '75',
+                height : '75px',
                 fontFamily : 'bdr-mono, sans-serif',
                 fontStyle : 'bold',
                 fontWeight : 300,
+                borderRadius : '16px',
+                letterSpacing : '-6px',
               }}    
              >
             {content}
@@ -69,18 +72,20 @@ export default function SchedulePage() {
 
     return <button
             style={{
-              'backgroundColor' : '#ffffff',
-              'font-size' : '40px',
-              'color' : 'black',
-              'border' : '2px solid #000000',
-              'text-align' : 'center',
-              'width' : '75px',
-              'height' : '75px',
-              'font-family' : 'bdr-mono, sans-serif',
-              'font-style' : 'bold',
-              'font-weight' : 300,
-            }}    
-            onClick={() => {setEventDay(id)}}
+              backgroundColor : '#ffffff',
+              fontSize : '40px',
+              color : 'black',
+              border : '2px solid #000000',
+              textAlign : 'center',
+              width : '75px',
+              height : '75px',
+              fontFamily : 'bdr-mono, sans-serif',
+              fontStyle : 'bold',
+              fontWeight : 300,
+              borderRadius : '16px',
+              letterSpacing : '-6px',
+            }}
+            onClick={() => {setEventDay(id); setExpanded('panel1')}}
            >
           {content}
         </button>;
@@ -108,7 +113,11 @@ export default function SchedulePage() {
           <DaysButton id={5} content={'S'}/>
         </View>
         <View style={{'flex' : 10}}>
-          <EventList eventDay={eventDay}/>
+          <EventList
+            eventDay={eventDay}
+            expanded={expanded}
+            setExpanded={setExpanded}
+          />
         </View>
       </View>
     </>

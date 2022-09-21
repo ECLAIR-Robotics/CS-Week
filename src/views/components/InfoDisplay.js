@@ -50,7 +50,7 @@ export default function InfoDisplay() {
   ]
 
   return (
-      <div className="section" style={{backgroundColor: '#1C248B'}}>
+      <div className="section" style={{backgroundColor: '#232B95'}}>
         <Container>
           <Row className="row-grid justify-content-between">
             <Col className="mt-lg-5 mr-5" md="5" mt='3'>
@@ -66,13 +66,13 @@ export default function InfoDisplay() {
               {clickGrid === 1 &&
                 <div>
                   <blockquote>
-                    <p className="blockquote blockquote-danger justify-content-center">
+                    <p className="blockquote blockquote-white justify-content-center">
                       Students can only sign up for one organization
                     </p>
-                    <p className="blockquote blockquote-info justify-content-center">
+                    <p className="blockquote blockquote-primary justify-content-center">
                       Organizations compete by obtaining bits in events, scavenger hunts, and other activities
                     </p>
-                    <p className="blockquote blockquote-primary justify-content-center">
+                    <p className="blockquote blockquote-danger justify-content-center">
                       May the best organization win
                     </p>
                   </blockquote>

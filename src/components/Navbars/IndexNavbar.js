@@ -20,17 +20,11 @@ import { Link, useHistory } from "react-router-dom";
 // reactstrap components
 import {
   Collapse,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  UncontrolledDropdown,
   NavbarBrand,
   Navbar,
   NavItem,
   Nav,
   Container,
-  Row,
-  Col,
   UncontrolledTooltip,
 } from "reactstrap";
 import SignUpModal from "views/components/SignUpModal";
@@ -152,11 +146,34 @@ export default function IndexNavbar({
     setCollapseOut("");
   };
 
+  const navStyleProps = {
+    fontFamily: 'bdr-mono, sans-serif',
+    fontStyle: 'normal',
+    fontWeight: '300',
+    fontSize: '16px',
+    //backgroundColor: '#e14eca',
+    backgroundColor: '#16206A',
+    color : '#ffffff',
+    border : 'none',
+    outline : 'none',
+    marginTop : '7px',
+    marginRight : '50px',
+    paddingLeft : '1px',
+    paddingRight : '40px',
+    paddingTop : '5px',
+    paddingBottom : '5px',
+    borderRadius : '8px',
+  };
+
   return (
     <Navbar className={"fixed-top " + color} color-on-scroll="100" expand="lg">
       <Container>
         <div className="navbar-translate">
-          <NavbarBrand to="/" tag={Link} id="navbar-brand">
+          <NavbarBrand to="/" tag={Link} id="navbar-brand" style={{
+              fontFamily: 'bdr-mono, sans-serif',
+              fontStyle: 'normal',
+              fontWeight: '300',
+          }}>
             Created by
             <span> ECLAIR</span>
           </NavbarBrand>
@@ -187,54 +204,26 @@ export default function IndexNavbar({
           onExited={onCollapseExited}
         >
           <div className="navbar-collapse-header">
-            <Row>
-              <Col className="collapse-brand" xs="6">
-                <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                  BLK•React
-                </a>
-              </Col>
-              <Col className="collapse-close text-right" xs="6">
-                <button
-                  aria-expanded={collapseOpen}
-                  className="navbar-toggler"
-                  onClick={toggleCollapse}
-                >
-                  <i className="tim-icons icon-simple-remove" />
-                </button>
-              </Col>
-            </Row>
           </div>
           <Nav navbar>
-            <UncontrolledDropdown nav>
-              <DropdownToggle
-                caret
-                color="default"
-                data-toggle="dropdown"
-                nav
-                onClick={(e) => e.preventDefault()}
+            <NavItem>
+              <button
+                style={navStyleProps}
+                onClick={() => { history.push('/') }}
               >
-                <i className="fa fa-cogs d-lg-none d-xl-none" />
-                Getting started
-              </DropdownToggle>
-              <DropdownMenu className="dropdown-with-icons">
-                <DropdownItem tag={Link} to="/">
-                  <i className="tim-icons icon-paper" />
-                  Home
-                </DropdownItem>
-                <DropdownItem tag={Link} to="/schedule">
-                  <i className="tim-icons icon-calendar-60" />
-                  Schedule
-                </DropdownItem>
-                <DropdownItem tag={Link} to="/schedule">
-                  <i className="tim-icons icon-puzzle-10" />
-                  Scavenger Hunt
-                </DropdownItem>
-                <DropdownItem tag={Link} to="/schedule">
-                  <i className="tim-icons icon-trophy" />
-                  Extra Events
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
+                <i className="tim-icons icon-minimal-right" />
+                {`About CS Week`}
+              </button>
+            </NavItem>
+            <NavItem>
+              <button
+                style={navStyleProps}
+                onClick={() => { history.push('/schedule') }}
+              >
+                <i className="tim-icons icon-minimal-right" />
+                {`Schedule`}
+              </button>
+            </NavItem>
             <NavItem>
               <SignUpModal
                 formModal={formModal}

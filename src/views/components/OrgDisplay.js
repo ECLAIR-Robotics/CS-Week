@@ -29,12 +29,12 @@ export default function OrgDisplay() {
   const[clickGrid, setClickGrid] = React.useState(-1);
 
   const gridContent = [
-    {
-      'name' : 'ABCS',
-      'desc' : 'The organization works to build and empower members of Texas Computer Science and the broader Black community to pursue technology related education and careers. We hope to inspire and equip the next diverse generation of thoughtful technologists!',
-      'link' : 'https://www.cs.utexas.edu/~abcs/',
-      'picture' : 'assets/avatar/question.png',
-    },
+    //{
+    //  'name' : 'ABCS',
+    //  'desc' : 'The organization works to build and empower members of Texas Computer Science and the broader Black community to pursue technology related education and careers. We hope to inspire and equip the next diverse generation of thoughtful technologists!',
+    //  'link' : 'https://www.cs.utexas.edu/~abcs/',
+    //  'picture' : 'assets/avatar/question.png',
+    //},
     {
       'name' : 'ACM/A4C',
       'desc' : 'The Association for Computing Machinery is a UT chapter of the national ACM, and exists to create a community among Computer Science students and anyone interested in technology. ACM holds events that serve its members and the community, and is focused on the advancement of computer science studies and research, furthering computing as a profession and a science.',
@@ -92,7 +92,7 @@ export default function OrgDisplay() {
   ]
 
   return (
-      <div className="section" style={{backgroundColor: '#1C248B'}}>
+      <div className="section" style={{backgroundColor: '#232B95'}}>
         <Container>
           <Row className="row-grid justify-content-between">
             <Col className="mt-lg-5 mr-5" md="5" mt='3'>

@@ -49,7 +49,7 @@ export default function ProfilePage() {
 
   const eventDescription = [
     'TBD', 'TBD', 'CTS', 'QC', 'TBD', 'C', 'EG', 'EC', 'TBD', 'FH',
-    'A4C', 'TBD', 'TBD', 'ACM', 'R', 'TBD', 'UTPC',
+    'A4C', 'TBD', 'TBD', 'ACM', 'R', 'TBD', 'PC',
   ]
 
   function isEmpty(obj) {
@@ -90,7 +90,7 @@ export default function ProfilePage() {
             }}
           >
             <Card className="card-register">
-              <h2 className="text-white ml-4 mr-3 mt-3">
+              <h2 className="text-white ml-4 mr-3 mt-3" style={{textAlign: 'center'}}>
                 Please sign in using your utexas gmail account! ^_^
               </h2>
             </Card>
@@ -157,12 +157,12 @@ export default function ProfilePage() {
                     }}>{googleUser.name}</h4>
                   </div>
                   <FormGroup className='ml-4 mr-5'>
-                    <label>UTEID</label>
-                    <Input defaultValue={userInfo.uteid} type="text" />
+                    <label>Email address (Cannot change)</label>
+                    <Input defaultValue={userInfo.email} type="email" />
                   </FormGroup>
                   <FormGroup className='ml-4 mr-5'>
-                    <label>Email address</label>
-                    <Input defaultValue={userInfo.email} type="email" />
+                    <label>UTEID</label>
+                    <Input defaultValue={userInfo.uteid} type="text" />
                   </FormGroup>
                 </Col>
                 <img
@@ -222,13 +222,14 @@ export default function ProfilePage() {
                                 borderWidth: '1px',
                                 backgroundColor: 'transparent',
                               }}
+                              onClick={() => {}}
                             >
                             {eventDescription[idx]}
                             </button>
                         })}
                         <i className="tim-icons icon-minimal-right text-info ml-3 mt-3"
                           onClick={() => {
-                            setEventIndex(eventIndex + 5 < 4 ? eventIndex + 5 : extraIndex);
+                            setEventIndex(eventIndex + 5 < eventDescription.length ? eventIndex + 5 : extraIndex);
                           }}
                           style={{cursor: 'pointer'}}
                         />
@@ -279,6 +280,7 @@ export default function ProfilePage() {
                                   backgroundColor: 'transparent',
                                 }}
                                 id='tooltipExtraEvent'
+                                onClick={() => {}}
                               >
                               {`#${idx}`}
                               </button>

@@ -20,6 +20,7 @@ import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import classnames from "classnames";
 import axios from "axios";
+import registerBackground from 'assets/pages/registerBackground.png';
 
 // reactstrap components
 import {
@@ -75,7 +76,12 @@ export default function RegisterPage() {
   }
 
   if (googleUser.name === undefined) {
-    return (<div>
+    return (<div className="page-header header-filter" style={{
+        backgroundImage : `url(${registerBackground})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+      }}>
+      <div>
       <IndexNavbar />
       <Container>
         <Col style={{
@@ -87,25 +93,31 @@ export default function RegisterPage() {
         >
           <Card className="card-register">
             <h4 className="mt-3" style={{
-              'margin-right' : 'auto',
-              'margin-left' : 'auto',
-              'margin-top' : '20px',
-              'color' : '#e36ef4',
-              'font-size' : '40px',
-              'font-family': 'bdr-mono, sans-serif',
-              'font-style': 'normal',
-              'font-weight': 300,
+              marginRight : 'auto',
+              marginLeft : 'auto',
+              marginTop : '20px',
+              color : '#e36ef4',
+              fontSize : '40px',
+              fontFamily: 'bdr-mono, sans-serif',
+              fontStyle: 'normal',
+              fontWeight: 300,
             }}>REGISTER</h4>
-            <h2 className="text-white ml-4 mr-3 mt-3">
+            <h2 className="text-white ml-4 mr-3 mt-3" style={{textAlign: 'center'}}>
               Please sign in using your utexas gmail account! ^_^
             </h2>
           </Card>
         </Col>
       </Container>
+    </div>
     </div>)
   }
 
-  return (<div>
+  return (<div className="page-header header-filter" style={{
+      backgroundImage : `url(${registerBackground})`,
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+    }}>
+      <div>
       <IndexNavbar />
       <Container>
         <Col style={{
@@ -117,13 +129,14 @@ export default function RegisterPage() {
         >
           <Card className="card-register">
             <h4 style={{
-              'margin-right' : 'auto',
-              'margin-left' : 'auto',
-              'color' : '#e36ef4',
-              'font-size' : '40px',
-              'font-family': 'bdr-mono, sans-serif',
-              'font-style': 'normal',
-              'font-weight': 300
+              marginRight : 'auto',
+              marginLeft : 'auto',
+              marginTop : '20px',
+              color : '#e36ef4',
+              fontSize : '40px',
+              fontFamily: 'bdr-mono, sans-serif',
+              fontStyle: 'normal',
+              fontWeight: 300,
             }}>REGISTER</h4>
             <CardBody>
               <Form className="form">
@@ -264,6 +277,7 @@ export default function RegisterPage() {
           </Card>
         </Col>
       </Container>
+    </div>
     </div>
   );
 }

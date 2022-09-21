@@ -16,10 +16,11 @@
 
 */
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import classnames from "classnames";
 import axios from "axios";
+import { setCreateUser } from "views/reduxFiles/reduxGoogle.js"
 import registerBackground from 'assets/pages/registerBackground.png';
 
 // reactstrap components
@@ -49,6 +50,7 @@ export default function RegisterPage() {
   const googleToken = useSelector((state) => state.reducer.jwt_key);
   const googleUser = useSelector((state) => state.reducer.user);
   const createUser = useSelector((state) => state.reducer.createUser);
+  const dispatch = useDispatch();
   const history = useHistory();
 
   // Form Values
@@ -70,6 +72,7 @@ export default function RegisterPage() {
       // Check response status
       if (response.status === 200) {
         // Redirect
+        dispatch(setCreateUser(false));
         history.push('/profile');
       }
       else {

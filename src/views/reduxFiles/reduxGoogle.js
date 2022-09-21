@@ -4,7 +4,8 @@ export const googleSlice = createSlice({
   name: 'google',
   initialState: {
     jwt_key: "",
-    user: {}
+    user: {},
+    createUser: true,
   },
   reducers: {
     clear: state => {

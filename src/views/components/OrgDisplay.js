@@ -107,7 +107,7 @@ export default function OrgDisplay() {
                     fontSize: '20px'
                   }}
                 >
-                  https://cs-week.herokuapp.com/
+                  Level up your UTCS experience with one of our participating student organizations!
                 </h1>
               }
               {clickGrid !== -1 &&

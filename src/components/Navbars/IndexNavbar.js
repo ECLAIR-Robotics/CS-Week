@@ -105,17 +105,19 @@ export default function IndexNavbar({
           //document.getElementById('google_signup').hidden = false
         }
       }
+      
+      if (google !== undefined) {
+        /* global google */
+        google.accounts.id.initialize({
+          client_id: "66587737847-galid6ft98binr278396v6lqm88b5ub2.apps.googleusercontent.com",
+          callback: googleCallback
+        })
 
-      /* global google */
-      google.accounts.id.initialize({
-        client_id: "66587737847-galid6ft98binr278396v6lqm88b5ub2.apps.googleusercontent.com",
-        callback: googleCallback
-      })
-
-      google.accounts.id.renderButton(
-        document.getElementById("google_signup"),
-        { theme : "outline", size: "large" }
-      )
+        google.accounts.id.renderButton(
+          document.getElementById("google_signup"),
+          { theme : "outline", size: "large" }
+        )
+      }
     }
   }, [googleToken, dispatch, history])
 

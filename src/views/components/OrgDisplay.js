@@ -92,7 +92,7 @@ export default function OrgDisplay() {
   ]
 
   return (
-      <div className="section" style={{backgroundColor: '#232B95'}}>
+      <div className="section" style={{backgroundColor: '#0e154e'}}>
         <Container>
           <Row className="row-grid justify-content-between">
             <Col className="mt-lg-5 mr-5" md="5" mt='3'>
@@ -101,10 +101,13 @@ export default function OrgDisplay() {
                   style={{
                     marginTop    : 'auto',
                     marginBottom : 'auto',
+                    fontFamily: 'bdr-mono, sans-serif',
+                    fontStyle: 'normal',
+                    fontWeight: '300',
+                    fontSize: '20px'
                   }}
                 >
-                  Level up your UTCS experience with one of our participating
-                  student organizations!
+                  https://cs-week.herokuapp.com/
                 </h1>
               }
               {clickGrid !== -1 &&

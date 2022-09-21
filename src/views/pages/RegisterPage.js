@@ -109,6 +109,9 @@ export default function RegisterPage() {
             <h2 className="text-white ml-4 mr-3 mt-3" style={{textAlign: 'center'}}>
               Please sign in using your utexas gmail account! ^_^
             </h2>
+            <h4 className="text-white ml-4 mr-3" style={{textAlign: 'center'}}>
+              For the best experience on this site, please view this website on a laptop.
+            </h4>
           </Card>
         </Col>
       </Container>

@@ -209,7 +209,7 @@ export default function ProfilePage() {
     </div>)
   }
 
-  const submitExtraEventRequest = (idx) => {
+  const submitExtraEventRequest = (idx, msg) => {
     // some axios stuff to do a request
     axios.put('https://cs-week-api.herokuapp.com/auth/extra_event', {
       google_id: googleToken,
@@ -219,7 +219,7 @@ export default function ProfilePage() {
       if (response.status === 200) {
         setErrorReq(false);
         setUpdateReq(true);
-        setUpdateContent(`Extra event #${idx + 10000} is under review!`);
+        setUpdateContent(msg);
       }
     }).catch((error) => {
       // else: have the user sign in again
@@ -475,7 +475,14 @@ export default function ProfilePage() {
                                     newList[idx] = -1;
                                     setUserInfo({'extra': newList, ...userInfo});
 
-                                    submitExtraEventRequest(idx);
+                                    submitExtraEventRequest(idx, `Extra event #${idx} is under review!`);
+                                  }
+                                  else if (num === -1) {
+                                    var newList = userInfo.extra;
+                                    newList[idx] = 0;
+                                    setUserInfo({'extra': newList, ...userInfo});
+
+                                    submitExtraEventRequest(idx, `Extra event #${idx} is no longer under review!`);
                                   }
                                 }}
                               >

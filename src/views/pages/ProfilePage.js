@@ -478,9 +478,9 @@ export default function ProfilePage() {
                                     submitExtraEventRequest(idx, `Extra event #${idx} is under review!`);
                                   }
                                   else if (num === -1) {
-                                    var newList = userInfo.extra;
-                                    newList[idx] = 0;
-                                    setUserInfo({'extra': newList, ...userInfo});
+                                    var newList2 = userInfo.extra;
+                                    newList2[idx] = 0;
+                                    setUserInfo({'extra': newList2, ...userInfo});
 
                                     submitExtraEventRequest(idx, `Extra event #${idx} is no longer under review!`);
                                   }

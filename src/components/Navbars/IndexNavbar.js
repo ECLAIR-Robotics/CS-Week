@@ -179,7 +179,7 @@ export default function IndexNavbar({
           </NavbarBrand>
           <UncontrolledTooltip placement="bottom" target="navbar-brand">
             Coded by<br />
-            Sahil Jain<br /><br />
+            Sahil Jain (eclairrobotics@gmail.com)<br /><br />
             Designed by<br />
             Irene Chamorro-Beckenhauer<br />
             Taylor Mason<br />

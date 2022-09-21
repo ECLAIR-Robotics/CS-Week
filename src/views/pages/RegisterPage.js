@@ -218,7 +218,7 @@ export default function RegisterPage() {
                   </InputGroupAddon>
                   <Input
                     type="text"
-                    placeholder="Computer Science"
+                    placeholder="Major(s)"
                     onFocus={(e) => setMajorFocus(true)}
                     onBlur={(e) => setMajorFocus(false)}
                     onChange={(e) => {setMajorValue(e.target.value)}}

@@ -70,27 +70,27 @@ export default function ControlledAccordions({
     // Monday Events
     [
       {
-        'name' : 'N/A',
+        'name' : 'TBD',
         'time' : '5:00PM-6:00PM',
         'loc'  : 'N/A',
       },
       {
-        'name' : 'N/A',
+        'name' : 'TBD',
         'time' : '6:00PM-7:00PM',
         'loc'  : 'N/A',
       },
       {
         'name' : 'CS Transfer Society',
         'time' : '7:00PM-8:00PM',
-        'loc'  : 'N/A',
+        'loc'  : 'GDC Atrium',
       },
       {
         'name' : 'Quantum Collective',
         'time' : '8:00PM-9:00PM',
-        'loc'  : 'N/A',
+        'loc'  : 'GDC 1.304',
       },
       {
-        'name' : 'N/A',
+        'name' : 'TBD',
         'time' : '9:00PM-10:00PM',
         'loc'  : 'N/A',
       },
@@ -100,20 +100,20 @@ export default function ControlledAccordions({
       {
         'name' : 'Convergent',
         'time' : '5:00PM-6:00PM',
-        'loc'  : 'N/A',
+        'loc'  : 'McCombs TBD',
       },
       {
         'name' : 'EGaDS',
         'time' : '6:00PM-8:00PM',
-        'loc'  : 'N/A',
+        'loc'  : 'GDC 5.302',
       },
       {
         'name' : 'ECLAIR',
         'time' : '8:00PM-9:00PM',
-        'loc'  : 'N/A',
+        'loc'  : 'GDC 6.302',
       },
       {
-        'name' : 'N/A',
+        'name' : 'TBD',
         'time' : '9:00PM-10:00PM',
         'loc'  : 'N/A',
       },
@@ -123,15 +123,15 @@ export default function ControlledAccordions({
       {
         'name' : 'Freetail Hackers',
         'time' : '5:00PM-6:00PM',
-        'loc'  : 'N/A',
+        'loc'  : 'TBD',
       },
       {
         'name' : 'A4C',
         'time' : '6:00PM-7:00PM',
-        'loc'  : 'N/A',
+        'loc'  : 'TBD',
       },
       {
-        'name' : 'N/A',
+        'name' : 'TBD',
         'time' : '9:00PM-10:00PM',
         'loc'  : 'N/A',
       },
@@ -139,43 +139,43 @@ export default function ControlledAccordions({
     // Thursday Events
     [
       {
-        'name' : 'N/A',
+        'name' : 'TBD',
         'time' : '5:00PM-6:00PM',
         'loc'  : 'N/A',
       },
       {
         'name' : 'ACM',
         'time' : '6:00PM-7:00PM',
-        'loc'  : 'N/A',
+        'loc'  : 'GDC 4.302',
       },
       {
         'name' : 'Roadshow',
         'time' : '9:00PM-10:00PM',
-        'loc'  : 'N/A',
+        'loc'  : 'GDC 4.302/4.304',
       },
     ],
     // Friday Events
     [
       {
-        'name' : 'N/A',
+        'name' : 'TBD',
         'time' : '5:00PM-6:00PM',
         'loc'  : 'N/A',
       },
       {
         'name' : 'UTPC',
         'time' : '6:00PM-8:00PM',
-        'loc'  : 'N/A',
+        'loc'  : 'GDC 2.216',
       },
     ],
     // Saturday Events
     [
       {
-        'name' : 'N/A',
+        'name' : 'TBD',
         'time' : '10:00AM-11:00AM',
         'loc'  : 'N/A',
       },
       {
-        'name' : 'N/A',
+        'name' : 'TBD',
         'time' : '11:00AM-12:00PM',
         'loc'  : 'N/A',
       },
@@ -185,22 +185,22 @@ export default function ControlledAccordions({
         'loc'  : 'N/A',
       },
       {
-        'name' : 'N/A',
+        'name' : 'TBD',
         'time' : '1:00PM-2:00PM',
         'loc'  : 'N/A',
       },
       {
-        'name' : 'N/A',
+        'name' : 'TBD',
         'time' : '2:00PM-3:00PM',
         'loc'  : 'N/A',
       },
       {
-        'name' : 'N/A',
+        'name' : 'TBD',
         'time' : '3:00PM-4:00PM',
         'loc'  : 'N/A',
       },
       {
-        'name' : 'N/A',
+        'name' : 'TBD',
         'time' : '4:00PM-5:00PM',
         'loc'  : 'N/A',
       },

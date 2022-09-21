@@ -16,6 +16,7 @@
 
 */
 import React from "react";
+import classnames from "classnames";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
@@ -23,19 +24,85 @@ import profileBackground from 'assets/pages/profileBackground.png';
 
 // reactstrap components
 import {
+  Alert,
+  Button,
   Card,
   CardBody,
   Form,
   Input,
+  InputGroup,
+  InputGroupAddon,
+  InputGroupText,
   Container,
   Col,
   Row,
+  Modal,
   FormGroup,
   UncontrolledTooltip,
 } from "reactstrap";
 
 // core components
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
+
+
+function AttendanceModal ({
+  formModal,
+  setFormModal,
+  submitAttendance,
+}) {
+
+    const [passwordFocus, setPasswordFocus] = React.useState(false);
+    const [password, setPassword] = React.useState('');
+
+    return <Modal
+            modalClassName="modal-black"
+            isOpen={formModal}
+            toggle={() => setFormModal(false)}
+          >
+            <div className="modal-header justify-content-center">
+              <button className="close" onClick={() => setFormModal(false)}>
+                <i className="tim-icons icon-simple-remove text-white" />
+              </button>
+              <div className="text-muted text-center ml-auto mr-auto">
+                <h3 className="mb-0">Event Sign In</h3>
+              </div>
+            </div>
+            <div className="modal-body">
+              <Form role="form">
+                <FormGroup>
+                  <InputGroup
+                    className={classnames("input-group-alternative", {
+                      "input-group-focus": passwordFocus,
+                    })}
+                  >
+                    <InputGroupAddon addonType="prepend">
+                      <InputGroupText>
+                        <i className="tim-icons icon-key-25" />
+                      </InputGroupText>
+                    </InputGroupAddon>
+                    <Input
+                      placeholder="Password"
+                      type="text"
+                      onFocus={(e) => setPasswordFocus(true)}
+                      onBlur={(e) => setPasswordFocus(false)}
+                      onChange={(e) => {setPassword(e.target.value)}} 
+                    />
+                  </InputGroup>
+                </FormGroup>
+                <div className="text-center">
+                  <Button
+                    className="my-4"
+                    color="primary"
+                    type="button"
+                    onClick={(e) => { submitAttendance(password) }}
+                  >
+                    Sign in to event
+                  </Button>
+                </div>
+              </Form>
+            </div>
+          </Modal>
+}
 
 export default function ProfilePage() {
 
@@ -45,6 +112,19 @@ export default function ProfilePage() {
   const [userInfo, setUserInfo] = React.useState({});
   const [extraIndex, setExtraIndex] = React.useState(0);
   const [eventIndex, setEventIndex] = React.useState(0);
+
+  // User information updating
+  const [userEID, setUserEID] = React.useState('');
+  const [userMajor, setUserMajor] = React.useState('');
+  const [userDrive, setUserDrive] = React.useState('');
+
+  // Alert setting
+  const [updateReq, setUpdateReq] = React.useState(false);
+  const [updateContent, setUpdateContent] = React.useState('');
+  const [errorReq, setErrorReq] = React.useState(false);
+  const [errorContent, setErrorContent] = React.useState('');
+
+  const [formModal, setFormModal] = React.useState(false);
   const history = useHistory();
 
   const eventDescription = [
@@ -62,9 +142,11 @@ export default function ProfilePage() {
         google_id: googleToken,
       }).then((response) => {
         // Check response status
-        console.log(response)
         if (response.status === 200) {
           setUserInfo(response.data);
+          setUserEID(response.data.uteid);
+          setUserMajor(response.data.major);
+          setUserDrive(response.data.drive_link);
         }
       }).catch((error) => {
         // else: have the user sign in again
@@ -127,6 +209,69 @@ export default function ProfilePage() {
     </div>)
   }
 
+  const submitExtraEventRequest = (idx) => {
+    // some axios stuff to do a request
+    axios.put('https://cs-week-api.herokuapp.com/auth/extra_event', {
+      google_id: googleToken,
+      extra_event_id: idx,
+    }).then((response) => {
+      // Check response status
+      if (response.status === 200) {
+        setErrorReq(false);
+        setUpdateReq(true);
+        setUpdateContent(`Extra event #${idx + 10000} is under review!`);
+      }
+    }).catch((error) => {
+      // else: have the user sign in again
+      setUpdateReq(false);
+      setErrorReq(true);
+      setErrorContent('Oh no! An error occurred. Please contact eclairrobotics@gmail.com if this issue persists');
+    })
+  }
+
+  const submitAttendance = (code) => {
+    // some axios stuff to do a request
+    axios.put('https://cs-week-api.herokuapp.com/auth/attendance', {
+      google_id: googleToken,
+      event_id: code,
+    }).then((response) => {
+      // Check response status
+      if (response.status === 200) {
+        setErrorReq(false);
+        setUpdateReq(true);
+        setUpdateContent(`Successfully recorded your attendance!`);
+      }
+    }).catch((error) => {
+      // else: have the user sign in again
+      setUpdateReq(false);
+      setErrorReq(true);
+      setErrorContent('Oh no! An error occurred. Please contact eclairrobotics@gmail.com if this issue persists');
+    })
+    setFormModal(false);
+  }
+
+  const submitProfileChanges = () => {
+    // some axios stuff to do a request
+    axios.put('https://cs-week-api.herokuapp.com/auth/update', {
+      google_id: googleToken,
+      uteid: userEID,
+      drive_link: userDrive,
+      major: userMajor,
+    }).then((response) => {
+      // Check response status
+      if (response.status === 200) {
+        setErrorReq(false);
+        setUpdateReq(true);
+        setUpdateContent(`Updated your user profile!`);
+      }
+    }).catch((error) => {
+      // else: have the user sign in again
+      setUpdateReq(false);
+      setErrorReq(true);
+      setErrorContent('Oh no! An error occurred. Please contact eclairrobotics@gmail.com if this issue persists');
+    })
+  }
+
   return (
     <div className="page-header header-filter" style={{
       backgroundImage : `url(${profileBackground})`,
@@ -135,12 +280,33 @@ export default function ProfilePage() {
     }}>
       <div>
         <IndexNavbar />
+        <AttendanceModal
+          formModal={formModal}
+          setFormModal={setFormModal}
+          submitAttendance={submitAttendance}
+        />
+        {updateReq && <Alert
+            color='success'
+            style={{marginTop: '5%', cursor: 'pointer'}}
+            onClick={() => {setUpdateReq(false)}}
+          >
+            {updateContent}
+          </Alert>
+        }
+        {errorReq && <Alert
+            color='danger'
+            style={{marginTop: '5%', cursor: 'pointer'}}
+            onClick={() => {setErrorReq(false)}}
+          >
+            {errorContent}
+          </Alert>
+        }
         <Container>
           <Col style={{
-              'width' : '800px',
-              'margin-left': 'auto',
-              'margin-right': 'auto',
-              'margin-top': '12%',
+              width : '800px',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              marginTop: updateReq || errorReq ? '7%' : '12%',
             }}
           >
             <Card className="card-register" style={{height: '450px'}}>
@@ -158,11 +324,15 @@ export default function ProfilePage() {
                   </div>
                   <FormGroup className='ml-4 mr-5'>
                     <label>Email address (Cannot change)</label>
-                    <Input defaultValue={userInfo.email} type="email" />
+                    <Input value={userInfo.email} type="email" />
                   </FormGroup>
                   <FormGroup className='ml-4 mr-5'>
                     <label>UTEID</label>
-                    <Input defaultValue={userInfo.uteid} type="text" />
+                    <Input
+                      defaultValue={userEID}
+                      type="text"
+                      onChange={(e) => {setUserEID(e.target.value)}} 
+                    />
                   </FormGroup>
                 </Col>
                 <img
@@ -180,17 +350,34 @@ export default function ProfilePage() {
               <CardBody>
                 <Form className='ml-2 mr-2'>
                   <Row>
-                    <Col md="6">
+                    <Col md="4">
                       <FormGroup>
                         <label>Major</label>
-                        <Input defaultValue={userInfo.major} type="text" />
+                        <Input
+                          defaultValue={userMajor}
+                          type="text"
+                          onChange={(e) => {setUserMajor(e.target.value)}} 
+                        />
                       </FormGroup>
                     </Col>
-                    <Col md="6">
+                    <Col md="4">
                       <FormGroup>
                         <label>Google Drive Extra Event Link</label>
-                        <Input placeholder={userInfo.drive_link} type="text" />
+                        <Input
+                          defaultValue={userDrive}
+                          type="text"
+                          onChange={(e) => {setUserDrive(e.target.value)}} 
+                        />
                       </FormGroup>
+                    </Col>
+                    <Col md='1'>
+                      <Button
+                        className="btn-simple"
+                        color="primary"
+                        onClick={(e) => { submitProfileChanges() }}
+                      >
+                        <i className="tim-icons icon-pencil" /> Update
+                      </Button>
                     </Col>
                   </Row>
                   <Row>
@@ -222,7 +409,8 @@ export default function ProfilePage() {
                                 borderWidth: '1px',
                                 backgroundColor: 'transparent',
                               }}
-                              onClick={() => {}}
+                              type='button'
+                              onClick={(e) => {setFormModal(true)}}
                             >
                             {eventDescription[idx]}
                             </button>
@@ -279,10 +467,19 @@ export default function ProfilePage() {
                                   top: '50%',
                                   backgroundColor: 'transparent',
                                 }}
+                                type='button'
                                 id='tooltipExtraEvent'
-                                onClick={() => {}}
+                                onClick={() => {
+                                  if (num === 0) {
+                                    var newList = userInfo.extra;
+                                    newList[idx] = -1;
+                                    setUserInfo({'extra': newList, ...userInfo});
+
+                                    submitExtraEventRequest(idx);
+                                  }
+                                }}
                               >
-                              {`#${idx}`}
+                              {`${idx}`}
                               </button>
                         })}
                         <i className="tim-icons icon-minimal-right ml-3 mt-3"

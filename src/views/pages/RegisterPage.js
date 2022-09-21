@@ -242,15 +242,15 @@ export default function RegisterPage() {
                     onBlur={(e) => setOrgFocus(false)}
                     onChange={(e) => {setOrgValue(e.target.value)}}
                   >
-                  <option>ACM/A4C</option>
-                  <option>Convergent</option>
-                  <option>CS Roadshow</option>
-                  <option>CS Transfer Society</option>
-                  <option>ECLAIR</option>
-                  <option>EGaDS</option>
-                  <option>Freetail Hackers</option>
-                  <option>Quantum Collective</option>
-                  <option>UTPC</option>
+                  <option style={{color: 'black'}}>ACM/A4C</option>
+                  <option style={{color: 'black'}}>Convergent</option>
+                  <option style={{color: 'black'}}>CS Roadshow</option>
+                  <option style={{color: 'black'}}>CS Transfer Society</option>
+                  <option style={{color: 'black'}}>ECLAIR</option>
+                  <option style={{color: 'black'}}>EGaDS</option>
+                  <option style={{color: 'black'}}>Freetail Hackers</option>
+                  <option style={{color: 'black'}}>Quantum Collective</option>
+                  <option style={{color: 'black'}}>UTPC</option>
                   </Input>
                 </InputGroup>
               </Form>

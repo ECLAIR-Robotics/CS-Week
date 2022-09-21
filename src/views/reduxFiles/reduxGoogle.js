@@ -10,7 +10,7 @@ export const googleSlice = createSlice({
     clear: state => {
       state.jwt_key = "";
       state.user = {};
-      state.createUser = false;
+      state.createUser = true;
     },
     setGoogleToken: (state, action) => {
       state.jwt_key = action.payload;

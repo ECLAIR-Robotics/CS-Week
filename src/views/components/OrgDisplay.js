@@ -67,8 +67,8 @@ export default function OrgDisplay() {
     },
     {
       'name' : 'EGaDS',
-      'desc' : 'The Electronic Game Developers Society, also known as EGaDS, is a student organization of the University of Texas at Austin, TX, completely dedicated to computer and video game development. We are currently one of the world’s largest nonprofit membership organizations serving all individuals who are aspirants to become game developers. We are totally committed to advancing their careers and enhancing the lives of game developers.',
-      'link' : 'http://egads-austin.org/',
+      'desc' : 'The Electronic Game Developers Society (EGaDS!) is an interdisciplinary student organization open to all UT students with an interest in game development. Our mission is to help students grow as developers while fostering a supportive and welcoming community. We welcome students of all disciplines and skill levels.',
+      'link' : 'https://texasegads.wixsite.com/egads',
       'picture' : 'assets/avatar/question.png',
     },
     {

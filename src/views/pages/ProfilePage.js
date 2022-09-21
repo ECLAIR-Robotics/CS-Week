@@ -324,7 +324,10 @@ export default function ProfilePage() {
                   </div>
                   <FormGroup className='ml-4 mr-5'>
                     <label>Email address (Cannot change)</label>
-                    <Input value={userInfo.email} type="email" readOnly={true}/>
+                    <Input value={userInfo.email}
+                      type="email"
+                      readOnly={true}
+                      style={{color: 'white'}}/>
                   </FormGroup>
                   <FormGroup className='ml-4 mr-5'>
                     <label>UTEID</label>

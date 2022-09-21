@@ -164,6 +164,7 @@ export default function RegisterPage() {
                       "" : googleUser.name
                     }
                     readOnly={true}
+                    style={{color: 'white'}}
                     type="text"
                     onFocus={(e) => setFullNameFocus(true)}
                     onBlur={(e) => setFullNameFocus(false)}
@@ -189,6 +190,7 @@ export default function RegisterPage() {
                       "" : googleUser.email
                     }
                     readOnly={true}
+                    style={{color: 'white'}}
                     type="text"
                     onFocus={(e) => setEmailFocus(true)}
                     onBlur={(e) => setEmailFocus(false)}

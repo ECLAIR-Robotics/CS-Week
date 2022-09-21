@@ -33,7 +33,8 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   clear,
   setGoogleToken,
-  setGoogleUser
+  setGoogleUser,
+  setCreateUser,
 } from "views/reduxFiles/reduxGoogle.js"
 import jwt_decode from 'jwt-decode';
 
@@ -64,6 +65,7 @@ export default function IndexNavbar({
 
           //document.getElementById('google_signup').hidden = true;
           dispatch(setGoogleUser({'loading' : 'loading'}));
+          dispatch(setCreateUser(true));
 
           // Do API call to see if user exists
           //axios.post('https://cs-week-api.herokuapp.com/auth/signin', {
@@ -77,6 +79,7 @@ export default function IndexNavbar({
 
               dispatch(setGoogleUser(userObject));
               dispatch(setGoogleToken(res.credential));
+              dispatch(setCreateUser(resJson.create_user));
 
               if (resJson.create_user) {
                 // If user doesn't have an account, create one

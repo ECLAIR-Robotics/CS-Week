@@ -165,10 +165,10 @@ export default function ProfilePage() {
         <IndexNavbar />
         <Container>
           <Col style={{
-              'width' : '500px',
-              'margin-left': 'auto',
-              'margin-right': 'auto',
-              'margin-top': '10%',
+              width : '500px',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              marginTop: '10%',
             }}
           >
             <Card className="card-register">
@@ -192,10 +192,10 @@ export default function ProfilePage() {
         <IndexNavbar />
         <Container>
           <Col style={{
-              'width' : '500px',
-              'margin-left': 'auto',
-              'margin-right': 'auto',
-              'margin-top': '10%',
+              width : '500px',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              marginTop: '10%',
             }}
           >
             <Card className="card-register">
@@ -324,7 +324,7 @@ export default function ProfilePage() {
                   </div>
                   <FormGroup className='ml-4 mr-5'>
                     <label>Email address (Cannot change)</label>
-                    <Input value={userInfo.email} type="email" />
+                    <Input value={userInfo.email} type="email" readOnly={true}/>
                   </FormGroup>
                   <FormGroup className='ml-4 mr-5'>
                     <label>UTEID</label>
@@ -398,7 +398,7 @@ export default function ProfilePage() {
 
                           const color = bool ? '#00f2c3' : '#1d8cf8';
 
-                          return <button style={{
+                          return <button key={idx} style={{
                                 marginLeft : '5px',
                                 width : '45px',
                                 height : '45px',
@@ -452,7 +452,7 @@ export default function ProfilePage() {
                             color = '#ff8d72';
                           }
 
-                          return <button
+                          return <button key={idx}
                                 className=""
                                 style={{
                                   marginLeft : '5px',

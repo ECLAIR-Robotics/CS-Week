@@ -226,7 +226,7 @@ export default function ControlledAccordions({
 
   const titleProps = {
     'font-size' : '30px',
-    'margin-left' : '10px',
+    marginLeft : '10px',
     'font-family' : 'bdr-mono, sans-serif',
     'font-style' : 'normal',
     'font-weight' : 300,
@@ -258,8 +258,8 @@ export default function ControlledAccordions({
                 return <blockquote>
                   <p className="blockquote blockquote-white justify-content-center"
                     style={{
-                      'font-size' : '18px',
-                      'margin-left' : '30px'
+                      fontSize : '18px',
+                      marginLeft : '30px'
                     }}
                   >
                     {events[eventDay][i]['name']} <br />
@@ -292,8 +292,8 @@ export default function ControlledAccordions({
           style={{height : `${window.innerHeight - 350}px`}}
         >
           <h4 className='text-white' style={{
-            'width' : '70%',
-            'margin-left' : '17px',
+            width : '70%',
+            marginLeft : '17px',
           }}>Scavenger Hunts will be published at 9AM everyday on this website.
             These events will be designed in such a way that they will be
             <font className='text-warning'> very difficult to complete on your own, </font>
@@ -330,8 +330,8 @@ export default function ControlledAccordions({
         >
           <h4 className='text-white'
             style={{
-              'width' : '70%',
-              'margin-left' : '17px',
+              width : '70%',
+              marginLeft : '17px',
             }}
           >
             <font className='text-warning'>Extra Events </font>are random,
@@ -341,7 +341,7 @@ export default function ControlledAccordions({
             <br />
             <br />
           </h4>
-          <Button color='info' style={{'margin-left' : '17px'}}>
+          <Button color='info' style={{marginLeft : '17px'}}>
             Extra events will be released on Sept. 26th!
           </Button>
         </AccordionDetails>

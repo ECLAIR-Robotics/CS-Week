@@ -48,6 +48,7 @@ export default function RegisterPage() {
 
   const googleToken = useSelector((state) => state.reducer.jwt_key);
   const googleUser = useSelector((state) => state.reducer.user);
+  const createUser = useSelector((state) => state.reducer.createUser);
   const history = useHistory();
 
   // Form Values
@@ -55,6 +56,9 @@ export default function RegisterPage() {
   const [majorValue, setMajorValue] = React.useState('');
   const [orgValue, setOrgValue] = React.useState('');
 
+  if (!createUser) {
+    history.push('/profile')
+  }
 
   const createAccount = () => {
     axios.put('https://cs-week-api.herokuapp.com/auth/create', {
@@ -85,10 +89,10 @@ export default function RegisterPage() {
       <IndexNavbar />
       <Container>
         <Col style={{
-            'width' : '500px',
-            'margin-left': 'auto',
-            'margin-right': 'auto',
-            'margin-top': '10%',
+            width : '500px',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            marginTop: '10%',
           }}
         >
           <Card className="card-register">
@@ -121,10 +125,10 @@ export default function RegisterPage() {
       <IndexNavbar />
       <Container>
         <Col style={{
-            'width' : '500px',
-            'margin-left': 'auto',
-            'margin-right': 'auto',
-            'margin-top': '10%',
+            width : '500px',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            marginTop: '10%',
           }}
         >
           <Card className="card-register">
@@ -159,6 +163,7 @@ export default function RegisterPage() {
                       googleUser.name === undefined ?
                       "" : googleUser.name
                     }
+                    readOnly={true}
                     type="text"
                     onFocus={(e) => setFullNameFocus(true)}
                     onBlur={(e) => setFullNameFocus(false)}
@@ -183,6 +188,7 @@ export default function RegisterPage() {
                       googleUser.email === undefined ?
                       "" : googleUser.email
                     }
+                    readOnly={true}
                     type="text"
                     onFocus={(e) => setEmailFocus(true)}
                     onBlur={(e) => setEmailFocus(false)}

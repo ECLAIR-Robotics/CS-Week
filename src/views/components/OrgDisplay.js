@@ -101,10 +101,6 @@ export default function OrgDisplay() {
                   style={{
                     marginTop    : 'auto',
                     marginBottom : 'auto',
-                    fontFamily: 'bdr-mono, sans-serif',
-                    fontStyle: 'normal',
-                    fontWeight: '300',
-                    fontSize: '20px'
                   }}
                 >
                   Level up your UTCS experience with one of our participating student organizations!

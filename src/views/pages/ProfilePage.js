@@ -318,7 +318,7 @@ export default function ProfilePage() {
                   <div>
                     <h4 className="mt-3" style={{
                       color : '#e36ef4',
-                      fontSize : '44px',
+                      fontSize : '3.2vw',
                       fontFamily : 'bdr-mono, sans-serif',
                       fontStyle : 'normal',
                       fontWeight : 300,

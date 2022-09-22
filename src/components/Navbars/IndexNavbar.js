@@ -106,8 +106,9 @@ export default function IndexNavbar({
         }
       }
       
+      const google = window.google;
+
       if (google !== undefined) {
-        /* global google */
         google.accounts.id.initialize({
           client_id: "66587737847-galid6ft98binr278396v6lqm88b5ub2.apps.googleusercontent.com",
           callback: googleCallback

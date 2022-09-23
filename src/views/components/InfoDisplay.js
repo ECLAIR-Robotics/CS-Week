@@ -33,7 +33,7 @@ export default function InfoDisplay() {
   const gridContent = [
     {
       'name' : 'WHAT IS CS WEEK?',
-      'desc' : 'CS Week is a week-long social competition between UTCS orgs. UTCS organizations will be competing against each other in a series of challenges, activities, and scavenger hunts to accumulate the most amount of Bits.',
+      'desc' : 'CS Week is a week-long social competition among UTCS orgs. UTCS organizations will be competing against each other in a series of challenges, activities, and scavenger hunts to accumulate the most amount of Bits.',
     },
     {
       'name' : 'RULES OF CS WEEK',

@@ -56,7 +56,7 @@ export default function RegisterPage() {
   // Form Values
   const [eidValue, setEidValue] = React.useState('');
   const [majorValue, setMajorValue] = React.useState('');
-  const [orgValue, setOrgValue] = React.useState('');
+  const [orgValue, setOrgValue] = React.useState('ACM/A4C');
 
   if (!createUser) {
     history.push('/profile')
@@ -274,6 +274,8 @@ export default function RegisterPage() {
               Please note that you can select <font className='text-success'> one </font>
               organization to represent.{" "}
             <font className='text-danger'>You cannot change this later.</font>
+              If you run into any problems, please reach out to eclairrobotics@gmail.com,
+              and we can help you out!
             </p>
             <Button
               className="btn-round ml-3 mr-3 mb-3 mt-2"

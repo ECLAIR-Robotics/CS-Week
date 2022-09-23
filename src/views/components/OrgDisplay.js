@@ -66,7 +66,7 @@ export default function OrgDisplay() {
       'picture' : 'assets/avatar/question.png',
     },
     {
-      'name' : 'EGaDS',
+      'name' : 'EGaDS!',
       'desc' : 'The Electronic Game Developers Society (EGaDS!) is an interdisciplinary student organization open to all UT students with an interest in game development. Our mission is to help students grow as developers while fostering a supportive and welcoming community. We welcome students of all disciplines and skill levels.',
       'link' : 'https://texasegads.wixsite.com/egads',
       'picture' : 'assets/avatar/question.png',

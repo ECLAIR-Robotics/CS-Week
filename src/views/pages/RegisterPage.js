@@ -263,6 +263,7 @@ export default function RegisterPage() {
                   <option style={{color: 'black'}}>ECLAIR</option>
                   <option style={{color: 'black'}}>EGaDS</option>
                   <option style={{color: 'black'}}>Freetail Hackers</option>
+                  <option style={{color: 'black'}}>Girls Who Code</option>
                   <option style={{color: 'black'}}>Quantum Collective</option>
                   <option style={{color: 'black'}}>UTPC</option>
                   </Input>

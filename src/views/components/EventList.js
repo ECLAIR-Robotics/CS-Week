@@ -70,14 +70,14 @@ export default function ControlledAccordions({
     // Monday Events
     [
       {
-        'name' : 'TBD',
+        'name' : 'Robot Automation Society (RAS)',
         'time' : '5:00PM-6:00PM',
-        'loc'  : 'N/A',
+        'loc'  : 'GDC 4.304',
       },
       {
-        'name' : 'TBD',
+        'name' : 'Girls Who Code',
         'time' : '6:00PM-7:00PM',
-        'loc'  : 'N/A',
+        'loc'  : 'GDC 4.304',
       },
       {
         'name' : 'CS Transfer Society',

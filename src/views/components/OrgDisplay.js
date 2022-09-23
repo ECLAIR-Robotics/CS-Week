@@ -78,6 +78,12 @@ export default function OrgDisplay() {
       'picture' : 'assets/avatar/question.png',
     },
     {
+      'name' : 'Girls Who Code',
+      'desc' : 'Freetail Hackers is an organization focused on bringing students who are passionate about technology together to build cool tech, learn new skills, and become involved in the hackathon and tech communities. We put on HackTX, an annual hackathon that brings students from all over the country to build new technology.',
+      'link' : 'https://freetailhackers.com/',
+      'picture' : 'assets/avatar/question.png',
+    },
+    {
       'name' : 'Quantum Collective',
       'desc' : 'The Quantum Collective at UT Austin aims to provide a community where undergraduate students can engage with each other to learn, teach, and research topics within the field of Quantum Computing.',
       'link' : 'https://linktr.ee/qcut',

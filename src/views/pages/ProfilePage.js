@@ -128,7 +128,7 @@ export default function ProfilePage() {
   const history = useHistory();
 
   const eventDescription = [
-    'TBD', 'TBD', 'CTS', 'QC', 'TBD', 'C', 'EG', 'EC', 'TBD', 'FH',
+    'RAS', 'GWC', 'CTS', 'QC', 'TBD', 'C', 'EG', 'EC', 'TBD', 'FH',
     'A4C', 'TBD', 'TBD', 'ACM', 'R', 'TBD', 'PC',
   ]
 

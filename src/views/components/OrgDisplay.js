@@ -79,8 +79,8 @@ export default function OrgDisplay() {
     },
     {
       'name' : 'Girls Who Code',
-      'desc' : 'Freetail Hackers is an organization focused on bringing students who are passionate about technology together to build cool tech, learn new skills, and become involved in the hackathon and tech communities. We put on HackTX, an annual hackathon that brings students from all over the country to build new technology.',
-      'link' : 'https://freetailhackers.com/',
+      'desc' : 'Girls Who Code College Loops is a chapter of the national Girls Who Code organization. We aim to provide all students  the opportunity to learn skills that they may not get the chance to elsewhere. We aim to bring together people into a community in order to learn topics like game development, web development, programming languages, interview techniques, and more!',
+      'link' : 'https://www.cs.utexas.edu/~wics/girlswhocode.html',
       'picture' : 'assets/avatar/question.png',
     },
     {

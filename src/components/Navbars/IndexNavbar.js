@@ -168,7 +168,7 @@ export default function IndexNavbar({
     marginTop : '7px',
     marginRight : '50px',
     paddingLeft : '1px',
-    paddingRight : '40px',
+    paddingRight : '25px',
     paddingTop : '5px',
     paddingBottom : '5px',
     borderRadius : '8px',
@@ -238,6 +238,15 @@ export default function IndexNavbar({
               >
                 <i className="tim-icons icon-minimal-right" />
                 {`SCHEDULE`}
+              </button>
+            </NavItem>
+            <NavItem>
+              <button
+                style={navStyleProps}
+                onClick={() => { history.push('/points') }}
+              >
+                <i className="tim-icons icon-minimal-right" />
+                {`POINTS`}
               </button>
             </NavItem>
             <NavItem>

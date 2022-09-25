@@ -84,12 +84,13 @@ export function PointsHeader() {
               color : '#ffffff'
             }} 
           >Current Bits</h1>
-          <h3 style={{
-            color : '#E36EF4'
-          }}>- SCAVENGER HUNT</h3>
-          <h3 style={{
-            color : '#E36EF4'
-          }}>- TOTAL</h3>
+          <h3 style={{color : '#E36EF4', marginLeft: '40px'}}>
+            <font style={{color: '#FF9343'}}>• EVENTS </font><br />
+            <font style={{color: '#1764FF'}}>• HOSTING </font><br />
+            <font style={{color: '#42A560'}}>• SCAVENGER HUNT </font><br />
+            <font style={{color: '#E36EF4'}}>• EXTRA EVENTS </font><br />
+            <font style={{color: '#E54141'}}>• PARTICIPATION </font>
+          </h3>
         </Container>
       </div>
     </div>

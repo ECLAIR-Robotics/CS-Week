@@ -165,16 +165,16 @@ export default function TotalPoints() {
             fontFamily: 'bdr-mono, sans-serif',
             fontStyle: 'normal',
             fontWeight: '300',
-            color : '#ffffff'
+            color : '#E36EF4',
           }} 
         >TOTAL BITS</h1>
         <ResponsiveBar
           data={data}
           keys={[
               'Events',
-              'Extra events',
               'Hosting',
               'Scavenger Hunt',
+              'Extra events',
               'Participation',
           ]}
           theme={{
@@ -189,7 +189,7 @@ export default function TotalPoints() {
           layout='horiztonal'
           valueScale={{ type: 'linear' }}
           indexScale={{ type: 'band', round: true }}
-          colors={['#FF9343', '#42A560', '#1764FF', '#E36EF4', '#E54141']}
+          colors={['#FF9343', '#1764FF', '#42A560', '#E36EF4', '#E54141']}
           borderColor={{
               from: 'color',
               modifiers: [

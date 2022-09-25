@@ -48,6 +48,17 @@ export default function GridButton({
     setIsHover(false);
   }
 
+  //{picture !== '' && <img
+  //    alt=' '
+  //    className='path'
+  //    src={picture}
+  //    style={{
+  //      marginTop : '20px',
+  //      width  : 50,
+  //      height : 50,
+  //    }}
+  //  />
+  //}
 
   return (<>
       <button
@@ -74,16 +85,6 @@ export default function GridButton({
         onClick={() => setClick(gridIndex)}>
         {content}
       </button>
-      {picture !== '' && <img
-        alt=' '
-        className='path'
-        src={picture}
-        style={{
-          'width'  : 60,
-          'height' : 60,
-        }}
-      />
-    }
     </>
   );
 }

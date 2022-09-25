@@ -5056,7 +5056,7 @@ a.close.disabled {
   vertical-align: text-top !important; }
 
 .bg-primary {
-  background-color: #e14eca !important; }
+  background-color: #e36ef4 !important; }
 
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,
@@ -10867,7 +10867,7 @@ img {
   .navbar.bg-dark {
     background: #222a42 !important; }
   .navbar.bg-primary {
-    background-color: #e14eca !important; }
+    background-color: #e36ef4 !important; }
   .navbar.bg-warning {
     background-color: #ff8d72 !important; }
   .navbar.bg-info {

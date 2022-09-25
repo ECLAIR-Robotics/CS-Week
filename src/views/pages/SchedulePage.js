@@ -52,7 +52,7 @@ export default function SchedulePage() {
     if (eventDay === id) {
       return <button
               style={{
-                backgroundColor : '#E14ECA',
+                backgroundColor : '#E36EF4',
                 fontSize : '40px',
                 color : 'black',
                 border : '2px solid #E14ECA',
@@ -110,7 +110,6 @@ export default function SchedulePage() {
           <DaysButton id={2} content={'W'}/>
           <DaysButton id={3} content={'Th'}/>
           <DaysButton id={4} content={'F'}/>
-          <DaysButton id={5} content={'S'}/>
         </View>
         <View style={{'flex' : 10}}>
           <EventList

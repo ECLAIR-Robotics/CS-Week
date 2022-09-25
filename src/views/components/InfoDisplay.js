@@ -54,25 +54,47 @@ export default function InfoDisplay() {
         <Container>
           <Row className="row-grid justify-content-between">
             <Col className="mt-lg-5 mr-5" md="5" mt='3'>
-              <h1 className="text-primary font-weight-light">
+              <h1 className="font-weight-light" style={{
+                fontFamily: 'bdr-mono, sans-serif',
+                fontStyle: 'normal',
+                fontWeight: '300',
+                color: '#E36EF4',
+              }}>
                 {gridContent[clickGrid].name}
               </h1>
               {clickGrid === 0 &&
                 <div>
-                  <h4 className="text-white font-weight-light">
+                  <h4 className="text-white font-weight-light" style={{
+                    fontSize: '18px',
+                  }}>
                     {gridContent[clickGrid].desc}
                   </h4>
                 </div>}
               {clickGrid === 1 &&
                 <div>
                   <blockquote>
-                    <p className="blockquote blockquote-white justify-content-center">
+                    <p className="blockquote blockquote-white justify-content-center" style={{
+                      //fontFamily: 'scala, sans-serif',
+                      //fontStyle: 'normal',
+                      //fontWeight: 400,
+                      //fontSize: '16px',
+                    }}>
                       Students can only sign up for one organization
                     </p>
-                    <p className="blockquote blockquote-primary justify-content-center">
+                    <p className="blockquote blockquote-white justify-content-center" style={{
+                      //fontFamily: 'scala, sans-serif',
+                      //fontStyle: 'normal',
+                      //fontWeight: 400,
+                      //fontSize: '16px',
+                    }}>
                       Organizations compete by obtaining bits in events, scavenger hunts, and other activities
                     </p>
-                    <p className="blockquote blockquote-danger justify-content-center">
+                    <p className="blockquote blockquote-white justify-content-center" style={{
+                      //fontFamily: 'scala, sans-serif',
+                      //fontStyle: 'normal',
+                      //fontWeight: 400,
+                      //fontSize: '16px',
+                    }}>
                       May the best organization win
                     </p>
                   </blockquote>

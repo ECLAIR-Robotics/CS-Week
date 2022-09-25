@@ -70,7 +70,7 @@ export default function ControlledAccordions({
     // Monday Events
     [
       {
-        'name' : 'Robot Automation Society (RAS)',
+        'name' : 'Robot Automation Society',
         'time' : '5:00PM-6:00PM',
         'loc'  : 'GDC 4.304',
       },
@@ -89,18 +89,18 @@ export default function ControlledAccordions({
         'time' : '8:00PM-9:00PM',
         'loc'  : 'GDC 1.304',
       },
-      {
-        'name' : 'TBD',
-        'time' : '9:00PM-10:00PM',
-        'loc'  : 'N/A',
-      },
+      //{
+      //  'name' : 'TBD',
+      //  'time' : '9:00PM-10:00PM',
+      //  'loc'  : 'N/A',
+      //},
     ],
     // Tuesday Events
     [
       {
         'name' : 'Convergent',
         'time' : '5:00PM-6:00PM',
-        'loc'  : 'McCombs TBD',
+        'loc'  : 'GDC 4.304',
       },
       {
         'name' : 'EGaDS',
@@ -112,11 +112,11 @@ export default function ControlledAccordions({
         'time' : '8:00PM-9:00PM',
         'loc'  : 'GDC 6.302',
       },
-      {
-        'name' : 'TBD',
-        'time' : '9:00PM-10:00PM',
-        'loc'  : 'N/A',
-      },
+      //{
+      //  'name' : 'TBD',
+      //  'time' : '9:00PM-10:00PM',
+      //  'loc'  : 'N/A',
+      //},
     ],
     // Wednesday Events
     [
@@ -130,19 +130,19 @@ export default function ControlledAccordions({
         'time' : '6:00PM-7:00PM',
         'loc'  : 'TBD',
       },
-      {
-        'name' : 'TBD',
-        'time' : '9:00PM-10:00PM',
-        'loc'  : 'N/A',
-      },
+      //{
+      //  'name' : 'TBD',
+      //  'time' : '9:00PM-10:00PM',
+      //  'loc'  : 'N/A',
+      //},
     ],
     // Thursday Events
     [
-      {
-        'name' : 'TBD',
-        'time' : '5:00PM-6:00PM',
-        'loc'  : 'N/A',
-      },
+      //{
+      //  'name' : 'TBD',
+      //  'time' : '5:00PM-6:00PM',
+      //  'loc'  : 'N/A',
+      //},
       {
         'name' : 'ACM',
         'time' : '6:00PM-7:00PM',
@@ -156,11 +156,11 @@ export default function ControlledAccordions({
     ],
     // Friday Events
     [
-      {
-        'name' : 'TBD',
-        'time' : '5:00PM-6:00PM',
-        'loc'  : 'N/A',
-      },
+      //{
+      //  'name' : 'TBD',
+      //  'time' : '5:00PM-6:00PM',
+      //  'loc'  : 'N/A',
+      //},
       {
         'name' : 'UTPC',
         'time' : '6:00PM-8:00PM',
@@ -246,7 +246,7 @@ export default function ControlledAccordions({
         >
           <Typography style={titleProps}>
             <i className="tim-icons icon-calendar-60 mr-3 mb-1"/>
-            Events
+            EVENTS
           </Typography>
         </AccordionSummary>
         <AccordionDetails
@@ -285,7 +285,7 @@ export default function ControlledAccordions({
         >
           <Typography style={titleProps}>
             <i className="tim-icons icon-puzzle-10 mr-3 mb-1" />
-            Scavenger Hunts
+            SCAVENGER HUNTS
           </Typography>
         </AccordionSummary>
         <AccordionDetails
@@ -298,9 +298,11 @@ export default function ControlledAccordions({
             These events will be designed in such a way that they will be
             <font className='text-warning'> very difficult to complete on your own, </font>
             so we highly encourage you to work with others! You are allowed to use
-            ANY resource you wish to solve these puzzles.
-            <font className='text-danger'> Please DO NOT copy answers
-            from another organization!</font>
+            ANY resource you wish to solve these puzzles (professors, internet, chemists,
+            your mom, anyone and anything!).
+            <font className='text-danger'> However, please DO NOT copy answers
+            from another organization! </font>
+            We will post occasional hints here so be sure to check if you get stuck! :)
             <br />
             <br />
           </h4>
@@ -322,7 +324,7 @@ export default function ControlledAccordions({
         >
           <Typography style={titleProps}>
             <i className="tim-icons icon-trophy mr-3 mb-1"/>
-            Extra Events
+            EXTRA EVENTS
           </Typography>
         </AccordionSummary>
         <AccordionDetails

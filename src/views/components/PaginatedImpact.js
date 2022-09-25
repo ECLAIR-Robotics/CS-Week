@@ -62,7 +62,7 @@ export default function PaginatedImpact() {
               style={{'font-size': '1.8em'}}/>
             Covid-19
           </h3>
-          <h4>
+          <h4 className="text-white">
             The pandemic had a massive impact on in-person events
             especially in CS department. CS Week aims to provide fun
             team building activities to help transition back to
@@ -78,7 +78,7 @@ export default function PaginatedImpact() {
               style={{'font-size': '1.8em'}}/>
             Burnout is Real
           </h3>
-          <h4>
+          <h4 className="text-white">
             Computer science, as a field, can feel very independent
             and isolating at times. We hope students can take a break
             and look forward to something fun and exciting while being
@@ -94,7 +94,7 @@ export default function PaginatedImpact() {
               style={{'font-size': '1.8em'}}/>
             Community Building
           </h3>
-          <h4>
+          <h4 className="text-white">
             UTCS feels relatively isolated as people work independently
             through the year. However, many like-minded individuals
             roam the halls of GDC daily. We hope that undergraduate CS
@@ -111,7 +111,7 @@ export default function PaginatedImpact() {
               style={{'font-size': '1.8em'}}/>
             Diversity, Equity, and Inclusion
           </h3>
-          <h4>
+          <h4 className="text-white">
             We strongly believe that the most vocal initiative should not
             be the only important initiative. CS Week hopes to allow all
             initiatves, big or small, to have a microphone and create a

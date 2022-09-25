@@ -275,6 +275,13 @@ export default function ProfilePage() {
     })
   }
 
+  var firstLastName = googleUser.name;
+  const splitted = firstLastName.split(" ")
+
+  if (splitted.length > 2) {
+    firstLastName = `${googleUser.name[0]} ${googleUser.name[splitted.length - 1]}`;
+  }
+
   return (
     <div className="page-header header-filter" style={{
       backgroundImage : `url(${profileBackground})`,

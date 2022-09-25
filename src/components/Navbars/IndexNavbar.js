@@ -175,7 +175,14 @@ export default function IndexNavbar({
   };
 
   return (
-    <Navbar className={"fixed-top " + color} color-on-scroll="100" expand="lg">
+    <Navbar
+      className={"fixed-top"}
+      color-on-scroll="100"
+      expand="lg"
+      style={{
+        backgroundColor : color === "navbar-transparent" ? 'transparent' : "#E36EF4"
+      }}
+    >
       <Container>
         <div className="navbar-translate">
           <NavbarBrand to="/" tag={Link} id="navbar-brand" style={{
@@ -183,7 +190,7 @@ export default function IndexNavbar({
               fontStyle: 'normal',
               fontWeight: '300',
           }}>
-            Created by
+            CREATED BY
             <span> ECLAIR</span>
           </NavbarBrand>
           <UncontrolledTooltip placement="bottom" target="navbar-brand">
@@ -221,7 +228,7 @@ export default function IndexNavbar({
                 onClick={() => { history.push('/') }}
               >
                 <i className="tim-icons icon-minimal-right" />
-                {`About CS Week`}
+                {`ABOUT CS WEEK`}
               </button>
             </NavItem>
             <NavItem>
@@ -230,7 +237,7 @@ export default function IndexNavbar({
                 onClick={() => { history.push('/schedule') }}
               >
                 <i className="tim-icons icon-minimal-right" />
-                {`Schedule`}
+                {`SCHEDULE`}
               </button>
             </NavItem>
             <NavItem>

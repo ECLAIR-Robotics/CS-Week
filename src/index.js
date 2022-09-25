@@ -27,6 +27,7 @@ import HomePage from "views/pages/HomePage.js";
 import SchedulePage from "views/pages/SchedulePage.js";
 import ProfilePage from "views/pages/ProfilePage.js";
 import RegisterPage from "views/pages/RegisterPage.js";
+import PointsPage from "views/pages/PointsPage.js";
 
 import { Provider } from 'react-redux'
 import store from "views/reduxFiles/store.js"
@@ -39,6 +40,7 @@ ReactDOM.render(
         <Route path="/schedule" render={(props) => <SchedulePage {...props} />} />
         <Route path="/register" render={(props) => <RegisterPage {...props} />} />
         <Route path="/profile" render={(props) => <ProfilePage {...props} />} />
+        <Route path="/points" render={(props) => <PointsPage {...props} />} />
         <Redirect to="/" />
       </Switch>
     </BrowserRouter>,

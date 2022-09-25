@@ -145,7 +145,7 @@ export default function OrgDisplay() {
                       target='_blank'
                       rel="noreferrer"
                     >
-                      Learn more about {` ${gridContent[clickGrid].name}`}
+                      Learn more
                       <i className="tim-icons icon-minimal-right text-success ml-2 mb-1" />
                     </a>
                   </h4>

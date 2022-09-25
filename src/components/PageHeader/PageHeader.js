@@ -17,6 +17,7 @@
 */
 import React from "react";
 import landingpage from 'assets/pages/landingpage.png';
+import pointsBackground from 'assets/pages/pointsBackground.png';
 
 // reactstrap components
 import { Container } from "reactstrap";
@@ -52,6 +53,43 @@ export function PageHeader() {
           <h3 style={{
             color : '#E36EF4'
           }}>SEPTEMBER 26TH - OCTOBER 1ST</h3>
+        </Container>
+      </div>
+    </div>
+  );
+}
+
+export function PointsHeader() {
+  return (
+    <div style={{
+      backgroundImage : `url(${pointsBackground})`,
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+    }}>
+      <div className="page-header header-filter">
+        <Container style={{
+          top : '40%',
+          fontFamily: 'bdr-mono, sans-serif',
+          fontStyle: 'normal',
+          fontWeight: '300',
+        }}>
+          <h1
+            style={{
+              fontSize: '80px',
+              fontFamily : 'soleil, sans-serif',
+              fontStyle : 'bold',
+              fontWeight : 300,
+              marginTop: '-15px',
+              marginLeft: '-8px',
+              color : '#ffffff'
+            }} 
+          >Current Bits</h1>
+          <h3 style={{
+            color : '#E36EF4'
+          }}>- SCAVENGER HUNT</h3>
+          <h3 style={{
+            color : '#E36EF4'
+          }}>- TOTAL</h3>
         </Container>
       </div>
     </div>

@@ -120,8 +120,11 @@ class BitNavs extends React.Component {
             <TabPane tabId="plainTabs1">
               <h4 className='text-white'>
               <font className='text-success'>Participation Bits </font>are earned by
-                students signing up for CS Week. 1 Bit is
-                awarded to each student that chooses to represent a particular org
+                students signing up for CS Week. You must attend at least 1 event for
+                your bit to be activated.
+              </h4>
+              <h4 className='text-white'>
+                For each member: 1 Bit 
               </h4>
             </TabPane>
             <TabPane tabId="plainTabs2">
@@ -129,9 +132,12 @@ class BitNavs extends React.Component {
               <font className='text-danger'>Event Bits </font>are earned by attending
                 and winning events held by other organizations.
                 <font className='text-warning'> These events will be the best way
-                to earn points for your organization.</font> Typically,
-                you will be working alongside the members that are a part of
-                your club in order to win as many Bits as you can.
+                to earn points for your organization.</font> 
+              </h4>
+              <h4 className='text-white' style={{whiteSpace: 'pre'}}>
+                For each org: <br />
+                1st: 200 Bits {`\t\t\t`} 2nd: 100 Bits <br />
+                3rd: 50 Bits  {`\t\t\t`} 4th: 25 Bits
               </h4>
             </TabPane>
             <TabPane tabId="plainTabs3">
@@ -139,8 +145,9 @@ class BitNavs extends React.Component {
               <font className='text-primary'>Hosting Bits </font>are earned by helping your
                 organization host their event. <font className='text-warning'> At a
                 minimum, each organization must host at least 1 event. </font>
-                Additionally, extra Hosting Bits may be earned by assisting labs
-                and other organizations during their events.
+              </h4>
+              <h4 className='text-white'>
+                For each event hosted: 100 Bits
               </h4>
             </TabPane>
             <TabPane tabId="plainTabs4">
@@ -151,6 +158,9 @@ class BitNavs extends React.Component {
                 very difficult to complete on your own,</font> so we highly
                 encourage you to work with others!
               </h4>
+              <h4 className='text-white'>
+                For each item completed: 15 Bits for each org
+              </h4>
             </TabPane>
             <TabPane tabId="plainTabs5">
               <h4 className='text-white'>
@@ -159,6 +169,9 @@ class BitNavs extends React.Component {
                 These typically consist of fun, unique activities to get you
                 out of your comfort zone
                 <br />
+              </h4>
+              <h4 className='text-white'>
+                Depending on the task, ranges from 1-5 Bits for each person
               </h4>
             </TabPane>
           </TabContent>

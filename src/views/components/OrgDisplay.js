@@ -23,7 +23,16 @@ Container,
 Row,
 } from "reactstrap";
 import GridButton from "./GridButton";
-import questionMark from 'assets/avatar/question.png';
+import acm from 'assets/avatar/ACM.png';
+import convergent from 'assets/avatar/TXConvergent.png';
+import roadshow from 'assets/avatar/CSRoadshow.png';
+import transfer from 'assets/avatar/CSTransferSociety.png';
+import eclair from 'assets/avatar/Eclair.png';
+import egads from 'assets/avatar/EGaDS.png';
+import freetail from 'assets/avatar/FreetailHackers.png';
+import girlswhocode from 'assets/avatar/GirlsCoding.png';
+import quantum from 'assets/avatar/Quantum_Collective.png';
+import utpc from 'assets/avatar/UTPC.png';
 
 export default function OrgDisplay() {
 
@@ -40,61 +49,61 @@ export default function OrgDisplay() {
       'name' : 'ACM/A4C',
       'desc' : 'The Association for Computing Machinery is a UT chapter of the national ACM, and exists to create a community among Computer Science students and anyone interested in technology. ACM holds events that serve its members and the community, and is focused on the advancement of computer science studies and research, furthering computing as a profession and a science.',
       'link' : 'http://texasacm.org/',
-      'picture' : questionMark,
+      'picture' : acm,
     },
     {
       'name' : 'CONVERGENT',
       'desc' : 'TX Convergent fosters collaboration within a multidisciplinary student body through hands-on projects, comprehensive education, and open-source philanthropic endeavors.',
       'link' : 'https://www.txconvergent.org/',
-      'picture' : questionMark,
+      'picture' : convergent,
     },
     {
       'name' : 'CS ROADSHOW',
       'desc' : 'We visit local K-12 schools to introduce students to the world of computer science, and teach them about how they can get involved.',
       'link' : 'https://www.cs.utexas.edu/roadshow/',
-      'picture' : questionMark,
+      'picture' : roadshow,
     },
     {
       'name' : 'CS TRANSFER SOCIETY',
       'desc' : "We're a student org created by transfer students, for transfer students. We know firsthand how tough it can be to find your way and your people after transferring into the CS major or into UT more generally. If you're an internal transfer, external transfer, or ATP student we hope to see you!",
       'link' : 'https://www.cs.utexas.edu/undergraduate-program/student-organizations',
-      'picture' : questionMark,
+      'picture' : transfer,
     },
     {
       'name' : 'ECLAIR',
       'desc' : 'The Engineering and Computational Learning of Artificial Intelligence in Robotics (ECLAIR) is a club at UT Austin dedicated to helping all robot-loving students to transform their passionate robotics ideas into reality.',
       'link' : 'https://eclair-robotics.github.io/',
-      'picture' : questionMark,
+      'picture' : eclair,
     },
     {
       'name' : 'EGaDS!',
       'desc' : 'The Electronic Game Developers Society (EGaDS!) is an interdisciplinary student organization open to all UT students with an interest in game development. Our mission is to help students grow as developers while fostering a supportive and welcoming community. We welcome students of all disciplines and skill levels.',
       'link' : 'https://texasegads.wixsite.com/egads',
-      'picture' : questionMark,
+      'picture' : egads,
     },
     {
       'name' : 'FREETAIL HACKERS',
       'desc' : 'Freetail Hackers is an organization focused on bringing students who are passionate about technology together to build cool tech, learn new skills, and become involved in the hackathon and tech communities. We put on HackTX, an annual hackathon that brings students from all over the country to build new technology.',
       'link' : 'https://freetailhackers.com/',
-      'picture' : questionMark,
+      'picture' : freetail,
     },
     {
       'name' : 'GIRLS WHO CODE',
       'desc' : 'Girls Who Code College Loops is a chapter of the national Girls Who Code organization. We aim to provide all students  the opportunity to learn skills that they may not get the chance to elsewhere. We aim to bring together people into a community in order to learn topics like game development, web development, programming languages, interview techniques, and more!',
       'link' : 'https://www.cs.utexas.edu/~wics/girlswhocode.html',
-      'picture' : questionMark,
+      'picture' : girlswhocode,
     },
     {
       'name' : 'QUANTUM COLLECTIVE',
       'desc' : 'The Quantum Collective at UT Austin aims to provide a community where undergraduate students can engage with each other to learn, teach, and research topics within the field of Quantum Computing.',
       'link' : 'https://linktr.ee/qcut',
-      'picture' : questionMark,
+      'picture' : quantum,
     },
     {
       'name' : 'UTPC',
       'desc' : 'The International Collegiate Programming Contest is an algorithmic programming contest for college students. Teams of three, representing their university, work to solve the most real-world problems, fostering collaboration, creativity, innovation, and the ability to perform under pressure.',
       'link' : 'https://www.cs.utexas.edu/users/utpc/',
-      'picture' : questionMark,
+      'picture' : utpc,
     },
   ]
 
@@ -119,9 +128,7 @@ export default function OrgDisplay() {
                     alt=""
                     src={gridContent[clickGrid].picture}
                     style={{
-                      width: "180px",
-                      height: "180px",
-                      marginBottom: '10px',
+                      width: "250px",
                       display: 'block',
                       marginLeft: 'auto',
                       marginRight: 'auto'

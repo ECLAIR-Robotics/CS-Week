@@ -43,6 +43,16 @@ import {
 
 // core components
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
+import acm from 'assets/avatar/ACM.png';
+import convergent from 'assets/avatar/TXConvergent.png';
+import roadshow from 'assets/avatar/CSRoadshow.png';
+import transfer from 'assets/avatar/CSTransferSociety.png';
+import eclair from 'assets/avatar/Eclair.png';
+import egads from 'assets/avatar/EGaDS.png';
+import freetail from 'assets/avatar/FreetailHackers.png';
+import girlswhocode from 'assets/avatar/GirlsCoding.png';
+import quantum from 'assets/avatar/Quantum_Collective.png';
+import utpc from 'assets/avatar/UTPC.png';
 
 
 function AttendanceModal ({
@@ -282,6 +292,21 @@ export default function ProfilePage() {
     firstLastName = `${googleUser.name[0]} ${googleUser.name[splitted.length - 1]}`;
   }
 
+  const avatarMapping = {
+    'ACM/A4C' : acm,
+    'Convergent' : convergent,
+    'CS Roadshow' : roadshow,
+    'CS Transfer Society' : transfer,
+    'ECLAIR' : eclair,
+    'EGaDS!' : egads,
+    'Freetail Hackers' : freetail,
+    'Girls Who Code' : girlswhocode,
+    'Quantum Collective' : quantum,
+    'UTPC' : utpc,
+  };
+
+  const avatar = avatarMapping[userInfo.org];
+
   return (
     <div className="page-header header-filter" style={{
       backgroundImage : `url(${profileBackground})`,
@@ -349,12 +374,11 @@ export default function ProfilePage() {
                   </FormGroup>
                 </Col>
                 <img
-                  alt="..."
-                  className="img-fluid rounded-circle shadow-lg"
-                  src={require("assets/avatar/question.png").default}
+                  alt=""
+                  src={avatar}
                   style={{
-                    width: "180px",
-                    height: "180px",
+                    width: "250px",
+                    height: "250px",
                     marginTop: "30px",
                     marginRight: "120px",
                   }}

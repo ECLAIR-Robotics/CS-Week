@@ -306,8 +306,13 @@ export default function ControlledAccordions({
             <br />
             <br />
           </h4>
-          <Button color='danger' style={{marginLeft : '17px'}}>
-            First scavenger hunt will be released on Sept. 26th!
+          <Button
+            color='danger'
+            style={{marginLeft : '17px'}}
+            href='https://forms.gle/kY3VKz3k18UKLHhu5'
+            target='_blank'
+          >
+            Click here to start the scavenger hunt for Monday!
           </Button>
         </AccordionDetails>
       </Accordion>
@@ -343,8 +348,13 @@ export default function ControlledAccordions({
             <br />
             <br />
           </h4>
-          <Button color='info' style={{marginLeft : '17px'}}>
-            Extra events will be released on Sept. 26th!
+          <Button
+            color='info'
+            style={{marginLeft : '17px'}}
+            href='https://docs.google.com/document/d/1fMGd2fXaWTBkCw1KtdnofT_xO2OQAwcJkOwnlut-9Ao/edit?usp=sharing'
+            target='_blank'
+          >
+            Click here to view the extra events for this year!
           </Button>
         </AccordionDetails>
       </Accordion>

@@ -42,12 +42,12 @@ export default function ScavengerPoints() {
     },
     {
       "organization": "CS Transfer Society",
-      "Progress": 8,
+      "Progress": 11,
       "ProgressColor": "hsl(306, 70%, 50%)",
     },
     {
       "organization": "ECLAIR",
-      "Progress": 6,
+      "Progress": 12,
       "ProgressColor": "hsl(46, 70%, 50%)",
     },
     {
@@ -62,7 +62,7 @@ export default function ScavengerPoints() {
     },
     {
       "organization": "Girls Who Code",
-      "Progress": 4,
+      "Progress": 7,
       "ProgressColor": "hsl(194, 70%, 50%)",
     },
     {

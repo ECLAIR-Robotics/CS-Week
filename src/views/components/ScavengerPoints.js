@@ -42,7 +42,7 @@ export default function ScavengerPoints() {
     },
     {
       "organization": "CS Transfer Society",
-      "Progress": 0,
+      "Progress": 5,
       "ProgressColor": "hsl(306, 70%, 50%)",
     },
     {
@@ -93,7 +93,7 @@ export default function ScavengerPoints() {
         >SCAVENGER HUNT</h1>
         <h4>
           To see today's scavenger hunt, please visit the schedule page!
-          (Note: rankings may take a few hours to update)
+          (Note: rankings may take a while to update)
         </h4>
         <ResponsiveBar
           data={data}

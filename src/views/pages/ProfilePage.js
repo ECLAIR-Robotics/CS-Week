@@ -373,16 +373,18 @@ export default function ProfilePage() {
                     />
                   </FormGroup>
                 </Col>
-                <img className="img-fluid rounded-circle shadow-lg"
-                  alt=""
-                  src={avatar}
-                  style={{
-                    width: "180px",
-                    height: "180px",
-                    marginTop: "30px",
-                    marginRight: "120px",
-                  }}
-                />
+                <Col>
+                  <img className="img-fluid rounded-circle shadow-lg"
+                    alt=""
+                    src={avatar}
+                    style={{
+                      width: "180px",
+                      height: "180px",
+                      marginTop: "30px",
+                      marginRight: "120px",
+                    }}
+                  />
+                </Col>
               </Row>
               <CardBody>
                 <Form className='ml-2 mr-2'>

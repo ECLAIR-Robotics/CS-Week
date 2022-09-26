@@ -32,7 +32,7 @@ export default function ScavengerPoints() {
     },
     {
       "organization": "Convergent",
-      "Progress": 0,
+      "Progress": 4,
       "ProgressColor": "hsl(85, 70%, 50%)",
     },
     {
@@ -57,7 +57,7 @@ export default function ScavengerPoints() {
     },
     {
       "organization": "Freetail Hackers",
-      "Progress": 1,
+      "Progress": 4,
       "ProgressColor": "hsl(194, 70%, 50%)",
     },
     {

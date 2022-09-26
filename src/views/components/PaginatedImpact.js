@@ -114,7 +114,7 @@ export default function PaginatedImpact() {
           <h4 className="text-white">
             We strongly believe that the most vocal initiative should not
             be the only important initiative. CS Week hopes to allow all
-            initiatves, big or small, to have a microphone and create a
+            initiatives, big or small, to have a microphone and create a
             space for all UTCS members
           </h4>
           <hr className="line-success" />

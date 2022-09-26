@@ -27,7 +27,7 @@ export default function ScavengerPoints() {
   const data = [
     {
       "organization": "ACM/A4C",
-      "Progress": 0,
+      "Progress": 3,
       "ProgressColor": "hsl(120, 70%, 50%)",
     },
     {
@@ -47,7 +47,7 @@ export default function ScavengerPoints() {
     },
     {
       "organization": "ECLAIR",
-      "Progress": 0,
+      "Progress": 3,
       "ProgressColor": "hsl(46, 70%, 50%)",
     },
     {
@@ -57,12 +57,12 @@ export default function ScavengerPoints() {
     },
     {
       "organization": "Freetail Hackers",
-      "Progress": 0,
+      "Progress": 1,
       "ProgressColor": "hsl(194, 70%, 50%)",
     },
     {
       "organization": "Girls Who Code",
-      "Progress": 0,
+      "Progress": 3,
       "ProgressColor": "hsl(194, 70%, 50%)",
     },
     {
@@ -72,7 +72,7 @@ export default function ScavengerPoints() {
     },
     {
       "organization": "UTPC",
-      "Progress": 0,
+      "Progress": 1,
       "ProgressColor": "hsl(194, 70%, 50%)",
     },
   ];

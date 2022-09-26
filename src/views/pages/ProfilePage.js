@@ -373,12 +373,12 @@ export default function ProfilePage() {
                     />
                   </FormGroup>
                 </Col>
-                <img
+                <img className="img-fluid rounded-circle shadow-lg"
                   alt=""
                   src={avatar}
                   style={{
-                    width: "250px",
-                    height: "250px",
+                    width: "180px",
+                    height: "180px",
                     marginTop: "30px",
                     marginRight: "120px",
                   }}

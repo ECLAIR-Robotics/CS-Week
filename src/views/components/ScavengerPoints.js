@@ -67,7 +67,7 @@ export default function ScavengerPoints() {
     },
     {
       "organization": "Quantum Collective",
-      "Progress": 0,
+      "Progress": 4,
       "ProgressColor": "hsl(194, 70%, 50%)",
     },
     {

@@ -60,7 +60,7 @@ export default function TotalPoints() {
       "HostingColor": "hsl(284, 70%, 50%)",
       "Participation": 0,
       "ParticipationColor": "hsl(190, 70%, 50%)",
-      "Scavenger Hunt": 0,
+      "Scavenger Hunt": 165,
       "Scavenger HuntColor": "hsl(297, 70%, 50%)",
     },
     {
@@ -86,7 +86,7 @@ export default function TotalPoints() {
       "HostingColor": "hsl(273, 70%, 50%)",
       "Participation": 0,
       "ParticipationColor": "hsl(276, 70%, 50%)",
-      "Scavenger Hunt": 60,
+      "Scavenger Hunt": 90,
       "Scavenger HuntColor": "hsl(194, 70%, 50%)",
     },
     {

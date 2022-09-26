@@ -73,21 +73,25 @@ export default function ControlledAccordions({
         'name' : 'Robot Automation Society',
         'time' : '5:00PM-6:00PM',
         'loc'  : 'GDC 4.304',
+        'event' : 'Geoguesser',
       },
       {
         'name' : 'Girls Who Code',
         'time' : '6:00PM-7:00PM',
         'loc'  : 'GDC 4.304',
+        'event' : 'Jeopardy',
       },
       {
         'name' : 'CS Transfer Society',
         'time' : '7:00PM-8:00PM',
         'loc'  : 'GDC Atrium',
+        'event' : 'Scavenger Hunt',
       },
       {
         'name' : 'Quantum Collective',
         'time' : '8:00PM-9:00PM',
         'loc'  : 'GDC 1.304',
+        'event' : 'Quantum Games',
       },
       //{
       //  'name' : 'TBD',
@@ -101,16 +105,19 @@ export default function ControlledAccordions({
         'name' : 'Convergent',
         'time' : '5:00PM-6:00PM',
         'loc'  : 'GDC 4.304',
+        'event' : 'Convergent Tank',
       },
       {
         'name' : 'EGaDS',
         'time' : '6:00PM-8:00PM',
         'loc'  : 'GDC 5.302',
+        'event' : 'Arcade Night',
       },
       {
         'name' : 'ECLAIR',
         'time' : '8:00PM-9:00PM',
         'loc'  : 'GDC 6.302',
+        'event' : 'Mock Casino',
       },
       //{
       //  'name' : 'TBD',
@@ -124,11 +131,13 @@ export default function ControlledAccordions({
         'name' : 'Freetail Hackers',
         'time' : '5:00PM-6:00PM',
         'loc'  : 'TBD',
+        'event' : 'Field Day',
       },
       {
         'name' : 'A4C',
         'time' : '6:00PM-7:00PM',
         'loc'  : 'TBD',
+        'event' : 'Debate Tournament',
       },
       //{
       //  'name' : 'TBD',
@@ -147,11 +156,13 @@ export default function ControlledAccordions({
         'name' : 'ACM',
         'time' : '6:00PM-7:00PM',
         'loc'  : 'GDC 4.302',
+        'event' : 'Trivia Night',
       },
       {
         'name' : 'Roadshow',
         'time' : '9:00PM-10:00PM',
         'loc'  : 'GDC 4.302/4.304',
+        'event' : 'Mario Kart Tournament',
       },
     ],
     // Friday Events
@@ -165,6 +176,7 @@ export default function ControlledAccordions({
         'name' : 'UTPC',
         'time' : '6:00PM-8:00PM',
         'loc'  : 'GDC 2.216',
+        'event' : 'Programming Comp.',
       },
     ],
     // Saturday Events
@@ -259,12 +271,13 @@ export default function ControlledAccordions({
                   <p className="blockquote blockquote-white justify-content-center"
                     style={{
                       fontSize : '18px',
-                      marginLeft : '30px'
+                      marginLeft : '30px',
+                      whiteSpace : 'pre',
                     }}
                   >
                     {events[eventDay][i]['name']} <br />
-                    {events[eventDay][i]['time']} <br />
-                    {events[eventDay][i]['loc']} <br />
+                    {events[eventDay][i]['event']} <br />
+                    {events[eventDay][i]['time']}{' '}{events[eventDay][i]['loc']} <br />
                   </p>
                 </blockquote>
               })}

@@ -138,8 +138,8 @@ export default function ProfilePage() {
   const history = useHistory();
 
   const eventDescription = [
-    'RAS', 'GWC', 'CTS', 'QC', 'TBD', 'C', 'EG', 'EC', 'TBD', 'FH',
-    'A4C', 'TBD', 'TBD', 'ACM', 'R', 'TBD', 'PC',
+    'RAS', 'GWC', 'CTS', 'QC', 'C', 'EG', 'EC', 'FH',
+    'A4C', 'ACM', 'R', 'TBD', 'PC',
   ]
 
   function isEmpty(obj) {

@@ -37,7 +37,7 @@ export default function ScavengerPoints() {
     },
     {
       "organization": "CS Roadshow",
-      "Progress": 0,
+      "Progress": 11,
       "ProgressColor": "hsl(219, 70%, 50%)",
     },
     {
@@ -47,7 +47,7 @@ export default function ScavengerPoints() {
     },
     {
       "organization": "ECLAIR",
-      "Progress": 4,
+      "Progress": 6,
       "ProgressColor": "hsl(46, 70%, 50%)",
     },
     {

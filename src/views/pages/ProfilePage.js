@@ -160,10 +160,9 @@ export default function ProfilePage() {
         }
       }).catch((error) => {
         // else: have the user sign in again
-        history.push('/register');
       })
     }
-  },[userInfo, googleToken, history]);
+  },[userInfo, googleToken]);
 
   if (googleUser.name === undefined) {
     return (<div className="page-header header-filter" style={{
@@ -350,7 +349,7 @@ export default function ProfilePage() {
                   <div>
                     <h4 className="mt-3" style={{
                       color : '#e36ef4',
-                      fontSize : '12px',
+                      fontSize : '24px',
                       fontFamily : 'bdr-mono, sans-serif',
                       fontStyle : 'normal',
                       fontWeight : 300,

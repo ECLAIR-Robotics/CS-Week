@@ -139,12 +139,6 @@ export default function ProfilePage() {
   const [formModal, setFormModal] = React.useState(false);
   const [orgAbrev, setOrgAbrev] = React.useState('');
 
-  const eventDescription = [
-    'RAS', 'GWC', 'CTS', 'QC',
-    'C', 'EG', 'EC', 'FH',
-    'A4C', 'ACM', 'R', 'PC',
-  ]
-
   const eventMapping = {
     'RAS' : 0,
     'GWC' : 1,
@@ -454,14 +448,16 @@ export default function ProfilePage() {
                           }}
                           style={{cursor: 'pointer'}}
                         />
-                        {userInfo.attendance.map((bool, idx) => {
-                          if (idx < eventIndex || idx >= eventIndex + 5) {
+                        {Object.keys(eventMapping).map((org, i) => {
+
+                          if (i < eventIndex || i >= eventIndex + 5) {
                             return <></>;
                           }
 
-                          const color = bool ? '#00f2c3' : '#1d8cf8';
+                          const actualIdx = eventMapping[org];
+                          const color = userInfo.attendance[actualIdx] ? '#00f2c3' : '#1d8cf8';
 
-                          return <button key={idx} style={{
+                          return <button key={i} style={{
                                 marginLeft : '5px',
                                 width : '45px',
                                 height : '45px',
@@ -474,16 +470,16 @@ export default function ProfilePage() {
                               }}
                               type='button'
                               onClick={(e) => {
-                                setOrgAbrev(eventDescription[idx]);
+                                setOrgAbrev(org);
                                 setFormModal(true)
                               }}
                             >
-                            {eventDescription[idx]}
+                            {org}
                             </button>
                         })}
                         <i className="tim-icons icon-minimal-right text-info ml-3 mt-3"
                           onClick={() => {
-                            setEventIndex(eventIndex + 5 < eventDescription.length ? eventIndex + 5 : extraIndex);
+                            setEventIndex(eventIndex + 5 < 12 ? eventIndex + 5 : extraIndex);
                           }}
                           style={{cursor: 'pointer'}}
                         />

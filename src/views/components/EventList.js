@@ -318,6 +318,9 @@ export default function ControlledAccordions({
             We will post occasional hints here so be sure to check if you get stuck! :)
             <br />
             <br />
+            Hints (please make sure to submit or your org won't get points!): <br />
+              1.1) Ask an upperclassmen about a former pet mascot <br />
+              1.3) .dneirf tseb ruoy si ypmuN .mrofsnart reiruoF
           </h4>
           <Button
             color='danger'

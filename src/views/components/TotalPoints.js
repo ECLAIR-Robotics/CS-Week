@@ -34,7 +34,7 @@ export default function TotalPoints() {
       "HostingColor": "hsl(274, 70%, 50%)",
       "Participation": 0,
       "ParticipationColor": "hsl(357, 70%, 50%)",
-      "Scavenger Hunt": 3 * 15,
+      "Scavenger Hunt": 3 * 15 + 1 * 15,
       "Scavenger HuntColor": "hsl(269, 70%, 50%)",
     },
     {
@@ -86,7 +86,7 @@ export default function TotalPoints() {
       "HostingColor": "hsl(273, 70%, 50%)",
       "Participation": 0,
       "ParticipationColor": "hsl(276, 70%, 50%)",
-      "Scavenger Hunt": 15 * 15,
+      "Scavenger Hunt": 15 * 15 + 3 * 15,
       "Scavenger HuntColor": "hsl(194, 70%, 50%)",
     },
     {
@@ -99,7 +99,7 @@ export default function TotalPoints() {
       "HostingColor": "hsl(259, 70%, 50%)",
       "Participation": 0,
       "ParticipationColor": "hsl(209, 70%, 50%)",
-      "Scavenger Hunt": 5 * 15,
+      "Scavenger Hunt": 5 * 15 + 3 * 15,
       "Scavenger HuntColor": "hsl(69, 70%, 50%)",
     },
     {
@@ -151,7 +151,7 @@ export default function TotalPoints() {
       "HostingColor": "hsl(324, 70%, 50%)",
       "Participation": 0,
       "ParticipationColor": "hsl(212, 70%, 50%)",
-      "Scavenger Hunt": 4 * 15,
+      "Scavenger Hunt": 4 * 15 + 1 * 15,
       "Scavenger HuntColor": "hsl(67, 70%, 50%)",
     },
   ];

@@ -136,7 +136,7 @@ export default function ControlledAccordions({
       {
         'name' : 'A4C',
         'time' : '6:00PM-7:00PM',
-        'loc'  : 'TBD',
+        'loc'  : 'GDC 2.410',
         'event' : 'Debate Tournament',
       },
       //{
@@ -322,10 +322,10 @@ export default function ControlledAccordions({
           <Button
             color='danger'
             style={{marginLeft : '17px'}}
-            href='https://forms.gle/kY3VKz3k18UKLHhu5'
+            href='https://forms.gle/wL5dztPy7m2sKxVT7'
             target='_blank'
           >
-            Click here to start the scavenger hunt for Monday!
+            Click here to start the scavenger hunt for Tuesday!
           </Button>
         </AccordionDetails>
       </Accordion>

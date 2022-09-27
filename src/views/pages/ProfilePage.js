@@ -18,7 +18,6 @@
 import React from "react";
 import classnames from "classnames";
 import { useSelector } from "react-redux";
-import { useHistory } from "react-router-dom";
 import axios from "axios";
 import profileBackground from 'assets/pages/profileBackground.png';
 
@@ -59,6 +58,7 @@ function AttendanceModal ({
   formModal,
   setFormModal,
   submitAttendance,
+  name,
 }) {
 
     const [passwordFocus, setPasswordFocus] = React.useState(false);
@@ -70,7 +70,11 @@ function AttendanceModal ({
             toggle={() => setFormModal(false)}
           >
             <div className="modal-header justify-content-center">
-              <button className="close" onClick={() => setFormModal(false)}>
+              <button
+                className="close"
+                onClick={() => setFormModal(false)}
+                type='button'
+              >
                 <i className="tim-icons icon-simple-remove text-white" />
               </button>
               <div className="text-muted text-center ml-auto mr-auto">
@@ -78,7 +82,6 @@ function AttendanceModal ({
               </div>
             </div>
             <div className="modal-body">
-              <Form role="form">
                 <FormGroup>
                   <InputGroup
                     className={classnames("input-group-alternative", {
@@ -104,12 +107,11 @@ function AttendanceModal ({
                     className="my-4"
                     color="primary"
                     type="button"
-                    onClick={(e) => { submitAttendance(password) }}
+                    onClick={(e) => { submitAttendance(name, password) }}
                   >
                     Sign in to event
                   </Button>
                 </div>
-              </Form>
             </div>
           </Modal>
 }
@@ -135,12 +137,28 @@ export default function ProfilePage() {
   const [errorContent, setErrorContent] = React.useState('');
 
   const [formModal, setFormModal] = React.useState(false);
-  const history = useHistory();
+  const [orgAbrev, setOrgAbrev] = React.useState('');
 
   const eventDescription = [
-    'RAS', 'GWC', 'CTS', 'QC', 'C', 'EG', 'EC', 'FH',
-    'A4C', 'ACM', 'R', 'TBD', 'PC',
+    'RAS', 'GWC', 'CTS', 'QC',
+    'C', 'EG', 'EC', 'FH',
+    'A4C', 'ACM', 'R', 'PC',
   ]
+
+  const eventMapping = {
+    'RAS' : 0,
+    'GWC' : 1,
+    'CTS' : 2,
+    'QC' : 3,
+    'C' : 5,
+    'EG' : 6,
+    'EC' : 7,
+    'FH' : 9,
+    'A4C' : 10,
+    'ACM' : 13,
+    'R' : 14,
+    'PC' : 16,
+  };
 
   function isEmpty(obj) {
     return Object.keys(obj).length === 0;
@@ -241,7 +259,7 @@ export default function ProfilePage() {
     })
   }
 
-  const submitAttendance = (code) => {
+  const submitAttendance = (id, code) => {
     // some axios stuff to do a request
     axios.put('https://cs-week-api.herokuapp.com/auth/attendance', {
       google_id: googleToken,
@@ -252,6 +270,11 @@ export default function ProfilePage() {
         setErrorReq(false);
         setUpdateReq(true);
         setUpdateContent(`Successfully recorded your attendance!`);
+        const idx = eventMapping[id];
+
+        var newList = userInfo.attendance;
+        newList[idx] = 1;
+        setUserInfo({'attendance': newList, ...userInfo});
       }
     }).catch((error) => {
       // else: have the user sign in again
@@ -285,7 +308,7 @@ export default function ProfilePage() {
   }
 
   var firstLastName = googleUser.name;
-  const splitted = firstLastName.split(" ")
+  const splitted = firstLastName.split(" ");
 
   if (splitted.length > 2) {
     firstLastName = `${googleUser.name[0]} ${googleUser.name[splitted.length - 1]}`;
@@ -318,6 +341,7 @@ export default function ProfilePage() {
           formModal={formModal}
           setFormModal={setFormModal}
           submitAttendance={submitAttendance}
+          name={orgAbrev}
         />
         {updateReq && <Alert
             color='success'
@@ -412,6 +436,7 @@ export default function ProfilePage() {
                       <Button
                         className="btn-simple"
                         color="primary"
+                        type="button"
                         onClick={(e) => { submitProfileChanges() }}
                       >
                         <i className="tim-icons icon-pencil" /> Update
@@ -448,7 +473,10 @@ export default function ProfilePage() {
                                 backgroundColor: 'transparent',
                               }}
                               type='button'
-                              onClick={(e) => {setFormModal(true)}}
+                              onClick={(e) => {
+                                setOrgAbrev(eventDescription[idx]);
+                                setFormModal(true)
+                              }}
                             >
                             {eventDescription[idx]}
                             </button>

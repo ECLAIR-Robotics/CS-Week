@@ -37,42 +37,42 @@ export default function ScavengerPoints() {
     },
     {
       "organization": "CS Roadshow",
-      "Progress": 11,
+      "Progress": 9,
       "ProgressColor": "hsl(219, 70%, 50%)",
     },
     {
       "organization": "CS Transfer Society",
-      "Progress": 11,
+      "Progress": 15,
       "ProgressColor": "hsl(306, 70%, 50%)",
     },
     {
       "organization": "ECLAIR",
-      "Progress": 12,
+      "Progress": 15,
       "ProgressColor": "hsl(46, 70%, 50%)",
     },
     {
       "organization": "EGaDS!",
-      "Progress": 0,
+      "Progress": 5,
       "ProgressColor": "hsl(90, 70%, 50%)",
     },
     {
       "organization": "Freetail Hackers",
-      "Progress": 4,
+      "Progress": 15,
       "ProgressColor": "hsl(194, 70%, 50%)",
     },
     {
       "organization": "Girls Who Code",
-      "Progress": 7,
+      "Progress": 15,
       "ProgressColor": "hsl(194, 70%, 50%)",
     },
     {
       "organization": "Quantum Collective",
-      "Progress": 4,
+      "Progress": 5,
       "ProgressColor": "hsl(194, 70%, 50%)",
     },
     {
       "organization": "UTPC",
-      "Progress": 1,
+      "Progress": 4,
       "ProgressColor": "hsl(194, 70%, 50%)",
     },
   ];

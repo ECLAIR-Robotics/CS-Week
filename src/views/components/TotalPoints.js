@@ -65,7 +65,7 @@ export default function TotalPoints() {
     },
     {
       "organization": "CS Transfer Society",
-      "Events": 0,
+      "Events": 200,
       "EventsColor": "hsl(306, 70%, 50%)",
       "Extra events": 0,
       "Extra eventsColor": "hsl(205, 70%, 50%)",

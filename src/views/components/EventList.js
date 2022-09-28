@@ -130,7 +130,7 @@ export default function ControlledAccordions({
       {
         'name' : 'Freetail Hackers',
         'time' : '5:00PM-6:00PM',
-        'loc'  : 'TBD',
+        'loc'  : 'GDC Courtyard',
         'event' : 'Field Day',
       },
       {
@@ -325,10 +325,10 @@ export default function ControlledAccordions({
           <Button
             color='danger'
             style={{marginLeft : '17px'}}
-            href='https://forms.gle/wL5dztPy7m2sKxVT7'
+            href='https://forms.gle/KtFEVEmCTFPEWqox9'
             target='_blank'
           >
-            Click here to start the scavenger hunt for Tuesday!
+            Click here to start the scavenger hunt for Wednesday!
           </Button>
         </AccordionDetails>
       </Accordion>

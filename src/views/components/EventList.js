@@ -316,19 +316,14 @@ export default function ControlledAccordions({
             <font className='text-danger'> However, please DO NOT copy answers
             from another organization! </font>
             We will post occasional hints here so be sure to check if you get stuck! :)
-            <br />
-            <br />
-            Hints (please make sure to submit or your org won't get points!): <br />
-              1.1) Ask an upperclassmen about a former pet mascot <br />
-              1.3) .dneirf tseb ruoy si ypmuN .mrofsnart reiruoF
           </h4>
           <Button
             color='danger'
             style={{marginLeft : '17px'}}
-            href='https://forms.gle/KtFEVEmCTFPEWqox9'
+            href='https://forms.gle/7rg9hR6abh8RwnXy8'
             target='_blank'
           >
-            Click here to start the scavenger hunt for Wednesday!
+            Click here to start the scavenger hunt for Thursday!
           </Button>
         </AccordionDetails>
       </Accordion>

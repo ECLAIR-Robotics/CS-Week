@@ -320,10 +320,10 @@ export default function ControlledAccordions({
           <Button
             color='danger'
             style={{marginLeft : '17px'}}
-            href='https://forms.gle/7rg9hR6abh8RwnXy8'
+            href='https://forms.gle/ZtQMqnHCSAMA5vAJ8'
             target='_blank'
           >
-            Click here to start the scavenger hunt for Thursday!
+            Click here to start the scavenger hunt for Friday!
           </Button>
         </AccordionDetails>
       </Accordion>

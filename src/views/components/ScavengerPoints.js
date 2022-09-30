@@ -27,7 +27,7 @@ export default function ScavengerPoints() {
   const data = [
     {
       "organization": "ACM/A4C",
-      "Progress": 1,
+      "Progress": 0,
       "ProgressColor": "hsl(120, 70%, 50%)",
     },
     {
@@ -47,12 +47,12 @@ export default function ScavengerPoints() {
     },
     {
       "organization": "ECLAIR",
-      "Progress": 3,
+      "Progress": 0,
       "ProgressColor": "hsl(46, 70%, 50%)",
     },
     {
       "organization": "EGaDS!",
-      "Progress": 3,
+      "Progress": 0,
       "ProgressColor": "hsl(90, 70%, 50%)",
     },
     {
@@ -72,7 +72,7 @@ export default function ScavengerPoints() {
     },
     {
       "organization": "UTPC",
-      "Progress": 1,
+      "Progress": 0,
       "ProgressColor": "hsl(194, 70%, 50%)",
     },
   ];

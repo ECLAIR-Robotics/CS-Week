@@ -52,7 +52,7 @@ export function PageHeader() {
           >CS Week</h1>
           <h3 style={{
             color : '#E36EF4'
-          }}>SEPTEMBER 26TH - OCTOBER 1ST</h3>
+          }}>APRIL 8TH - APRIL 12TH</h3>
         </Container>
       </div>
     </div>

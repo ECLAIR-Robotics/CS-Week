@@ -32,7 +32,7 @@ import PointsPage from "views/pages/PointsPage.js";
 import { Provider } from 'react-redux'
 import store from "views/reduxFiles/store.js"
 
-location.url = "https://www.instagram.com/utcsweek";
+window.location.href = "https://www.instagram.com/utcsweek";
 return;
 
 ReactDOM.render(

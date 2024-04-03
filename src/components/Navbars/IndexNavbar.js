@@ -18,25 +18,11 @@
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
 // reactstrap components
-import {
-  Collapse,
-  NavbarBrand,
-  Navbar,
-  NavItem,
-  Nav,
-  Container,
-  UncontrolledTooltip,
-} from "reactstrap";
-import SignUpModal from "views/components/SignUpModal";
 import axios from "axios";
+import jwt_decode from "jwt-decode";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  clear,
-  setGoogleToken,
-  setGoogleUser,
-  setCreateUser,
-} from "views/reduxFiles/reduxGoogle.js"
-import jwt_decode from 'jwt-decode';
+import { Collapse, Container, Nav, NavItem, Navbar, NavbarBrand, UncontrolledTooltip } from "reactstrap";
+import { clear, setCreateUser, setGoogleToken, setGoogleUser } from "views/reduxFiles/reduxGoogle.js";
 
 export default function IndexNavbar({
   navColor='info'
@@ -105,7 +91,7 @@ export default function IndexNavbar({
           //document.getElementById('google_signup').hidden = false
         }
       }
-      
+
       const google = window.google;
 
       if (google !== undefined) {
@@ -180,33 +166,42 @@ export default function IndexNavbar({
       color-on-scroll="100"
       expand="lg"
       style={{
-        backgroundColor : color === "navbar-transparent" ? 'transparent' : "#E36EF4"
+        backgroundColor: color === "navbar-transparent" ? "transparent" : "#E36EF4",
       }}
     >
       <Container>
         <div className="navbar-translate">
-          <NavbarBrand to="/" tag={Link} id="navbar-brand" style={{
-              fontFamily: 'bdr-mono, sans-serif',
-              fontStyle: 'normal',
-              fontWeight: '300',
-          }}>
+          <NavbarBrand
+            to="/"
+            tag={Link}
+            id="navbar-brand"
+            style={{
+              fontFamily: "bdr-mono, sans-serif",
+              fontStyle: "normal",
+              fontWeight: "300",
+            }}
+          >
             CREATED BY
             <span> ECLAIR</span>
           </NavbarBrand>
           <UncontrolledTooltip placement="bottom" target="navbar-brand">
-            Coded by<br />
-            Sahil Jain (eclairrobotics@gmail.com)<br /><br />
-            Designed by<br />
-            Irene Chamorro-Beckenhauer<br />
-            Taylor Mason<br />
-            Sujeong Oh<br />
-            Sai Veda Rallabandi<br />
+            Coded by
+            <br />
+            Sahil Jain (eclairrobotics@gmail.com)
+            <br />
+            <br />
+            Designed by
+            <br />
+            Irene Chamorro-Beckenhauer
+            <br />
+            Taylor Mason
+            <br />
+            Sujeong Oh
+            <br />
+            Sai Veda Rallabandi
+            <br />
           </UncontrolledTooltip>
-          <button
-            aria-expanded={collapseOpen}
-            className="navbar-toggler navbar-toggler"
-            onClick={toggleCollapse}
-          >
+          <button aria-expanded={collapseOpen} className="navbar-toggler navbar-toggler" onClick={toggleCollapse}>
             <span className="navbar-toggler-bar bar1" />
             <span className="navbar-toggler-bar bar2" />
             <span className="navbar-toggler-bar bar3" />
@@ -219,19 +214,20 @@ export default function IndexNavbar({
           onExiting={onCollapseExiting}
           onExited={onCollapseExited}
         >
-          <div className="navbar-collapse-header">
-          </div>
+          <div className="navbar-collapse-header"></div>
           <Nav navbar>
             <NavItem>
               <button
                 style={navStyleProps}
-                onClick={() => { history.push('/') }}
+                onClick={() => {
+                  history.push("/");
+                }}
               >
                 <i className="tim-icons icon-minimal-right" />
                 {`ABOUT CS WEEK`}
               </button>
             </NavItem>
-            <NavItem>
+            {/* <NavItem>
               <button
                 style={navStyleProps}
                 onClick={() => { history.push('/schedule') }}
@@ -256,7 +252,7 @@ export default function IndexNavbar({
                 googleUser={googleUser}
                 modalError={modalError}
                 setErrorModal={setErrorModal}/>
-            </NavItem>
+            </NavItem> */}
           </Nav>
         </Collapse>
       </Container>

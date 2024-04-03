@@ -33,7 +33,6 @@ import { Provider } from 'react-redux'
 import store from "views/reduxFiles/store.js"
 
 window.location.href = "https://www.instagram.com/utcsweek";
-return;
 
 // ReactDOM.render(
 //   <Provider store={store}>

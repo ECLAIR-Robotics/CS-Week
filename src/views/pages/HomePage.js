@@ -25,6 +25,7 @@ import OrgDisplay from "views/components/OrgDisplay.js"
 import InfoDisplay from "views/components/InfoDisplay.js"
 
 export default function HomePage() {
+  
   React.useEffect(() => {
     document.body.classList.toggle("index-page");
     // Specify how to clean up after this effect:

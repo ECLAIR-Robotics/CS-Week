@@ -172,7 +172,7 @@ export default function IndexNavbar({
       <Container>
         <div className="navbar-translate">
           <NavbarBrand
-            to="/"
+            to="/home"
             tag={Link}
             id="navbar-brand"
             style={{
@@ -220,14 +220,14 @@ export default function IndexNavbar({
               <button
                 style={navStyleProps}
                 onClick={() => {
-                  history.push("/");
+                  history.push("/home");
                 }}
               >
                 <i className="tim-icons icon-minimal-right" />
                 {`ABOUT CS WEEK`}
               </button>
             </NavItem>
-            {/* <NavItem>
+            <NavItem>
               <button
                 style={navStyleProps}
                 onClick={() => { history.push('/schedule') }}
@@ -246,13 +246,7 @@ export default function IndexNavbar({
               </button>
             </NavItem>
             <NavItem>
-              <SignUpModal
-                formModal={formModal}
-                setFormModal={setFormModal}
-                googleUser={googleUser}
-                modalError={modalError}
-                setErrorModal={setErrorModal}/>
-            </NavItem> */}
+            </NavItem>
           </Nav>
         </Collapse>
       </Container>

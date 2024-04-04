@@ -28,24 +28,26 @@ import SchedulePage from "views/pages/SchedulePage.js";
 import ProfilePage from "views/pages/ProfilePage.js";
 import RegisterPage from "views/pages/RegisterPage.js";
 import PointsPage from "views/pages/PointsPage.js";
-
+import InstagramRedirect from "views/pages/InstagramRedirect";
 import { Provider } from 'react-redux'
 import store from "views/reduxFiles/store.js"
 
-window.location.href = "https://www.instagram.com/utcsweek";
 
-// ReactDOM.render(
-//   <Provider store={store}>
-//     <BrowserRouter>
-//       <Switch>
-//         <Route exact path="/" render={(props) => <HomePage {...props} />} />
-//         <Route path="/schedule" render={(props) => <SchedulePage {...props} />} />
-//         <Route path="/register" render={(props) => <RegisterPage {...props} />} />
-//         <Route path="/profile" render={(props) => <ProfilePage {...props} />} />
-//         <Route path="/points" render={(props) => <PointsPage {...props} />} />
-//         <Redirect to="/" />
-//       </Switch>
-//     </BrowserRouter>,
-//   </Provider>,
-//   document.getElementById("root")
-// );
+// window.location.href = "https://www.instagram.com/utcsweek";
+
+ReactDOM.render(
+  <Provider store={store}>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" render={(props) => <InstagramRedirect {...props} />} />
+        <Route exact path="/home" render={(props) => <HomePage {...props} />} />
+        <Route path="/schedule" render={(props) => <SchedulePage {...props} />} />
+        <Route path="/register" render={(props) => <RegisterPage {...props} />} />
+        <Route path="/profile" render={(props) => <ProfilePage {...props} />} />
+        <Route path="/points" render={(props) => <PointsPage {...props} />} />
+        <Redirect to="/" />
+      </Switch>
+    </BrowserRouter>,
+  </Provider>,
+  document.getElementById("root")
+);
